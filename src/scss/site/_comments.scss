@@ -1,0 +1,113 @@
+.comments-area ol {
+  // bottom spacing
+  margin-bottom: 2em;
+  // spacing between comments
+  article {
+    margin-bottom: 2.25em;
+  }
+}
+.comments-title {
+  margin-bottom: 1.5em;
+  font-size: 2rem;
+}
+ol.comment-list {
+  padding-left: 0;
+  list-style: none;
+  li {
+    font-size: 1.6rem;
+    list-style-type: none;
+  }
+  .comment-meta {
+    @include clearfix;
+  }
+  .fn,
+  .says {
+    display: inline-block;
+    padding-top: .25em;
+  }
+  img.avatar {
+    margin-right: 1em;
+    float: left;
+    border-radius: 36px;
+    border: .2rem solid $forest-green;
+  }
+  /* fiddle with later, if needed
+  .comment-content {
+    p,
+    li,
+    dd,
+    td,
+    th,
+    label,
+    input,
+    select,
+    textarea,
+    button,
+    address,
+    blockquote {
+      font-size: 1.6rem;
+    }
+  }*/
+}
+.comment-form {
+  .logged-in-as {
+    font-size: 1.6rem;
+    a {
+      font-weight: 600;
+      text-decoration: none;
+    }
+  }
+  p {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  p.comment-form-comment {
+    margin-top: 1em;
+  }
+  label {
+    margin-bottom: .5em;
+    font-weight: 600;
+  }
+  .comment-form-cookies-consent label {
+    font-weight: normal;
+  }
+  input {
+    border: .1rem solid $form-input-outline-color;
+  }
+  input.submit,
+  input[type="submit"] {
+    width: auto;
+    padding: .6em 1.5em;
+    font-size: 1.4rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: .03em;
+    color: $btn-txt-color;
+    background-color: $btn-bg-color;
+    border: solid .2rem $btn-bg-color;
+    &:hover,
+    &:focus {
+      background-color: lighten($btn-bg-color, 5%);
+      border-color: lighten($btn-bg-color, 5%);
+    }
+  }
+}
+.comments-area {
+  margin-bottom: 2em;
+}
+
+// other things to format
+//.comment-form {
+//  .comment-reply-link {}
+//  .comment-metadata {}
+//  .required {}
+//}
+// remove indentation on mobile if needed
+//@media screen and (max-width: 767px) {
+//  #comments {
+//    ol ol {
+//      padding-left: 0;
+//    }
+//  }
+//}

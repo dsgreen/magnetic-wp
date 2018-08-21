@@ -1,0 +1,125 @@
+// basic flex grid
+.row {
+  display: flex;
+}
+.col {
+  display: flex;
+}
+.col {
+  margin-bottom: $column-bottom-margin-mobile;
+}
+//form .row,
+//form .col {
+//  margin-bottom: 0;
+//}
+.row {
+  @include clearfix;
+}
+
+@media only screen and (min-width: 768px) {
+  // negative margins cancel out outer column padding so column content
+  // lines up with other content on the page.
+  .row {
+    margin-right: -$column-padding;
+    margin-left: -$column-padding;
+  }
+  // use if you want an edge to edge background color within a column, use .row--no-margin and don't wrap row with container.
+  // use .row--no-col-padding to remove column padding (or grid gutters).
+  .row.row--no-margin,
+  .row.row--no-col-padding {
+    margin-right: 0;
+    margin-left: 0;
+  }
+  .col {
+    float: left;
+    margin-bottom: 0;
+    padding: 0 $column-padding;
+  }
+  // cancels out column padding
+  .row.row--no-col-padding .col {
+    padding: 0;
+  }
+  // nested cols
+  .col .col:first-of-type {
+    padding-left: 0;
+  }
+  .col .col:last-child {
+    padding-right: 0;
+  }
+  // columns
+  .col-1 {
+    width: (1 / 12) * 100%;
+  }
+  .col-2 {
+    width: (2 / 12) * 100%;
+  }
+  .col-3,
+  .quarter {
+    width: (3 / 12) * 100%;
+  }
+  .col-4,
+  .third {
+    width: (4 / 12) * 100%;
+  }
+  .col-5 {
+    width: (5 / 12) * 100%;
+  }
+  .col-6,
+  .half {
+    width: (6 / 12) * 100%;
+  }
+  .col-7 {
+    width: (7 / 12) * 100%;
+  }
+  .col-8,
+  .two-thirds {
+    width: (8 / 12) * 100%;
+  }
+  .col-9,
+  .three-quarters {
+    width: (9 / 12) * 100%;
+  }
+  .col-10 {
+    width: (10 / 12) * 100%;
+  }
+  .col-11 {
+    width: (11 / 12) * 100%;
+  }
+  .col-12 {
+    width: 100%;
+  }
+  // offsets
+  .offset-1 {
+    margin-left: (1 / 12) * 100%;
+  }
+  .offset-2 {
+    margin-left: (2 / 12) * 100%;
+  }
+  .offset-3 {
+    margin-left: (3 / 12) * 100%;
+  }
+  .offset-4 {
+    margin-left: (4 / 12) * 100%;
+  }
+  .offset-5 {
+    margin-left: (5 / 12) * 100%;
+  }
+  .offset-6 {
+    margin-left: (6 / 12) * 100%;
+  }
+  .offset-7 {
+    margin-left: (7 / 12) * 100%;
+  }
+  .offset-8 {
+    margin-left: (8 / 12) * 100%;
+  }
+  .offset-9 {
+    margin-left: (9 / 12) * 100%;
+  }
+  .offset-10 {
+    margin-left: (10 / 12) * 100%;
+  }
+  .offset-11 {
+    margin-left: (11 / 12) * 100%;
+  }
+}

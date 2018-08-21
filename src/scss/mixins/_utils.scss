@@ -1,0 +1,28 @@
+@mixin clearfix {
+  &:before,
+  &:after {
+    display: table;
+    content: " ";
+  }
+  &:after {
+    clear: both;
+  }
+}
+.clearfix {
+  @include clearfix;
+}
+
+@mixin img-responsive {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.img-fluid,
+.img-responsive {
+  @include img-responsive;
+}
+
+@mixin font-smoothing {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: auto;
+}

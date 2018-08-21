@@ -1,0 +1,67 @@
+// sub page styles
+.color-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(32,22,22,.7); // red/sepia
+  z-index: 99;
+}
+.hero--sub {
+  @include hero-bg-img('../images/hero.jpg');
+  position: relative;
+  overflow: hidden;
+  padding-top: 18em;
+  padding-bottom: 3em;
+  h1 {
+    @include font-smoothing;
+    position: relative;
+    font-size: 8rem;
+    font-weight: 300;
+    color: #fff;
+    z-index: 100;
+  }
+  .lead {
+    position: relative;
+    z-index: 100;
+    color: #fff !important;
+    p {
+      font-size: 1.9rem;
+    }
+    h2 {
+      color: #fff !important;
+      font-size: 2.4rem;
+      font-weight: 400;
+    }
+  }
+}
+@media only screen and (min-width: 768px) {
+  .hero--sub .lead {
+    width: 83.3333333333%;
+  }
+}
+// mobile
+@media screen and (max-width: 767px) {
+  .hero--sub {
+    padding-top: 12em;
+    padding-bottom: 2em;
+    h1 {
+      font-size: 6rem;
+    }
+    .lead h2 {
+      font-size: 2rem;
+    }
+  }
+}
+@media screen and (max-width: 500px) {
+  .hero--sub {
+    padding-top: 8em;
+    padding-bottom: 2em;
+    h1 {
+      font-size: 4rem;
+    }
+  }
+}
+
+

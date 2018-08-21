@@ -1,0 +1,124 @@
+/*!
+Theme Name: _s-bootstrap
+Theme URI: https://underscores.me/
+Author: Automattic
+Author URI: https://automattic.com/
+Description: Hi. I'm a starter theme called <code>_s</code>, or <em>underscores</em>, if you like. I'm a theme meant for hacking so don't use me as a <em>Parent Theme</em>. Instead try turning me into the next, most awesome, WordPress theme out there. That's what I'm here for.
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: _s
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+_s is based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+*/
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Normalize
+# Typography
+# Elements
+# Forms
+# Navigation
+	## Links
+	## Menus
+# Accessibility
+# Alignments
+# Clearings
+# Widgets
+# Content
+	## Posts and pages
+	## Comments
+# Infinite scroll
+# Media
+	## Captions
+	## Galleries
+# Custom
+--------------------------------------------------------------*/
+@import "variables-site/variables-site";
+@import "mixins/mixins-master";
+
+///*--------------------------------------------------------------
+//# Normalize
+//--------------------------------------------------------------*/
+// not needed, in Bootstrap
+//@import "normalize";
+
+///*--------------------------------------------------------------
+//# Typography
+//--------------------------------------------------------------*/
+// not needed, Bootstrap instead
+// but, could use to set color
+//@import "typography/typography";
+
+///*--------------------------------------------------------------
+//# Elements
+//--------------------------------------------------------------*/
+// not needed, Bootstrap instead
+// but, could use some element styling, see img tag
+//@import "elements/elements";
+
+///*--------------------------------------------------------------
+//# Forms
+//--------------------------------------------------------------*/
+// not needed, Bootstrap or custom instead
+// but, could use some button styling
+//@import "forms/forms";
+
+///*--------------------------------------------------------------
+//# Navigation
+//--------------------------------------------------------------*/
+// could use some link styling, or use custom
+//@import "navigation/navigation";
+
+/*--------------------------------------------------------------
+# Accessibility
+--------------------------------------------------------------*/
+// could be replaced with Bootstrap 4 accessibility features
+@import "modules/accessibility";
+
+/*--------------------------------------------------------------
+# Alignments
+--------------------------------------------------------------*/
+// WordPress default alignment classes
+@import "modules/alignments";
+
+/*--------------------------------------------------------------
+# Clearings
+--------------------------------------------------------------*/
+@import "modules/clearings";
+
+/*--------------------------------------------------------------
+# Widgets
+--------------------------------------------------------------*/
+// might add unnecessary margin
+@import "site/secondary/widgets";
+
+/*--------------------------------------------------------------
+# Content
+--------------------------------------------------------------*/
+// various WP
+@import "site/site";
+
+/*--------------------------------------------------------------
+# Infinite scroll
+--------------------------------------------------------------*/
+@import "modules/infinite-scroll";
+
+/*--------------------------------------------------------------
+# Media
+--------------------------------------------------------------*/
+@import "media/media";
+
+/*--------------------------------------------------------------
+# Custom
+--------------------------------------------------------------*/
+@import "custom";

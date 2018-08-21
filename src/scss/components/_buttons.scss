@@ -1,0 +1,55 @@
+.btn,
+.btn-inverse {
+  display: inline-block;
+  padding: .6em .9em;
+  font-size: 1.4rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: .03em;
+  border-radius: $btn-border-radius;
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+}
+.btn,
+a.btn {
+  color: $btn-txt-color;
+  background-color: $btn-bg-color;
+  border: solid .2rem $btn-bg-color;
+  .fa {
+    color: rgba($btn-txt-color,.6);
+  }
+  &:hover,
+  &:focus {
+    background-color: lighten($btn-bg-color, 5%);
+    border-color: lighten($btn-bg-color, 5%);
+    .fa {
+      color: rgba($btn-txt-color,.7);
+    }
+  }
+}
+.btn-inverse,
+a.btn-inverse {
+  color: $btn-inverse-txt-color;
+  border: solid .2rem $btn-inverse-border-color;
+  .fa {
+    color: rgba($btn-inverse-txt-color,.6);
+  }
+  &:hover,
+  &:focus {
+    color: lighten($btn-inverse-txt-color, 5%);
+    border-color: lighten($btn-inverse-border-color, 5%);
+    .fa {
+      color: rgba($btn-inverse-txt-color,.7);
+    }
+  }
+}
+a.btn.alt {
+  @include btn-color-override($btn-txt-color, $accent);
+}
+.btn.wide {
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+}

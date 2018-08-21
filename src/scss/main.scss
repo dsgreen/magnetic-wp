@@ -1,0 +1,50 @@
+/*!
+Theme Name: wp-base
+Theme URI: http://example.com
+Author: Douglas Green
+Author URI: https://douglasgreen.com/
+Description: A blank starter theme based on underscores (_s).
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: _s
+Tags:
+
+_s is based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+*/
+
+@import "variables";
+@import "vendor/normalize";
+@import "mixins/utils";
+@import "mixins/lists";
+@import "mixins/links";
+@import "mixins/hero";
+@import "mixins/buttons";
+@import "mixins/visibility";
+
+@import "base/defaults";
+@import "base/type";
+@import "base/forms";
+
+@import "components/containers";
+@import "components/header";
+@import "components/header-fixed";
+@import "components/footer";
+@import "components/navigation";
+@import "components/buttons";
+@import "components/skiplink";
+@import "components/hero";
+@import "components/grid-float";
+
+@import "classes/presentational";
+@import "classes/alignment";
+
+// site styles
+//@import "site/debug";
+@import "site/home";
+@import "site/sub-page";
+@import "site/wordpress";
+//@import "site/page-general";
+@import "site/blog";
+@import "site/comments";

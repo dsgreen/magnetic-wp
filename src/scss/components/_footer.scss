@@ -1,0 +1,15 @@
+.pre-footer {
+  margin-top: 1em;
+  padding: 2em 0;
+  color: $pre-footer-txt-color;
+  background-color: $pre-footer-bg-color;
+}
+.site-footer {
+  padding-top: 1.6em;
+  padding-bottom: 1em;
+  color: $footer-txt-color;
+  background-color: $footer-bg-color;
+  p {
+    font-size: 1.3rem;
+  }
+}

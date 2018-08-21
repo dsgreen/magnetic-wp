@@ -1,0 +1,44 @@
+// home page styles
+.hero--home {
+  @include hero-bg-img('../images/hero.jpg');
+  h1 {
+    text-transform: uppercase;
+    color: #fff;
+  }
+  p {
+    color: #fff;
+  }
+  .btn {
+    @include btn-color-override($copy-color, $accent);
+    font-weight: 600;
+    letter-spacing: .02em;
+  }
+  .btn-inverse {
+    @include btn-inv-color-override($accent, $accent);
+  }
+}
+// mobile
+@media screen and (max-width: 500px) {
+  .hero--home {
+    padding-top: 3.5em;
+    padding-bottom: 6em;
+    h1 {
+      font-size: 3rem;
+    }
+    .btn,
+    .btn-inverse {
+      font-size: 1.3rem;
+    }
+  }
+}
+// marketing message sections
+.marketing-panel {
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+.marketing-panel-alt .col {
+  padding: 2em;
+}
+//.panel-img-bg {
+//  @include hero-bg-img('../images/hero.jpg');
+//}

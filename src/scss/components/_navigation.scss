@@ -1,0 +1,141 @@
+// if no js, menu will be hidden - need to override
+.no-js .main-navigation.hidden {
+  display: block !important;
+}
+// don't need nav toggle if no js
+.no-js .nav-toggle {
+  display: none;
+}
+.main-navigation {
+  ul {
+    @include list-nostyle;
+    margin: 0;
+    text-align: center;
+  }
+  li {
+    padding-top: 2.25em;
+    font-size: 1.3rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: .03em;
+    &.active a {
+      color: $main-nav-hover;
+    }
+  }
+  a {
+    padding: .7em 1em;
+    color: $main-nav-color;
+    text-decoration: none;
+    &:hover,
+    &:focus {
+      color: $main-nav-hover;
+    }
+  }
+}
+.body--transparent-header .main-navigation {
+  a {
+    color: $main-nav-color--transparent-header;
+    &:hover,
+    &:focus {
+      color: $main-nav-hover;
+    }
+  }
+}
+
+// navigation item with button styling
+.main-nav-btn a {
+  padding-right: 1.4em;
+  padding-left: 1.4em;
+  //color: $main-nav-color;
+  border: $btn-border-width solid $main-nav-color;
+  border-radius: $btn-border-radius;
+  &:focus,
+  &:hover {
+    color: $main-nav-color--transparent-header;
+    background-color: $main-nav-color;
+  }
+}
+.body--transparent-header  .main-nav-btn a {
+  color: $main-nav-color--transparent-header;
+  border: $btn-border-width solid $main-nav-color--transparent-header;
+  border-radius: $btn-border-radius;
+  &:focus,
+  &:hover {
+    color: $copy-color;
+    background-color: $main-nav-color--transparent-header;
+  }
+}
+
+// nav toggle button and mobile only adjustments
+@media (max-width: 767px) {
+  .nav-toggle {
+    position: absolute;
+    top: 2.25rem;
+    right: 2rem;
+    display: block;
+    width: 2.75rem;
+    text-align: center;
+    cursor: pointer;
+    // adjustments for button element
+    background: none;
+    border: none;
+    padding: 0;
+    // default outline looks bad, try to improve without ruining accessibility
+    // ideally for keyboard only, not mouse selection
+    // applies to chrome, and ...?
+    &:focus,
+    &:active {
+      outline: none;
+      //border: .1rem dotted $light-gray-02;
+    }
+  }
+  .nav-toggle-text {
+    display: inline-block;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    @include sr-only;
+  }
+  .nav-toggle .bar {
+    margin-bottom: .8rem;
+    height: .2rem;
+    width: 100%;
+    background-color: $main-nav-color;
+    display: block;
+    transition: background-color .2s ease;
+  }
+  .nav-toggle:hover,
+  .nav-toggle:focus {
+    .bar {
+      background-color: $main-nav-hover;
+    }
+  }
+  .body--transparent-header {
+    .nav-toggle .bar {
+      background-color: $main-nav-color--transparent-header;
+    }
+  }
+
+  .main-navigation ul {
+    margin-bottom: 1em;
+  }
+}
+// tablet and up, header & nav styles
+@media screen and (min-width: 768px) {
+  .brand {
+    float: left;
+  }
+  .nav-toggle {
+    display: none;
+  }
+  .main-navigation {
+    float: right;
+    ul {
+      @include list-inline;
+      margin-bottom: 0;
+    }
+    li {
+      padding-top: 0;
+    }
+  }
+}

@@ -1,0 +1,47 @@
+// from _s
+.screen-reader-text {
+  @include sr-only;
+}
+
+// responsive images in post content
+//.post,
+//.page,
+//.comment-content {
+img {
+  @include img-responsive;
+}
+//}
+
+// post formatting
+// for archive pages, make more specific
+.post {
+  margin-top: 4em;
+}
+.entry-meta {
+  font-size: 1.5rem;
+}
+.post-thumbnail {
+  margin: 1em 0;
+  display: block;
+}
+
+// sidebar
+#secondary {
+  margin-top: 4em;
+}
+.widget-title {
+  font-size: 1.8rem;
+  text-transform: uppercase;
+}
+body.archive h1.page-title {
+  font-size: 1.8rem;
+  text-transform: uppercase;
+}
+.widget ul {
+  @include list-nostyle;
+}
+@media screen and (min-width: 768px) {
+  #secondary {
+    padding: 0 2em;
+  }
+}

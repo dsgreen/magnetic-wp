@@ -1,0 +1,23 @@
+body {
+  // top padding for fixed header
+  padding-top: 6.9rem;
+}
+body.body--transparent-header,
+body.body--solid-header-img {
+  padding-top: 0;
+}
+// fixed header
+.site-header {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  width: 100%;
+  box-shadow: 0 0 .5rem $gray-10;
+}
+body.body--solid-header-img .site-header {
+  box-shadow: 0 0 .5rem $gray-10;
+}
+body.body--transparent-header .site-header {
+  position: absolute;
+  box-shadow: none;
+}

@@ -1,0 +1,35 @@
+.site-header {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  background-color: $header-bg-color;
+
+  .brand {
+    margin: 0;
+    padding: 0;
+    // text only styles for .brand, no logo
+    font-size: 1.8rem;
+    font-weight: 400;
+    letter-spacing: .05em;
+    text-transform: uppercase;
+    @include link-color($dark-gray-01, $accent);
+  }
+  .logo {
+    width: 220px;
+    height: auto;
+  }
+  // make header span full browser width
+  .container {
+    max-width: none;
+  }
+}
+.body--transparent-header .site-header {
+  background-color: transparent;
+
+  .brand {
+    @include link-color($main-nav-color--transparent-header, $accent);
+  }
+  &.toggled {
+    background-color: rgba(0,0,0,.92);
+  }
+  transition: background-color .2s ease;
+}

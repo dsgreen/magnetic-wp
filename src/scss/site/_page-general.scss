@@ -1,0 +1,47 @@
+// pages
+.site-main {
+  padding-top: 4em;
+}
+// big header image overrides
+.page-template-page-big-image .site-main,
+.page-template-page-big-image-full-width .site-main,
+.page-template-page-big-image-max-width .site-main
+{
+  // limit container in content on max-width pages
+  .container-full-width {
+    max-width: 1450px;
+  }
+  /*
+  h2 {
+    font-size: 4rem;
+    font-weight: 400;
+    line-height: 1.4;
+  }
+  // currently hidden on home pg.
+  h2.featured {
+    padding-bottom: .5em;
+    font-size: 2rem;
+    text-transform: uppercase;
+  }
+  p,
+  li,
+  dd,
+  td,
+  th,
+  label,
+  input,
+  select,
+  textarea,
+  button,
+  address,
+  blockquote {
+    font-size: 1.9rem;
+  }
+  ul {
+    margin-bottom: 1em;
+  }
+  .btn {
+    font-size: 1.6rem;
+  }
+  */
+}
