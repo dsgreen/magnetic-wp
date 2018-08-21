@@ -1,5 +1,5 @@
 {
-  "name": "wp-base",
+  "name": "magnetic-1",
   "version": "1.0.0",
   "description": "_s with styles",
   "main": "index.php",
@@ -8,14 +8,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dsgreen/wp-base.git"
+    "url": "git+https://bitbucket.org/dsgreen/magnetic-1.git"
   },
   "author": "Douglas Green",
   "license": "GPL-2.0",
-  "bugs": {
-    "url": "https://github.com/dsgreen/wp-base/issues"
-  },
-  "homepage": "https://github.com/dsgreen/wp-base#readme",
+  "homepage": "https://bitbucket.org/dsgreen/magnetic-1#readme",
   "devDependencies": {
     "bootstrap": "^4.1.2",
     "grunt": "^1.0.3",
