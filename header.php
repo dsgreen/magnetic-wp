@@ -60,5 +60,4 @@
     !is_front_page()
 ) { ?>
 <section class="site-content container" id="content">
-	<div class="row">
 <?php } ?>
