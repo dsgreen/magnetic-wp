@@ -1,5 +1,5 @@
 /*!
-Theme Name: wp-base
+Theme Name: magnetic-1
 Theme URI: http://example.com
 Author: Douglas Green
 Author URI: https://douglasgreen.com/
@@ -45,6 +45,6 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 @import "site/home";
 @import "site/sub-page";
 @import "site/wordpress";
-//@import "site/page-general";
+@import "site/page-general";
 @import "site/blog";
 @import "site/comments";

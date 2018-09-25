@@ -38,13 +38,13 @@ $skiplink-bg: #fff;
 
 $copy-color: $dark-gray-01;
 $heading-color: $dark-gray-01;
-$pre-footer-txt-color: $copy-color;
-$footer-txt-color: $copy-color;
+$pre-footer-txt-color: $light-gray-01;
+$footer-txt-color: $light-gray-01;
 
-$page-bg-color: $light-gray-01;
+$page-bg-color: #fff;
 $header-bg-color: #fff;
-$pre-footer-bg-color: #fff;
-$footer-bg-color: #fff;
+$pre-footer-bg-color: $dark-gray-01;
+$footer-bg-color: $dark-gray-01;
 $table-head-bg-color: #fff;
 $table-border-color: $light-gray-04;
 
@@ -70,7 +70,7 @@ $column-bottom-margin-mobile: 1.6rem;
 $btn-border-width: .2rem;
 $btn-border-radius: 0;
 
-$max-container-width: 1200px;
+$max-container-width: 1300px;
 
 // mq breakpoints
 
