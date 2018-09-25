@@ -10,6 +10,7 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+  <div class="post-wrap">
 	<?php _s_post_thumbnail('extra_large'); ?>
 
 	<header class="entry-header">
@@ -56,4 +57,5 @@
 	<footer class="entry-footer">
 		<?php _s_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
+  </div>
 </article><!-- #post-<?php the_ID(); ?> -->
