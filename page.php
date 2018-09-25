@@ -14,7 +14,7 @@
 
 get_header(); ?>
 
-    <main class="col-9 col site-main" id="main" role="main">
+    <main class="col-12 col site-main" id="main" role="main">
 
 			<?php
 			while ( have_posts() ) : the_post();
