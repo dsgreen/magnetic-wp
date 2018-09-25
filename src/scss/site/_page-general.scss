@@ -3,13 +3,14 @@
   padding-top: 4em;
 }
 // big header image overrides
-.page-template-page-big-image .site-main,
-.page-template-page-big-image-full-width .site-main,
-.page-template-page-big-image-max-width .site-main
+//.page-template-page-big-image .site-main,
+//.page-template-page-big-image-full-width .site-main,
+//.page-template-page-big-image-max-width .site-main
+.site-main
 {
   // limit container in content on max-width pages
   .container-full-width {
-    max-width: 1450px;
+    max-width: $max-container-width;
   }
   /*
   h2 {
@@ -23,6 +24,7 @@
     font-size: 2rem;
     text-transform: uppercase;
   }
+  */
   p,
   li,
   dd,
@@ -35,8 +37,9 @@
   button,
   address,
   blockquote {
-    font-size: 1.9rem;
+    line-height: 1.8;
   }
+  /*
   ul {
     margin-bottom: 1em;
   }
