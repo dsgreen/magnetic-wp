@@ -22,7 +22,8 @@
 <? if (
     is_page_template('page-big-image.php') ||
     is_page_template('page-big-image-full-width.php') ||
-    is_page_template('page-big-image-max-width.php')
+    is_page_template('page-big-image-max-width.php') ||
+    is_front_page()
 ) { ?>
 <body <?php body_class('body--transparent-header'); ?>>
 <?php } else { ?>
@@ -55,7 +56,8 @@
 <? if (
     !is_page_template('page-big-image.php') &&
     !is_page_template('page-big-image-full-width.php') &&
-    !is_page_template('page-big-image-max-width.php')
+    !is_page_template('page-big-image-max-width.php') &&
+    !is_front_page()
 ) { ?>
 <section class="site-content container" id="content">
 	<div class="row">
