@@ -51,6 +51,32 @@ if ( ! function_exists( '_s_posted_by' ) ) :
 	}
 endif;
 
+if ( ! function_exists( '_s_comments_link' ) ) :
+	/**
+	 * Outputs comments link
+	 */
+	function _s_comments_link() {
+    if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
+      echo '<span class="comments-link">';
+      comments_popup_link(
+        sprintf(
+          wp_kses(
+          /* translators: %s: post title */
+            __( 'Leave a Comment<span class="screen-reader-text"> on %s</span>', '_s' ),
+            array(
+              'span' => array(
+                'class' => array(),
+              ),
+            )
+          ),
+          get_the_title()
+        )
+      );
+      echo '</span>';
+    }
+  }
+endif;
+
 if ( ! function_exists( '_s_entry_footer' ) ) :
 	/**
 	 * Prints HTML with meta information for the categories, tags and comments.
@@ -71,25 +97,6 @@ if ( ! function_exists( '_s_entry_footer' ) ) :
 				/* translators: 1: list of tags. */
 				printf( '<span class="tags-links">' . esc_html__( '%1$s', '_s' ) . '</span>', $tags_list ); // WPCS: XSS OK.
 			}
-		}
-
-		if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
-			echo '<span class="comments-link">';
-			comments_popup_link(
-				sprintf(
-					wp_kses(
-						/* translators: %s: post title */
-						__( 'Leave a Comment<span class="screen-reader-text"> on %s</span>', '_s' ),
-						array(
-							'span' => array(
-								'class' => array(),
-							),
-						)
-					),
-					get_the_title()
-				)
-			);
-			echo '</span>';
 		}
 
 		edit_post_link(
