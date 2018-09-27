@@ -14,6 +14,7 @@
 	<?php _s_post_thumbnail('extra_large'); ?>
 
 	<header class="entry-header">
+    <?php _s_print_categories(); ?>
 		<?php
 		if ( is_singular() ) :
 			the_title( '<h1 class="entry-title">', '</h1>' );
@@ -24,13 +25,14 @@
 		if ( 'post' === get_post_type() ) : ?>
 		<div class="entry-meta">
 			<?php
-				_s_posted_on();
-				_s_posted_by();
+//				_s_posted_on();
+//				_s_posted_by();
+//			  _s_comments_link();
 			?>
-		</div><!-- .entry-meta -->
+		</div>
 		<?php
 		endif; ?>
-	</header><!-- .entry-header -->
+	</header>
 
 	<div class="entry-content">
 		<?php
@@ -52,10 +54,14 @@
 				'after'  => '</div>',
 			) );
 		?>
-	</div><!-- .entry-content -->
+	</div>
 
 	<footer class="entry-footer">
-		<?php _s_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
+		<?php
+		_s_posted_on();
+		_s_posted_by();
+//    _s_comments_link();
+		?>
+	</footer>
   </div>
-</article><!-- #post-<?php the_ID(); ?> -->
+</article>
