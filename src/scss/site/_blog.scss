@@ -1,4 +1,3 @@
-// blog layout
 body.blog {
   background-color: $light-gray-01;
 
@@ -10,36 +9,36 @@ body.blog {
 
     article {
       display: flex;
-      //flex: 1 1 (4 / 12) * 100%;
-      flex: 1 1 (6 / 12) * 100%;
+      flex: 1 1 (4 / 12) * 100%;
+      //flex: 1 1 (6 / 12) * 100%;
       margin-bottom: 1em;
       padding: 0 1em 1em;
     }
-    //article.sticky,
+    article.sticky,
     .navigation
     {
       flex: 1 1 100%;
       padding: 0 1em;
     }
   }
+  article.sticky {
+    .post-thumbnail {width: 50%}
+  }
 }
 
-// need to revise, this is for a vertical list format
 body.blog,
-//body.single-post,
+body.single-post,
 body.archive
 {
   .post-wrap {
-    //box-shadow: .1rem .1rem 1rem $light-gray-01;
     background-color: #fff;
-    //border: 1px solid $light-gray-01;
   }
   .entry-header {
-    padding: 1em 2em 1em;
+    padding: 1em 2em 0;
   }
   .entry-content {}
   .entry-title {
-    margin: 0.67em 0 .5em;
+    margin: .4em 0 .5em;
     font-size: 2.8rem;
     font-weight: 500;
     line-height: 1.4;
@@ -51,9 +50,11 @@ body.archive
   .entry-meta,
   .cat-links,
   .comments-link,
-  .tags-links {
+  .tags-links,
+  .entry-footer {
+    font-size: 1.4rem;
+    color: $gray-40;
     a {
-      font-size: 1.4rem;
       text-decoration: none;
       color: $gray-40;
     }
@@ -68,6 +69,11 @@ body.archive
       background-color: $light-gray-01;
     }
   }
+  .entry-footer {
+    a {
+      font-weight: bold;
+    }
+  }
   .comments-link,
   .tags-links {
     display: inline-block;
@@ -78,6 +84,7 @@ body.archive
   }
   .entry-footer {
     padding: 1em 2em 2em;
+    border-top: 1px solid $gray-10;
   }
   .comments-area {
     padding: 1em 2em;
@@ -95,24 +102,6 @@ body.archive
     a {
       font-weight: 500;
       text-decoration: none;
-    }
-  }
-  .swp_popular_post {
-    b {
-      font-weight: 500;
-    }
-  }
-  #secondary {
-    .social-icons a {
-      padding: .25em;
-      //color: #fff;
-      &:focus,
-      &:hover  {
-        //color: $accent;
-      }
-      &:first-of-type {
-        padding-left: 0;
-      }
     }
   }
   // post nav
