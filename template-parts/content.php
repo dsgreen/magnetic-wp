@@ -10,10 +10,11 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-  <div class="post-wrap">
-	<?php _s_post_thumbnail('extra_large'); ?>
+  <div class="post-wrap row">
+	<?php //_s_post_thumbnail('extra_large'); ?>
 
-	<header class="entry-header">
+	<div class="col col-4">
+    <header class="entry-header">
 		<?php
 		if ( is_singular() ) :
 			the_title( '<h1 class="entry-title">', '</h1>' );
@@ -26,13 +27,18 @@
 			<?php
 				_s_posted_on();
 				_s_posted_by();
+				_s_comments_link();
 			?>
-		</div><!-- .entry-meta -->
+		</div>
 		<?php
 		endif; ?>
-	</header><!-- .entry-header -->
+	</header>
+  <footer class="entry-footer">
+    <?php _s_entry_footer(); ?>
+  </footer>
+  </div>
 
-	<div class="entry-content">
+	<div class="entry-content col col-8">
 		<?php
 			the_content( sprintf(
 				wp_kses(
@@ -52,10 +58,6 @@
 				'after'  => '</div>',
 			) );
 		?>
-	</div><!-- .entry-content -->
-
-	<footer class="entry-footer">
-		<?php _s_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
+	</div>
   </div>
-</article><!-- #post-<?php the_ID(); ?> -->
+</article>
