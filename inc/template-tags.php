@@ -42,7 +42,7 @@ if ( ! function_exists( '_s_posted_by' ) ) :
 	function _s_posted_by() {
 		$byline = sprintf(
 			/* translators: %s: post author. */
-			esc_html_x( '%s', 'post author', '_s' ),
+			esc_html_x( 'by %s', 'post author', '_s' ),
 			'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 		);
 
@@ -77,6 +77,7 @@ if ( ! function_exists( '_s_comments_link' ) ) :
   }
 endif;
 
+// TODO rename this, only categorys/tags now
 if ( ! function_exists( '_s_entry_footer' ) ) :
 	/**
 	 * Prints HTML with meta information for the categories, tags and comments.
