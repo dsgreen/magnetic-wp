@@ -8,7 +8,8 @@
  */
 
 get_header(); ?>
-
+<?php get_template_part( 'template-parts/image-header' ); ?>
+  <section class="site-content container" id="content">
     <main class="site-main" id="main" role="main">
 
 		<?php
@@ -26,7 +27,7 @@ get_header(); ?>
 		endwhile; // End of the loop.
 		?>
 
-		</main><!-- #main -->
-
+		</main>
+  </section>
 <?php
 get_footer();

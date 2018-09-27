@@ -8,7 +8,7 @@
  */
 
 get_header(); ?>
-
+  <section class="site-content container" id="content">
     <main class="site-main" id="main" role="main">
 
 		<?php
@@ -42,7 +42,7 @@ get_header(); ?>
 
 		endif; ?>
 
-		</main><!-- #main -->
-
+		</main>
+  </section>
 <?php
 get_footer();

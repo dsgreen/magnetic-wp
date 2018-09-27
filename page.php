@@ -13,7 +13,7 @@
  */
 
 get_header(); ?>
-
+  <section class="site-content container" id="content">
     <main class="site-main" id="main" role="main">
 
 			<?php
@@ -29,7 +29,7 @@ get_header(); ?>
 			endwhile; // End of the loop.
 			?>
 
-		</main><!-- #main -->
-
+		</main>
+  </section>
 <?php
 get_footer();

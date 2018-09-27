@@ -8,8 +8,8 @@
  */
 
 get_header(); ?>
-
-		<main class="site-main" id="main" role="main">
+  <section class="site-content container" id="content">
+    <main class="site-main" id="main" role="main">
 
 			<section class="error-404 not-found">
 				<header class="page-header">
@@ -28,7 +28,7 @@ get_header(); ?>
 				</div><!-- .page-content -->
 			</section><!-- .error-404 -->
 
-		</main><!-- #main -->
-
+		</main>
+  </section>
 <?php
 get_footer();

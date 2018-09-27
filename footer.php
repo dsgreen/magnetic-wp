@@ -11,12 +11,13 @@
 
 ?>
 <? if (
+	// TODO remove if not needed
+
   !is_page_template('page-big-image.php') &&
 	!is_page_template('page-big-image-full-width.php') &&
 	!is_page_template('page-big-image-max-width.php') &&
 	!is_front_page()
 ) { ?>
-	</section><!--/#content-->
 <?php } ?>
 
 <?php if ( is_active_sidebar( 'footer-1' ) || is_active_sidebar( 'footer-2' ) || is_active_sidebar( 'footer-3' ) ) : ?>

@@ -176,7 +176,7 @@ if ( ! function_exists( '_s_woocommerce_wrapper_after' ) ) {
 	 */
 	function _s_woocommerce_wrapper_after() {
 		?>
-			</main><!-- #main -->
+			</main>
 		</div><!-- #primary -->
 		<?php
 	}
