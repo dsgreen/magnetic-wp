@@ -2,22 +2,6 @@ body.blog,
 body.single-post,
 body.archive
 {
-  .post-wrap {
-    background-color: #fff;
-  }
-  .entry-header {
-    padding: 1em 2em 0;
-  }
-  .entry-title {
-    margin: .4em 0 .5em;
-    font-size: 2.8rem;
-    font-weight: 500;
-    line-height: 1.4;
-    a {
-      color: $copy-color;
-      text-decoration: none;
-    }
-  }
   .entry-meta,
   .cat-links,
   .comments-link,
@@ -50,17 +34,4 @@ body.archive
     display: inline-block;
     margin-left: .5em;
   }
-  .entry-content {
-    padding: 0 2em;
-  }
-  .entry-footer {
-    padding: 1em 2em 2em;
-    border-top: 1px solid $gray-10;
-  }
-  .comments-area {
-    padding: 1em 2em;
-    box-shadow: .1rem .1rem 1rem $gray-10;
-    background-color: #fff;
-  }
-  // see _comments file for more comment formatting
 }

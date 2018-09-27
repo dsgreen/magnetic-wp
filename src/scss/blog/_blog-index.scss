@@ -25,3 +25,29 @@ body.blog {
   //  .post-thumbnail {width: 50%}
   //}
 }
+body.blog,
+body.archive {
+  .post-wrap {
+    background-color: #fff;
+  }
+  .entry-header {
+    padding: 1em 2em 0;
+  }
+  .entry-title {
+    margin: .4em 0 .5em;
+    font-size: 2.8rem;
+    font-weight: 500;
+    line-height: 1.4;
+    a {
+      color: $copy-color;
+      text-decoration: none;
+    }
+  }
+  .entry-content {
+    padding: 0 2em;
+  }
+  .entry-footer {
+    padding: 1em 2em 2em;
+    border-top: 1px solid $gray-10;
+  }
+}
