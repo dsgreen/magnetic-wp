@@ -75,9 +75,9 @@ $max-container-width: 1300px;
 // mq breakpoints
 
 // font import
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,400italic,600,700');
+//@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,400italic,600,700');
 //@import url('https://fonts.googleapis.com/css?family=Lato:300,400,400italic,700');
-//@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,400italic,500,700');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,400italic,500,700');
 //@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,400italic,600,700');
 //@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
 //@import url('https://fonts.googleapis.com/css?family=Droid+Serif:400,400italic,700');
@@ -87,7 +87,7 @@ $max-container-width: 1300px;
 $sans-default: "Helvetica Neue", Helvetica, Arial, sans-serif;
 //$serif-default: Georgia, serif;
 
-$sans-custom: "Open Sans";
+$sans-custom: "Roboto";
 //$serif-custom: "Droid Serif";
 
 $sans: $sans-custom, $sans-default;
