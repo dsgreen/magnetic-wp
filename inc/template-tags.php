@@ -77,28 +77,40 @@ if ( ! function_exists( '_s_comments_link' ) ) :
   }
 endif;
 
-// TODO rename this, only categorys/tags now
+if ( ! function_exists( '_s_print_categories' ) ) :
+  function _s_print_categories() {
+	  // Hide category and tag text for pages.
+	  if ( 'post' === get_post_type() ) {
+		  /* translators: used between list items, there is a space after the comma */
+		  $categories_list = get_the_category_list(esc_html__(', ', '_s'));
+		  if ($categories_list) {
+			  /* translators: 1: list of categories. */
+			  printf('<span class="cat-links">' . esc_html__('%1$s', '_s') . '</span>', $categories_list); // WPCS: XSS OK.
+		  }
+	  }
+  }
+endif;
+if ( ! function_exists( '_s_print_tags' ) ) :
+	function _s_print_tags() {
+		// Hide category and tag text for pages.
+		if ( 'post' === get_post_type() ) {
+			/* translators: used between list items, there is a space after the comma */
+			$tags_list = get_the_tag_list('', esc_html_x(', ', 'list item separator', '_s'));
+			if ($tags_list) {
+				/* translators: 1: list of tags. */
+				printf('<span class="tags-links">' . esc_html__('%1$s', '_s') . '</span>', $tags_list); // WPCS: XSS OK.
+			}
+		}
+  }
+endif;
+
 if ( ! function_exists( '_s_entry_footer' ) ) :
 	/**
 	 * Prints HTML with meta information for the categories, tags and comments.
 	 */
 	function _s_entry_footer() {
-		// Hide category and tag text for pages.
-		if ( 'post' === get_post_type() ) {
-			/* translators: used between list items, there is a space after the comma */
-			$categories_list = get_the_category_list( esc_html__( ', ', '_s' ) );
-			if ( $categories_list ) {
-				/* translators: 1: list of categories. */
-				printf( '<span class="cat-links">' . esc_html__( '%1$s', '_s' ) . '</span>', $categories_list ); // WPCS: XSS OK.
-			}
-
-			/* translators: used between list items, there is a space after the comma */
-			$tags_list = get_the_tag_list( '', esc_html_x( ', ', 'list item separator', '_s' ) );
-			if ( $tags_list ) {
-				/* translators: 1: list of tags. */
-				printf( '<span class="tags-links">' . esc_html__( '%1$s', '_s' ) . '</span>', $tags_list ); // WPCS: XSS OK.
-			}
-		}
+    _s_print_categories();
+    _s_print_tags();
 
 		edit_post_link(
 			sprintf(
