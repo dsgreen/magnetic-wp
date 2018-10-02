@@ -8,14 +8,16 @@ body.archive
   .tags-links,
   .entry-footer {
     font-size: 1.4rem;
-    color: $gray-40;
+    color: $gray-80;
     a {
       text-decoration: none;
-      color: $gray-40;
+      color: $gray-80;
     }
   }
   .cat-links,
   .tags-links {
+    margin-top: .5em;
+    display: block;
     a {
       padding: .5em 1em;
       font-size: 1.1rem;
