@@ -10,25 +10,25 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-  <div class="post-wrap ">
-	<div class="">
+  <div class="post-wrap">
     <header class="entry-header">
 		<?php
 		if ( 'post' === get_post_type() ) : ?>
-		<p class="entry-meta">
+		  <div class="entry-meta">
+			<?php
+        _s_print_categories();
+			?>
+      <p>
 			<?php
 				_s_posted_on();
 				_s_posted_by();
 				_s_comments_link();
 			?>
-		</p>
-    <p class="entry-meta">
-      <?php _s_print_categories(); ?>
-    </div>
+      </p>
+		  </div>
 		<?php
 		endif; ?>
-	</header>
-  </div>
+	  </header>
 
 	<div class="entry-content">
 		<?php

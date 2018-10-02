@@ -14,24 +14,18 @@
 	<?php _s_post_thumbnail('extra_large'); ?>
 
 	<header class="entry-header">
-    <?php _s_print_categories(); ?>
-		<?php
+
+    <div class="entry-meta">
+      <?php _s_print_categories(); ?>
+		</div>
+
+    <?php
 		if ( is_singular() ) :
 			the_title( '<h1 class="entry-title">', '</h1>' );
 		else :
 			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 		endif;
-
-		if ( 'post' === get_post_type() ) : ?>
-		<div class="entry-meta">
-			<?php
-//				_s_posted_on();
-//				_s_posted_by();
-//			  _s_comments_link();
-			?>
-		</div>
-		<?php
-		endif; ?>
+		?>
 	</header>
 
 	<div class="entry-content">
@@ -60,7 +54,6 @@
 		<?php
 		_s_posted_on();
 		_s_posted_by();
-//    _s_comments_link();
 		?>
 	</footer>
   </div>
