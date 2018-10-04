@@ -1,12 +1,15 @@
 body.blog,
-body.single-post,
+body.single,
 body.archive
 {
-  .entry-meta,
   .cat-links,
   .comments-link,
   .tags-links,
-  .entry-footer {
+  .entry-meta,
+  .entry-footer,
+  .comment-author,
+  .comment-metadata,
+  .comment-reply-link {
     font-size: 1.4rem;
     color: $gray-80;
     a {
@@ -16,8 +19,8 @@ body.archive
   }
   .cat-links,
   .tags-links {
-    margin-top: .5em;
     display: block;
+    margin-top: 1em;
     a {
       padding: .5em 1em;
       font-size: 1.1rem;
@@ -26,14 +29,13 @@ body.archive
       background-color: $light-gray-01;
     }
   }
+  .entry-meta,
   .entry-footer {
     a {
       font-weight: bold;
     }
   }
-  .comments-link,
-  .tags-links {
+  .comments-link {
     display: inline-block;
-    margin-left: .5em;
   }
 }

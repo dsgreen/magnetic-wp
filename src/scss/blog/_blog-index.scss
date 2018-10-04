@@ -1,32 +1,24 @@
-body.blog {
+body.blog,
+body.archive {
   background-color: $light-gray-01;
 
   .site-main {
     display: flex;
     flex-flow: row wrap;
 
-    // provide 1, 2, & 3 col options in customizer
-
     article {
       display: flex;
       flex: 1 1 (4 / 12) * 100%;
-      //flex: 1 1 (6 / 12) * 100%;
       margin-bottom: 1em;
       padding: 0 1em 1em;
     }
-    //article.sticky,
-    .navigation
+    .navigation,
+    .page-header
     {
       flex: 1 1 100%;
       padding: 0 1em;
     }
   }
-  //article.sticky {
-  //  .post-thumbnail {width: 50%}
-  //}
-}
-body.blog,
-body.archive {
   .post-wrap {
     background-color: #fff;
   }
