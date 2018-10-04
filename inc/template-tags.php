@@ -192,8 +192,8 @@ if ( ! function_exists( 'numeric_posts_navigation' ) ) :
 				'format'    => '?paged=%#%',
 				'current'   => max( 1, get_query_var('paged') ),
 				'total'     => $wp_query->max_num_pages,
-				'next_text' => esc_html__( '&rarr;', '_s' ),
-				'prev_text' => esc_html__( '&larr;', '_s' )
+				'next_text' => esc_html__( 'Next', '_s' ),
+				'prev_text' => esc_html__( 'Prev', '_s' )
 			) );
 			?>
     </div>
