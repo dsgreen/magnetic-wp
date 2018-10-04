@@ -1,7 +1,6 @@
 body.blog,
-body.single-post,
+body.single,
 body.archive {
-  // post nav
   .navigation {
     @include clearfix;
     margin-top: .5em;
@@ -15,6 +14,12 @@ body.archive {
     display: inline-block;
     float: right;
   }
+}
+body.blog,
+body.archive {
+  .navigation {
+    text-align: center;
+  }
   .nav-previous a,
   .nav-next a,
   a.page-numbers
@@ -27,20 +32,14 @@ body.archive {
     text-decoration: none;
     letter-spacing: .03em;
     color: $copy-color;
-    background-color: $light-gray-02;//$btn-bg-color;
+    background-color: $light-gray-02;
     border: solid .2rem $light-gray-02;
-    //.fa {
-    //  color: rgba($copy-color,.6);
-    //}
     &:hover,
     &:focus {
       text-decoration: none;
       color: #fff;
       background-color: $btn-bg-color;
       border-color: $btn-bg-color;
-      //.fa {
-      //  color: rgba($btn-txt-color,.7);
-      //}
     }
   }
   .page-numbers.current,
@@ -58,9 +57,25 @@ body.archive {
     background-color: #fff;
     border: solid .2rem #fff;
   }
+  .page-numbers.next::after {
+    content: "\f105";
+    font-family: "Font Awesome 5 Free";
+    font-size: 1.3rem;
+    margin-left: .25em;
+  }
+  .page-numbers.prev::before {
+    content: "\f104";
+    font-family: "Font Awesome 5 Free";
+    font-size: 1.3rem;
+    margin-right: .25em;
+  }
 }
-// navigation overrides, individual post
-body.single-post {
+// individual post
+body.single {
+  .navigation {
+    margin-top: 2em;
+    margin-bottom: 3em;
+  }
   .nav-previous {
     max-width: 50%;
   }
@@ -68,8 +83,30 @@ body.single-post {
     max-width: 50%;
   }
   .nav-previous a,
-  .nav-next a
-  {
-    text-transform: none;
+  .nav-next a {
+    display: inline-block;
+    font-size: 1.4rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: $copy-color;
+    &:hover,
+    &:focus {
+      text-decoration: none;
+      color: #fff;
+      background-color: $btn-bg-color;
+      border-color: $btn-bg-color;
+    }
+  }
+  .nav-next a:after {
+    content: "\f105";
+    font-family: "Font Awesome 5 Free";
+    font-size: 1.3rem;
+    margin-left: .5em;
+  }
+  .nav-previous a::before {
+    content: "\f104";
+    font-family: "Font Awesome 5 Free";
+    font-size: 1.3rem;
+    margin-right: .5em;
   }
 }
