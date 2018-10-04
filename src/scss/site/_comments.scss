@@ -1,3 +1,7 @@
+.comments-area {}
+.comment-reply-title {
+  font-weight: 500;
+}
 .comments-area ol {
   // bottom spacing
   margin-bottom: 2em;
@@ -9,6 +13,7 @@
 .comments-title {
   margin-bottom: 1.5em;
   font-size: 2rem;
+  font-weight: 500;
 }
 ol.comment-list {
   padding-left: 0;
@@ -20,16 +25,21 @@ ol.comment-list {
   .comment-meta {
     @include clearfix;
   }
+  .comment-author {
+    //padding-top: 2em;
+
+  }
+  .comment-metadata {}
   .fn,
   .says {
     display: inline-block;
-    padding-top: .25em;
+    padding-top: 1em;
   }
   img.avatar {
     margin-right: 1em;
     float: left;
     border-radius: 36px;
-    border: .2rem solid $forest-green;
+    //border: .2rem solid $forest-green;
   }
   /* fiddle with later, if needed
   .comment-content {
@@ -48,13 +58,30 @@ ol.comment-list {
       font-size: 1.6rem;
     }
   }*/
+  .reply {
+    font-weight: 600;
+    a {
+      text-decoration: none;
+    }
+    a:before {
+      margin-right: .25em;
+      content: "\f3e5";
+      font-family: "Font Awesome 5 Free";
+      font-size: 1.2rem;
+    }
+  }
+  .comment-reply-title a {
+    font-size: 1.4rem;
+    color: $gray-80;
+  }
 }
 .comment-form {
   .logged-in-as {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     a {
       font-weight: 600;
       text-decoration: none;
+      color: $gray-80;
     }
   }
   p {
