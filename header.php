@@ -43,7 +43,7 @@
 			<?php wp_nav_menu( array(
 					'theme_location'    => 'primary',
 					'menu'              => 'primary',
-					'depth'             => 1,
+					'depth'             => 2,
 					'container'         => '',
 					'container_class'   => '',
 					'container_id'      => '',
