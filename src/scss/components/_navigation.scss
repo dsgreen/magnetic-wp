@@ -31,6 +31,18 @@
       color: $main-nav-hover;
     }
   }
+  .sub-menu a {
+    color: $sub-menu-color;
+    background-color: $sub-menu-bg-color;
+    &:hover,
+    &:focus {
+      color: $sub-menu-color;
+      background-color: lighten($sub-menu-bg-color, 20%);
+    }
+  }
+  .sub-menu li {
+    border-bottom: $sub-menu-brdr solid $sub-menu-brdr-color;
+  }
 }
 .body--transparent-header .main-navigation {
   a {
@@ -42,7 +54,7 @@
   }
 }
 .site-header.scrolled .main-navigation {
-  a {
+  > a {
     color: $main-nav-color;
     &:hover,
     &:focus {
@@ -163,7 +175,16 @@
       text-align: left;
     }
   }
+  .sub-menu .sub-menu {
+    top: 0;
+    left: 16rem;
+  }
   .sub-menu a {
     display: block;
   }
 }
+// debug
+//.main-navigation {
+  //li {border-bottom: 1px solid aqua;}
+  //a {border: 1px solid red;}
+//}

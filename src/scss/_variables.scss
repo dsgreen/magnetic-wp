@@ -31,7 +31,7 @@ $medium-blue: #0000cd;
 // etc.
 
 // functional color names
-$accent: $lime-green;
+$accent: $medium-blue;
 $link-color: $medium-blue;
 $link-hover: lighten($link-color, 15%);
 $skiplink-bg: #fff;
@@ -51,6 +51,10 @@ $table-border-color: $light-gray-04;
 $main-nav-color: $dark-gray-01;
 $main-nav-color--transparent-header: #fff;
 $main-nav-hover: $accent;//lighten($main-nav-color, 10%);
+$sub-menu-color: #fff;
+$sub-menu-bg-color: $dark-gray-01;
+$sub-menu-brdr: .1rem;
+$sub-menu-brdr-color: lighten($sub-menu-bg-color, 20%);
 
 $btn-txt-color: #fff;
 $btn-bg-color: $dark-gray-01;
