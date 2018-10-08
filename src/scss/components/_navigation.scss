@@ -143,12 +143,27 @@
   }
   .main-navigation {
     float: right;
-    ul {
+    > ul {
       @include list-inline;
       margin-bottom: 0;
     }
     li {
       padding-top: 0;
     }
+  }
+  .menu-item-has-children {
+    position: relative;
+  }
+  .sub-menu {
+    position: absolute;
+    top: 2.325em;
+    width: 16rem;
+    background-color: $header-bg-color;
+    li {
+      text-align: left;
+    }
+  }
+  .sub-menu a {
+    display: block;
   }
 }
