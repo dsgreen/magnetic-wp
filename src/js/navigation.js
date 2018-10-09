@@ -39,4 +39,24 @@ jQuery(document).ready(function($) {
     }
   });
 
+  /*
+  menu keyboard focus needs work
+  // add sub-menu focus class
+  $('.menu-item-has-children > a').focus(function() {
+    // console.log('.menu-item-has-children > a focus');
+    $(this).next().addClass('open');
+  });
+
+  // target last menu item
+  $('.sub-menu > li:last-of-type > a').blur(function() {
+    // console.log($(this).parent().hasClass('menu-item-has-children'));
+
+    // if last item does not have a sub menu, remove open menu class
+    if ( ! $(this).parent().hasClass('menu-item-has-children') ) {
+      console.log('last');
+      $(this).parent().parent().removeClass('open');
+    }
+  });
+  */
+
 });
