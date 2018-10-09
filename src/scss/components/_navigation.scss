@@ -166,25 +166,54 @@
   .menu-item-has-children {
     position: relative;
   }
+  .menu-item-has-children > a::after {
+    content: "\f107";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 700;
+    margin-left: .5em;
+  }
+  .menu-item-has-children .menu-item-has-children > a::after {
+    content: "\f105";
+  }
+
   .sub-menu {
+    display: none;
     position: absolute;
-    top: 2.325em;
+    top: 2em;
     width: 16rem;
     background-color: $header-bg-color;
     li {
       text-align: left;
     }
   }
+  .sub-menu a {
+    display: block;
+  }
+  // display sub menu on hover
+  .menu-item-has-children:hover {
+    > .sub-menu {
+      display: block;
+    }
+  }
+  // position 2nd level (and greater) menus
   .sub-menu .sub-menu {
     top: 0;
-    left: 16rem;
+    left: 15.8rem;
   }
-  .sub-menu a {
+  // focus styles need some JS to make menu stay open
+  // doesn't stay focused with just CSS
+  //.menu-item-has-children a:focus {
+  //  + .sub-menu {
+  //    display: block;
+  //  }
+  //}
+  // applied with JS
+  .sub-menu.open {
     display: block;
   }
 }
 // debug
-//.main-navigation {
-  //li {border-bottom: 1px solid aqua;}
+.main-navigation {
+  //li {border: 1px solid aqua;}
   //a {border: 1px solid red;}
-//}
+}
