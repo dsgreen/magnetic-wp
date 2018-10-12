@@ -56,7 +56,7 @@ if ( ! function_exists( '_s_comments_link' ) ) :
 	 * Outputs comments link
 	 */
 	function _s_comments_link() {
-    if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
+    if ( ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
       echo '<span class="comments-link">';
       comments_popup_link(
         sprintf(
