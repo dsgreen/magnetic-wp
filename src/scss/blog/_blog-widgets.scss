@@ -1,0 +1,23 @@
+h2.widget-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: 0;
+}
+#secondary h2.widget-title {
+  margin: .7em 0 .7em;
+  padding: .4em .6em;
+  background-color: $widget-title-bg-color;
+  border-left: $widget-title-border;
+}
+.widget {
+  li,
+  p {
+    margin-bottom: .7em;
+    font-size: 1.4rem;
+    line-height: 1.6;
+    //a {
+    //  font-weight: normal;
+    //}
+  }
+}

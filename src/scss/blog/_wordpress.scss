@@ -1,3 +1,5 @@
+// TODO to cleanup, phase out
+
 // from _s
 .screen-reader-text {
   @include sr-only;
@@ -12,48 +14,12 @@ img {
 }
 //}
 
-// post formatting
-// for archive pages, make more specific
-
-// vertical format
-//.post {
-//  margin-top: 4em;
-//}
-
-.entry-meta {
-  font-size: 1.5rem;
-}
+// not really needed
 .post-thumbnail {
-  //margin: 1em 0;
   display: block;
 }
 
-// sidebar
-#secondary {
-  margin-top: 8em;
-}
-h2.widget-title {
-  font-size: 1.6rem;
-  font-weight: 600;
-  line-height: 1.4;
-  letter-spacing: 0;
-}
-#secondary h2.widget-title {
-  margin: .7em 0 .7em;
-  padding: .4em .6em;
-  background-color: lighten($light-gray-01, 2%);
-  border-left: .2rem solid $main-nav-color;
-}
-.widget {
-  li {
-    margin-bottom: .7em;
-    font-size: 1.4rem;
-    line-height: 1.6;
-    a {
-      font-weight: 600;
-    }
-  }
-}
+
 body.archive,
 body.search
 {
