@@ -1,8 +1,9 @@
-body.blog,
-body.archive,
-body.search,
-body.single
-{
+// remove page classes, I think...
+//body.blog,
+//body.archive,
+//body.search,
+//body.single
+//{
   .navigation {
     @include clearfix;
     margin-top: .5em;
@@ -16,8 +17,7 @@ body.single
     display: inline-block;
     float: right;
   }
-}
-
+//}
 
 // read more link
 .more-wrap {
@@ -29,14 +29,11 @@ body.single
   padding: .5em 1em;
   font-size: 1.4rem;
   font-weight: 600;
-  //letter-spacing: .05em;
-  //text-transform: uppercase;
-  //background-color: lighten($light-gray-01, 2%);
+  letter-spacing: .01em;
+  background-color: $read-more-bg;
   &:hover,
   &:focus {
-    color: $main-nav-hover;
-    //background-color: $main-nav-color;
-    //text-decoration: none;
+    color: $read-more-hover;
   }
   &::after {
     content: "\f105";
