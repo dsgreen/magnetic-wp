@@ -1,3 +1,5 @@
+// TODO cleanup
+
 .comments-area {}
 .comment-reply-title {
   font-weight: 500;
@@ -27,7 +29,6 @@ ol.comment-list {
   }
   .comment-author {
     //padding-top: 2em;
-
   }
   .comment-metadata {}
   .fn,
@@ -39,7 +40,6 @@ ol.comment-list {
     margin-right: 1em;
     float: left;
     border-radius: 36px;
-    //border: .2rem solid $forest-green;
   }
   /* fiddle with later, if needed
   .comment-content {
@@ -76,7 +76,7 @@ ol.comment-list {
   }
   .comment-reply-title a {
     font-size: 1.4rem;
-    color: $gray-80;
+    color: $comment-meta-link-color;
   }
 }
 .comment-form {
@@ -85,7 +85,7 @@ ol.comment-list {
     a {
       font-weight: 600;
       text-decoration: none;
-      color: $gray-80;
+      color: $comment-meta-link-color;
       &:focus,
       &:hover {
         //color: $main-nav-color;
