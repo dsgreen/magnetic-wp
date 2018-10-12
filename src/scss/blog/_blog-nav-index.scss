@@ -1,0 +1,57 @@
+body.blog,
+body.archive,
+body.search
+{
+  .navigation {
+    text-align: center;
+  }
+  .nav-previous a,
+  .nav-next a,
+  a.page-numbers
+  {
+    display: inline-block;
+    padding: .6em .9em;
+    font-size: 1.4rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: .03em;
+    color: $copy-color;
+    background-color: $light-gray-02;
+    border: solid .2rem $light-gray-02;
+    &:hover,
+    &:focus {
+      text-decoration: none;
+      color: #fff;
+      background-color: $btn-bg-color;
+      border-color: $btn-bg-color;
+    }
+  }
+  .page-numbers.current,
+  .page-numbers.dots {
+    display: inline-block;
+    padding: .6em .9em;
+    font-size: 1.4rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: .03em;
+    color: $copy-color;
+  }
+  .page-numbers.current {
+    background-color: #fff;
+    border: solid .2rem #fff;
+  }
+  .page-numbers.next::after {
+    content: "\f105";
+    font-family: "Font Awesome 5 Free";
+    font-size: 1.3rem;
+    margin-left: .25em;
+  }
+  .page-numbers.prev::before {
+    content: "\f104";
+    font-family: "Font Awesome 5 Free";
+    font-size: 1.3rem;
+    margin-right: .25em;
+  }
+}

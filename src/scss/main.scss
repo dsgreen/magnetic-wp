@@ -44,12 +44,15 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 //@import "site/debug";
 @import "site/home";
 @import "site/sub-page";
-@import "blog/wordpress";
 @import "site/page-general";
+
+@import "blog/wordpress";
 @import "blog/comments";
 
-//@import "blog/blog-index";
-@import "blog/blog-common";
-@import "blog/blog-single";
-@import "blog/blog-nav";
+@import "blog/blog-general";
+@import "blog/blog-index";
+@import "blog/blog-meta";
+@import "blog/blog-nav-general";
+@import "blog/blog-nav-index";
+@import "blog/blog-nav-single";
 @import "blog/search";

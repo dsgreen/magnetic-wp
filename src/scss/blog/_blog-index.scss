@@ -1,3 +1,5 @@
+// flex grid layout, for no sidebar, not used
+/*
 body.blog,
 body.archive {
   background-color: $light-gray-01;
@@ -30,8 +32,6 @@ body.archive {
     font-size: 2.8rem;
     font-weight: 500;
     line-height: 1.4;
-    //a {
-    //  color: $copy-color;
     //  text-decoration: none;
     //  &:hover,
     //  &:focus {
@@ -45,5 +45,15 @@ body.archive {
   }
   .entry-footer {
     padding: 0 2em 3em;
+  }
+}
+*/
+
+body.blog,
+body.archive,
+body.search
+{
+  .entry-footer {
+    margin-bottom: 3em;
   }
 }

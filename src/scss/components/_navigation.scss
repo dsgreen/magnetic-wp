@@ -41,6 +41,7 @@
     }
   }
   .sub-menu li {
+    text-transform: none;
     border-bottom: $sub-menu-brdr solid $sub-menu-brdr-color;
   }
 }
@@ -72,8 +73,9 @@
   border-radius: $btn-border-radius;
   &:focus,
   &:hover {
-    color: $main-nav-color--transparent-header;
-    background-color: $main-nav-color;
+    color: $main-nav-btn-hover;
+    background-color: $main-nav-btn-hover-bg;
+    border-color: $main-nav-btn-hover-bg;
   }
 }
 .body--transparent-header  .main-nav-btn a {

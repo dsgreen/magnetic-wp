@@ -11,7 +11,7 @@
     font-weight: 400;
     letter-spacing: .05em;
     text-transform: uppercase;
-    @include link-color($dark-gray-01, $accent);
+    @include link-color($brand-txt-color, $brand-txt-hover);
   }
   .logo {
     width: 220px;
@@ -26,7 +26,7 @@
   background-color: transparent;
 
   .brand {
-    @include link-color($main-nav-color--transparent-header, $accent);
+    @include link-color($main-nav-color--transparent-header, $brand-txt-hover);
   }
 
   // mobile menu is open
@@ -38,7 +38,7 @@
   &.scrolled {
     background-color: $header-bg-color;
     .brand {
-      @include link-color($dark-gray-01, $accent);
+      @include link-color($brand-txt-color, $brand-txt-hover);
     }
   }
 

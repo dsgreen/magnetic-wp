@@ -1,0 +1,30 @@
+// general
+.entry-header {
+  margin-bottom: 1em;
+}
+.entry-title {
+  margin: .25em 0;
+  font-size: 3rem;
+  font-weight: 500;
+  line-height: 1.4;
+  a {
+    color: $entry-title-link;
+    text-decoration: none;
+    &:hover,
+    &:focus {
+      color: $entry-title-hover;
+      border-bottom: 1px solid $entry-title-hover;
+    }
+  }
+}
+.meta-wrap {
+  padding: 0 2em;
+}
+.post-thumbnail {
+  display: block;
+  margin-bottom: 2em;
+}
+.entry-footer {
+  padding-bottom: 2em;
+  border-bottom: 1px solid $post-bottom-border-color;
+}

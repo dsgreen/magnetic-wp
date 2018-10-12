@@ -1,0 +1,37 @@
+body.single {
+  .navigation {
+    margin-top: 2em;
+    margin-bottom: 3em;
+  }
+  .nav-previous {
+    max-width: 50%;
+  }
+  .nav-next {
+    max-width: 50%;
+  }
+  .nav-previous a,
+  .nav-next a {
+    display: inline-block;
+    font-size: 1.4rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: $single-nav-color;
+    &:hover,
+    &:focus {
+      text-decoration: none;
+      color: $single-nav-hover;
+    }
+  }
+  .nav-next a:after {
+    content: "\f105";
+    font-family: "Font Awesome 5 Free";
+    font-size: 1.3rem;
+    margin-left: .5em;
+  }
+  .nav-previous a::before {
+    content: "\f104";
+    font-family: "Font Awesome 5 Free";
+    font-size: 1.3rem;
+    margin-right: .5em;
+  }
+}

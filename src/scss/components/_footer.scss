@@ -3,6 +3,13 @@
   padding: 2em 0;
   color: $footer-widgets-txt-color;
   background-color: $footer-widgets-bg-color;
+  a {
+    color: $footer-widgets-link-color;
+  }
+  a:hover,
+  a:focus {
+    color: $footer-widgets-link-hover;
+  }
 }
 .footer-widgets h2.widget-title {
   color: $footer-widgets-txt-color;
@@ -14,5 +21,12 @@
   background-color: $footer-bg-color;
   p {
     font-size: 1.3rem;
+  }
+  a {
+    color: $footer-link-color;
+  }
+  a:hover,
+  a:focus {
+    color: $footer-link-hover;
   }
 }

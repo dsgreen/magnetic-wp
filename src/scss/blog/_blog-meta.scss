@@ -35,7 +35,8 @@
     margin-bottom: .5em;
     padding: .5em 1em;
     font-size: 1.1rem;
-    letter-spacing: .02em;
+    font-weight: normal;
+    letter-spacing: .05em;
     text-transform: uppercase;
     color: $tag-link;
     background-color: $tag-bg;
@@ -62,39 +63,4 @@
   a:focus {
     color: $meta-link-hover;
   }
-}
-// general
-.entry-header {
-  margin-bottom: 1em;
-}
-.entry-title {
-  margin: .25em 0;
-  // heading text styling
-  font-size: 3rem;
-  font-weight: 500;
-  line-height: 1.4;
-
-  // from index
-  a {
-    color: $copy-color;
-    text-decoration: none;
-    &:hover,
-    &:focus {
-          color: $main-nav-color;
-          border-bottom: 1px solid $main-nav-color;
-      //color: lighten($copy-color, 20%);
-      //border-bottom: 1px solid $gray-20;
-    }
-  }
-}
-.meta-wrap {
-  padding: 0 2em;
-}
-.post-thumbnail {
-  display: block;
-  margin-bottom: 2em;
-}
-.entry-footer {
-  padding-bottom: 2em;
-  border-bottom: 1px solid $gray-20;
 }
