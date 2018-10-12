@@ -11,7 +11,9 @@ body.body--transparent-header {
   z-index: 999;
   top: 0;
   width: 100%;
-  box-shadow: 0 0 .5rem $gray-10;
+  @if($header-shadow) {
+    box-shadow: 0 0 .5rem $gray-10;
+  }
 }
 body.body--transparent-header .site-header {
   position: absolute;

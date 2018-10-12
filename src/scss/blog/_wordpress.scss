@@ -30,17 +30,19 @@ img {
 
 // sidebar
 #secondary {
-  margin-top: 4em;
+  margin-top: 8em;
 }
 h2.widget-title {
-  margin: .7em 0 .7em;
-  padding: .4em .6em;
   font-size: 1.6rem;
   font-weight: 600;
   line-height: 1.4;
   letter-spacing: 0;
+}
+#secondary h2.widget-title {
+  margin: .7em 0 .7em;
+  padding: .4em .6em;
   background-color: lighten($light-gray-01, 2%);
-  border-left: .4rem solid $main-nav-color;
+  border-left: .2rem solid $main-nav-color;
 }
 .widget {
   li {

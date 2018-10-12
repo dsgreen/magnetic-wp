@@ -80,8 +80,8 @@
     text-decoration: none;
     &:hover,
     &:focus {
-          color: $main-nav-hover;
-          border-bottom: 1px solid $main-nav-hover;
+          color: $main-nav-color;
+          border-bottom: 1px solid $main-nav-color;
       //color: lighten($copy-color, 20%);
       //border-bottom: 1px solid $gray-20;
     }

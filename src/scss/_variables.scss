@@ -32,24 +32,25 @@ $accent: $medium-blue;
 // text
 $copy-color: $dark-gray-01;
 $heading-color: $dark-gray-01;
-$pre-footer-txt-color: $light-gray-01;
+$footer-widgets-txt-color: $copy-color;
 $footer-txt-color: $light-gray-01;
 
 // links
 $link-color: $medium-blue;
 $link-hover: lighten($link-color, 15%);
 $skiplink-bg: #fff;
-$meta-link-color:$gray-80;
+$meta-link-color: $gray-80;
 $meta-link-hover: $accent;
-$tag-link: $copy-color;
-$tag-bg: $light-gray-01;
+$tag-link: #fff;
+$tag-bg: $accent;
 $tag-link-hover: #fff;
-$tag-bg-hover: $accent;
+$tag-bg-hover: lighten($accent, 10%);
+// footer widget links
 
 // backgrounds
 $page-bg-color: #fff;
 $header-bg-color: #fff;
-$pre-footer-bg-color: $dark-gray-01;
+$footer-widgets-bg-color: $light-gray-01;
 $footer-bg-color: $dark-gray-01;
 $table-head-bg-color: #fff;
 $table-border-color: $light-gray-04;
@@ -81,6 +82,9 @@ $form-input-outline-hover: darken($form-input-outline-color,20%);
 // columns
 $column-padding: 1rem;
 $column-bottom-margin-mobile: 1.6rem;
+
+// other settings
+$header-shadow: false;
 
 // widths & media queries
 $max-container-width: 1200px;

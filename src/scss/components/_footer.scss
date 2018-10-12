@@ -1,8 +1,11 @@
-.pre-footer {
+.footer-widgets {
   margin-top: 1em;
   padding: 2em 0;
-  color: $pre-footer-txt-color;
-  background-color: $pre-footer-bg-color;
+  color: $footer-widgets-txt-color;
+  background-color: $footer-widgets-bg-color;
+}
+.footer-widgets h2.widget-title {
+  color: $footer-widgets-txt-color;
 }
 .site-footer {
   padding-top: 1.6em;
