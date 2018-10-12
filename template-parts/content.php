@@ -36,6 +36,7 @@
     <div class="entry-content">
     <?php _s_post_thumbnail('extra_large'); ?>
     <?php
+    if ( is_single() ) {
       the_content( sprintf(
         wp_kses(
           /* translators: %s: Name of current post. Only visible to screen readers */
@@ -53,11 +54,16 @@
         'before' => '<div class="page-links">' . esc_html__( 'Pages:', '_s' ),
         'after'  => '</div>',
       ) );
+    } else {
+	    the_excerpt();
+    }
     ?>
     </div>
     <footer class="entry-footer">
       <?php
-      _s_entry_footer();
+      if ( is_single() ) {
+        _s_entry_footer();
+      }
       ?>
     </footer>
   </div>
