@@ -63,9 +63,6 @@ if ( ! function_exists( '_s_setup' ) ) :
 			'primary' => esc_html__( 'Primary', '_s' ),
 		) );
 
-		// Register Custom Navigation Walker
-		require_once get_template_directory() . '/class-wp-bootstrap-navwalker.php';
-
 		/*
 		 * Switch default core markup for search form, comment form, and comments
 		 * to output valid HTML5.
@@ -101,6 +98,13 @@ if ( ! function_exists( '_s_setup' ) ) :
 			'flex-width'  => true,
 			'flex-height' => true,
 		) );
+
+		// Changing excerpt more link
+   function new_excerpt_more() {
+	   global $post;
+	   return '&hellip; <div class="more-wrap"><a href="'. get_permalink($post->ID) . '" title="Continue to ' . get_the_title() . '" class="more-link">' . get_the_title() . '</a></div>';
+   }
+   add_filter('excerpt_more', 'new_excerpt_more');
 
 		// Hide WordPress version number in HTML source
 		// original source/license: unknown
@@ -184,6 +188,7 @@ add_action( 'widgets_init', '_s_widgets_init' );
 function _s_scripts() {
   // Bootstrap, plugins, other
 //	wp_enqueue_style( 'bootstrap', get_stylesheet_directory_uri() . '/css/bootstrap.min.css', array(), '4.1.0' );
+	wp_enqueue_style( 'bootstrap-grid', get_stylesheet_directory_uri() . '/css/bootstrap-grid.min.css', array(), '4.1.3' );
 //  wp_enqueue_style( 'font-awesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css', array(), '4.7.0' );
   wp_enqueue_style( 'font-awesome', 'https://use.fontawesome.com/releases/v5.1.1/css/all.css', array(), '5.1.1' );
 
