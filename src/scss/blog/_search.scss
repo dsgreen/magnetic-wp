@@ -1,29 +1,22 @@
 .search-form {
-  white-space: nowrap;
+  margin-bottom: 2em;
+
+  display: flex;
+  flex: auto;
 
   label,
-  input {
-    display: inline-block;
-    width: auto;
-  }
-  input {
-    font-weight: normal;
-  }
+  input {}
   .search-field {
+    margin-bottom: 0;
     font-size: 1.3rem;
 
     //&::after {
     //  content: "";
     //}
-
   }
-  .search-submit {
-  }
+  .search-submit {}
   input.search-submit {
-    //display: inline-block;
-    //clear: both;
-    //width: auto;
-    margin: 0;
+    margin: 0 0 0 .25em;
     padding: 0.4em .75em;
     font-size: 1.2rem;
     font-weight: 400;
