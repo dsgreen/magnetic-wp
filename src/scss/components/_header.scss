@@ -17,9 +17,9 @@
     width: 220px;
     height: auto;
   }
-  // make header span full browser width
+  // set variable to none to make header span full browser width
   .container {
-    max-width: none;
+    max-width: $max-container-width-header;
   }
 }
 .body--transparent-header .site-header {
