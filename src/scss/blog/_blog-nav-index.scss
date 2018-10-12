@@ -40,8 +40,8 @@ body.search
     color: $pagination-color;
   }
   .page-numbers.current {
-    background-color: $page-bg-color;
-    border: solid .2rem $page-bg-color;
+    background-color: $pagination-current-bg-color;
+    border: solid .2rem $pagination-current-bg-color;
   }
   .page-numbers.next::after {
     content: "\f105";
