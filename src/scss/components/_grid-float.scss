@@ -1,15 +1,11 @@
 // basic float grid
 .row,
-.col {
+.col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {
   display: block;
 }
-.col {
+.col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {
   margin-bottom: $column-bottom-margin-mobile;
 }
-//form .row,
-//form .col {
-//  margin-bottom: 0;
-//}
 .row {
   @include clearfix;
 }
@@ -38,7 +34,7 @@
     padding: 0;
   }
   // nested cols
-  // this causes problems w/ alignment. revisit this in boilerplate
+  // this causes problems w/ alignment, revisit later
   /*
   .col .col:first-of-type {
     padding-left: 0;
@@ -48,79 +44,74 @@
   }
   */
   // columns
-  .col-1 {
+  .col-sm-1 {
     width: (1 / 12) * 100%;
   }
-  .col-2 {
+  .col-sm-2 {
     width: (2 / 12) * 100%;
   }
-  .col-3,
-  .quarter {
+  .col-sm-3 {
     width: (3 / 12) * 100%;
   }
-  .col-4,
-  .third {
+  .col-sm-4 {
     width: (4 / 12) * 100%;
   }
-  .col-5 {
+  .col-sm-5 {
     width: (5 / 12) * 100%;
   }
-  .col-6,
-  .half {
+  .col-sm-6 {
     width: (6 / 12) * 100%;
   }
-  .col-7 {
+  .col-sm-7 {
     width: (7 / 12) * 100%;
   }
-  .col-8,
-  .two-thirds {
+  .col-sm-8 {
     width: (8 / 12) * 100%;
   }
-  .col-9,
-  .three-quarters {
+  .col-sm-9 {
     width: (9 / 12) * 100%;
   }
-  .col-10 {
+  .col-sm-10 {
     width: (10 / 12) * 100%;
   }
-  .col-11 {
+  .col-sm-11 {
     width: (11 / 12) * 100%;
   }
-  .col-12 {
+  .col-sm-12 {
     width: 100%;
   }
   // offsets
-  .offset-1 {
+  .offset-sm-1 {
     margin-left: (1 / 12) * 100%;
   }
-  .offset-2 {
+  .offset-sm-2 {
     margin-left: (2 / 12) * 100%;
   }
-  .offset-3 {
+  .offset-sm-3 {
     margin-left: (3 / 12) * 100%;
   }
-  .offset-4 {
+  .offset-sm-4 {
     margin-left: (4 / 12) * 100%;
   }
-  .offset-5 {
+  .offset-sm-5 {
     margin-left: (5 / 12) * 100%;
   }
-  .offset-6 {
+  .offset-sm-6 {
     margin-left: (6 / 12) * 100%;
   }
-  .offset-7 {
+  .offset-sm-7 {
     margin-left: (7 / 12) * 100%;
   }
-  .offset-8 {
+  .offset-sm-8 {
     margin-left: (8 / 12) * 100%;
   }
-  .offset-9 {
+  .offset-sm-9 {
     margin-left: (9 / 12) * 100%;
   }
-  .offset-10 {
+  .offset-sm-10 {
     margin-left: (10 / 12) * 100%;
   }
-  .offset-11 {
+  .offset-sm-11 {
     margin-left: (11 / 12) * 100%;
   }
 }
