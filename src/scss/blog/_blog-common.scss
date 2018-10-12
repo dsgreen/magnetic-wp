@@ -1,41 +1,100 @@
-body.blog,
-body.single,
-body.archive
-{
-  .cat-links,
-  .comments-link,
-  .tags-links,
-  .entry-meta,
-  .entry-footer,
-  .comment-author,
-  .comment-metadata,
-  .comment-reply-link {
-    font-size: 1.4rem;
-    color: $gray-80;
-    a {
-      text-decoration: none;
-      color: $gray-80;
-    }
+.entry-meta,
+.entry-footer {
+  a {
+    font-weight: bold;
   }
-  .cat-links,
-  .tags-links {
-    display: block;
-    margin-top: 1em;
-    a {
-      padding: .5em 1em;
-      font-size: 1.1rem;
-      text-transform: uppercase;
-      color: $copy-color;
-      background-color: $light-gray-01;
-    }
+}
+// meta links, comment links
+.cat-links,
+.comments-link,
+.tags-links,
+.entry-meta,
+.entry-footer,
+.comment-author,
+.comment-metadata,
+.comment-reply-link {
+  font-size: 1.4rem;
+  color: $gray-80;
+  a {
+    text-decoration: none;
+    color: $meta-link-color;
   }
-  .entry-meta,
-  .entry-footer {
-    a {
-      font-weight: bold;
-    }
+  a:hover,
+  a:focus {
+    color: $meta-link-hover;
   }
-  .comments-link {
+}
+// category, tag links
+.cat-links,
+.tags-links {
+  display: block;
+  margin-top: 1em;
+  a {
     display: inline-block;
+    margin-right: .25em;
+    margin-bottom: .5em;
+    padding: .5em 1em;
+    font-size: 1.1rem;
+    letter-spacing: .02em;
+    text-transform: uppercase;
+    color: $tag-link;
+    background-color: $tag-bg;
   }
+  a:hover,
+  a:focus {
+    color: $tag-link-hover;
+    background-color: $tag-bg-hover;
+  }
+}
+// link to comments in post meta
+.comments-link {
+  display: inline-block;
+  margin-left: .5em;
+  a::before {
+    display: inline-block;
+    padding-right: .25em;
+    content: "\f075";
+    font-family: "Font Awesome 5 Free";
+    font-weight: normal;
+    color: $meta-link-hover;
+  }
+  a:hover,
+  a:focus {
+    color: $meta-link-hover;
+  }
+}
+// general
+.entry-header {
+  margin-bottom: 1em;
+}
+.entry-title {
+  margin: .25em 0;
+  // heading text styling
+  font-size: 3rem;
+  font-weight: 500;
+  line-height: 1.4;
+
+  // from index
+  a {
+    color: $copy-color;
+    text-decoration: none;
+    &:hover,
+    &:focus {
+          color: $main-nav-hover;
+          border-bottom: 1px solid $main-nav-hover;
+      //color: lighten($copy-color, 20%);
+      //border-bottom: 1px solid $gray-20;
+    }
+  }
+}
+.meta-wrap {
+  padding: 0 2em;
+}
+.post-thumbnail {
+  display: block;
+  margin-bottom: 2em;
+}
+.entry-footer {
+  padding-bottom: 2em;
+  border-bottom: 1px solid $gray-20;
 }

@@ -30,15 +30,15 @@ body.archive {
     font-size: 2.8rem;
     font-weight: 500;
     line-height: 1.4;
-    a {
-      color: $copy-color;
-      text-decoration: none;
-      &:hover,
-      &:focus {
-        color: lighten($copy-color, 20%);
-        border-bottom: 1px solid $gray-20;
-      }
-    }
+    //a {
+    //  color: $copy-color;
+    //  text-decoration: none;
+    //  &:hover,
+    //  &:focus {
+    //    color: lighten($copy-color, 20%);
+    //    border-bottom: 1px solid $gray-20;
+    //  }
+    //}
   }
   .entry-content {
     padding: 0 2em;
