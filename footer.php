@@ -10,32 +10,30 @@
  */
 
 ?>
-<? if (
-	// TODO remove if not needed
-
-  !is_page_template('page-big-image.php') &&
-	!is_page_template('page-big-image-full-width.php') &&
-	!is_page_template('page-big-image-max-width.php') &&
-	!is_front_page()
-) { ?>
-<?php } ?>
+<?// if (
+//  !is_page_template('page-big-image.php') &&
+//	!is_front_page()
+//) { ?>
+<?php //} ?>
+  </div><!-- from header -->
+</section><!-- from header -->
 
 <?php if ( is_active_sidebar( 'footer-1' ) || is_active_sidebar( 'footer-2' ) || is_active_sidebar( 'footer-3' ) ) : ?>
 <section class="pre-footer">
   <div class="container">
     <div class="row">
       <?php if ( is_active_sidebar( 'footer-1' ) ) { ?>
-      <div class="col-4 col">
+      <div class="col-sm-4">
 	      <?php dynamic_sidebar( 'footer-1' ); ?>
       </div>
       <?php } ?>
       <?php if ( is_active_sidebar( 'footer-2' ) ) { ?>
-      <div class="col-4 col">
+      <div class="col-sm-4">
 	      <?php dynamic_sidebar( 'footer-2' ); ?>
       </div>
       <?php } ?>
       <?php if ( is_active_sidebar( 'footer-3' ) ) { ?>
-      <div class="col-4 col">
+      <div class="col-sm-4">
 	      <?php dynamic_sidebar( 'footer-3' ); ?>
       </div>
       <?php } ?>
@@ -47,7 +45,7 @@
 <footer class="site-footer" role="contentinfo">
 	<div class="container site-info">
     <div class="row">
-      <div class="half col">
+      <div class="col-sm-6">
 	      <?php if ( is_active_sidebar( 'footer-text' ) ) { ?>
           <?php dynamic_sidebar( 'footer-text' ); ?>
 	      <?php } else { ?>
@@ -57,7 +55,7 @@
           <a href="<?php echo esc_url( __( 'https://github.com/dsgreen/wp-base', '_s') ); ?>"><?php esc_html_e('WP Base', '_s'); ?></a>.</p>
 	      <?php } ?>
       </div>
-      <div class="half col">
+      <div class="col-sm-6">
         <p class="text-right"><a href="#top"><i class="fas fa-angle-up fa-2x" title="<?php esc_html_e( 'Back to top', '_s' ); ?>"></i></a></p>
       </div>
     </div>

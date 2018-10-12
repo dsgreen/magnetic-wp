@@ -8,10 +8,7 @@
  */
 
 get_header(); ?>
-  <section class="site-content container" id="content">
-    <main class="site-main" id="main" role="main">
-
-		<?php
+<?php
 		if ( have_posts() ) : ?>
 
 			<header class="page-header">
@@ -41,8 +38,8 @@ get_header(); ?>
 			get_template_part( 'template-parts/content', 'none' );
 
 		endif; ?>
-
-		</main>
-  </section>
+  </main><!-- from header -->
+</div><!-- from header -->
 <?php
+get_sidebar();
 get_footer();

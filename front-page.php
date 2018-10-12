@@ -11,10 +11,12 @@ get_header();
 
 <?php while ( have_posts() ) : the_post(); ?>
 <?php get_template_part( 'template-parts/image-header' ); ?>
-<section class="site-content container" id="content">
-  <div class="row">
-    <main class="col-12 col site-main" id="main" role="main">
 
+  <?php if ( !is_active_sidebar( 'sidebar-1' ) ) : ?>
+  <main class="col-sm-10 offset-sm-1 site-main" id="main" role="main">
+	<?php else : ?>
+  <main class="col-sm-9 site-main" id="main" role="main">
+		<?php endif; ?>
 			<?php get_template_part( 'template-parts/content', 'page' ); ?>
 
 			<?php
@@ -27,7 +29,6 @@ get_header();
 			<?php endwhile; // End of the loop. ?>
 
     </main>
-  </div>
-</section>
-<?php get_footer();
-?>
+<?php
+get_sidebar();
+get_footer();

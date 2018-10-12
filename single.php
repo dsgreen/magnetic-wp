@@ -8,11 +8,6 @@
  */
 
 get_header(); ?>
-<section class="site-content container" id="content">
-  <div class="row">
-    <div class="col col-8<?php if (!is_active_sidebar( 'sidebar-1' ) ) { echo " offset-2"; } ?>">
-      <main class="site-main" id="main" role="main">
-
       <?php
       while ( have_posts() ) : the_post();
 
@@ -27,11 +22,8 @@ get_header(); ?>
 
       endwhile; // End of the loop.
       ?>
-
-      </main>
-    </div>
-    <?php get_sidebar(); ?>
-  </div>
-</section>
+  </main><!-- from header -->
+</div><!-- from header -->
 <?php
+get_sidebar();
 get_footer();
