@@ -6,8 +6,8 @@
 }
 // meta links, comment links
 .cat-links,
-.comments-link,
 .tags-links,
+.comments-link,
 .entry-meta,
 .entry-footer,
 .comment-author,
@@ -38,13 +38,27 @@
     font-weight: normal;
     letter-spacing: .05em;
     text-transform: uppercase;
-    color: $tag-link;
-    background-color: $tag-bg;
+    color: $cat-link;
+    background-color: $cat-bg;
   }
   a:hover,
   a:focus {
-    color: $tag-link-hover;
-    background-color: $tag-bg-hover;
+    color: $cat-link-hover;
+    background-color: $cat-bg-hover;
+  }
+}
+.tags-links {
+  a {
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: none;
+    color: $tag-link;
+    background-color: $tag-bg;
+    &:hover,
+    &:focus {
+      color: $tag-link-hover;
+      background-color: $tag-bg-hover;
+    }
   }
 }
 // link to comments in post meta

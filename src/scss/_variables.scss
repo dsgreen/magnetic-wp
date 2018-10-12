@@ -59,10 +59,10 @@ $heading-color: $copy-color;
 $footer-widgets-txt-color: $light;
 $footer-txt-color: $light;
 
-// backgrounds
+// page section backgrounds
 $page-bg-color: $light;
 $header-bg-color: $light;
-$footer-widgets-bg-color: $accent-light;
+$footer-widgets-bg-color: $accent-light; // try - brand
 $footer-bg-color: $dark;
 $bg-primary: $light;
 $bg-alt: $accent-dark;
@@ -76,12 +76,17 @@ $entry-title-link: $copy-color;
 $entry-title-hover: $brand-hover;
 $meta-link-color: $copy-color;
 $meta-link-hover: $brand-hover;
-$tag-link: $light;
-$tag-bg: $brand;
-$tag-link-hover: $light;
-$tag-bg-hover: $brand-hover;
+$cat-link: $light;
+$cat-bg: $brand;
+$cat-link-hover: $light;
+$cat-bg-hover: $brand-hover;
 $read-more-bg: $light-btn-bg;
 $read-more-hover: $brand-hover;
+$tag-link: $link-color;
+$tag-bg: $light-btn-bg;
+$tag-link-hover: $link-hover;
+$tag-bg-hover: $light-btn-bg;
+$comment-meta-link-color: $copy-color;
 $single-nav-color: $copy-color;
 $single-nav-hover: $brand-hover;
 $footer-widgets-link-color: $link-color;
@@ -95,6 +100,7 @@ $pagination-color: $copy-color;
 $pagination-hover-color: $light;
 $pagination-btn-brdr: solid .2rem $light-btn-bg;
 $pagination-bg-color: $light-btn-bg;
+$pagination-current-bg-color: #fff;
 $pagination-bg-hover-color: $brand;
 
 // main navigation
@@ -124,6 +130,8 @@ $form-input-outline-hover: darken($form-input-outline-color, 20%);
 $table-head-bg-color: $light;
 $table-border-color: $light-gray-01;
 $post-bottom-border-color: $light-gray-02;
+$widget-title-bg-color: $light-btn-bg;
+$widget-title-border: .2rem solid $copy-color;
 
 // columns - for custom grid
 $column-padding: 1rem;
