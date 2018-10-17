@@ -62,7 +62,7 @@ $footer-txt-color: $light;
 // page section backgrounds
 $page-bg-color: $light;
 $header-bg-color: $light;
-$footer-widgets-bg-color: $accent-light; // try - brand
+$footer-widgets-bg-color: $brand;
 $footer-bg-color: $dark;
 $bg-primary: $light;
 $bg-alt: $accent-dark;
@@ -89,11 +89,15 @@ $tag-bg-hover: $light-btn-bg;
 $comment-meta-link-color: $copy-color;
 $single-nav-color: $copy-color;
 $single-nav-hover: $brand-hover;
-$footer-widgets-link-color: $link-color;
-$footer-widgets-link-hover: $link-hover;
+$footer-widgets-link-color: $light;
+$footer-widgets-link-hover: $dark;
 $footer-link-color: $light;
 $footer-link-hover: $link-hover;
-$text-decoration: none;
+$text-decoration-global: none;
+//$text-decoration-content: underline;
+//$text-decoration-sidebar: none;
+$text-decoration-footer-widgets: underline;
+$text-decoration-footer: underline;
 
 // pagination links
 $pagination-color: $copy-color;
@@ -121,6 +125,8 @@ $btn-txt-color: $light;
 $btn-bg-color: $brand;
 $btn-inverse-txt-color: $copy-color;
 $btn-inverse-border-color: $copy-color;
+$btn-alt-txt-color: $light;
+$btn-alt-bg-color: $dark;
 $btn-border-width: .2rem;
 $btn-border-radius: 0;
 
