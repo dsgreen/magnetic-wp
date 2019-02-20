@@ -54,7 +54,7 @@ if ( ! function_exists( '_s_setup' ) ) :
 		add_filter( 'image_size_names_choose', 'custom_image_sizes' );
 		function custom_image_sizes( $sizes ) {
 			return array_merge( $sizes, array(
-				'extra_large' => __( 'Extra Large' )
+				'extra_large' => __( 'Extra Large', '_s' )
 			) );
 		}
 
