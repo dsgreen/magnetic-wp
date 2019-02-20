@@ -1,26 +1,27 @@
 {
-  "name": "magnetic-1",
+  "name": "magnetic",
   "version": "1.0.0",
-  "description": "_s with styles",
+  "private": true,
+  "description": "WP base theme for commercial projects.",
   "main": "index.php",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://bitbucket.org/dsgreen/magnetic-1.git"
+    "url": "git+https://github.com/dsgreen/magnetic.git"
   },
   "author": "Douglas Green",
   "license": "GPL-2.0",
-  "homepage": "https://bitbucket.org/dsgreen/magnetic-1#readme",
+  "homepage": "https://github.com/dsgreen/magnetic",
   "devDependencies": {
-    "bootstrap": "^4.1.2",
+    "bootstrap": "^4.3.1",
     "grunt": "^1.0.3",
     "grunt-contrib-uglify": "^3.4.0",
     "grunt-contrib-watch": "^1.1.0",
     "grunt-sass": "2.1.0",
     "jquery": "^3.3.1",
-    "normalize.css": "^8.0.0",
-    "popper.js": "^1.14.4"
+    "normalize.css": "^8.0.1",
+    "popper.js": "^1.14.7"
   }
 }
