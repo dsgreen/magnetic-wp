@@ -2,7 +2,7 @@
   "name": "magnetic",
   "version": "1.0.0",
   "private": true,
-  "description": "WP base theme for commercial projects.",
+  "description": "Base WordPress theme for commercial projects.",
   "main": "index.php",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

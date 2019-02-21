@@ -1,9 +1,9 @@
 /*!
-Theme Name: magnetic-1
-Theme URI: http://example.com
+Theme Name: Magnetic
+Theme URI: https://douglasgreen.com/
 Author: Douglas Green
 Author URI: https://douglasgreen.com/
-Description: A blank starter theme based on underscores (_s).
+Description: Base WordPress theme for commercial projects.
 Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
@@ -16,6 +16,7 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 
 @import "variables";
 @import "vendor/normalize";
+
 @import "mixins/utils";
 @import "mixins/lists";
 @import "mixins/links";
