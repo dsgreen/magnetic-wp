@@ -10,13 +10,14 @@
  */
 
 ?>
-<?// if (
-//  !is_page_template('page-big-image.php') &&
-//	!is_front_page()
-//) { ?>
-<?php //} ?>
+<?php if (
+	!is_page_template('page-big-image.php') &&
+	!is_page_template('page-big-image-full-width.php') &&
+	!is_page_template('page-big-image-max-width.php')
+) { ?>
   </div><!-- from header -->
 </section><!-- from header -->
+<?php } ?>
 
 <?php if ( is_active_sidebar( 'footer-1' ) || is_active_sidebar( 'footer-2' ) || is_active_sidebar( 'footer-3' ) ) : ?>
 <section class="footer-widgets">
