@@ -12,10 +12,10 @@ add_image_size( 'medium-large', 1024, 683, array( 'center', 'center') );
 add_filter( 'image_size_names_choose', 'my_custom_sizes' );
 function my_custom_sizes( $sizes ) {
 		return array_merge( $sizes, array(
-				'grid-sm' => __( 'Grid Small' ),
-				'grid-md' => __( 'Grid Medium' ),
-				'extra-large' => __( 'Extra Large' ),
-				'medium-large' => __( 'Medium Large' )
+				'grid-sm' => __( 'Grid Small', '_s' ),
+				'grid-md' => __( 'Grid Medium', '_s' ),
+				'extra-large' => __( 'Extra Large', '_s' ),
+				'medium-large' => __( 'Medium Large', '_s' )
 		) );
 }
 /*
