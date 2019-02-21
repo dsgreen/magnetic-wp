@@ -201,14 +201,17 @@ add_action( 'widgets_init', '_s_widgets_init' );
  * Enqueue scripts and styles.
  */
 function _s_scripts() {
-  // Bootstrap, plugins, other
-//	wp_enqueue_style( 'bootstrap', get_stylesheet_directory_uri() . '/css/bootstrap.min.css', array(), '4.1.0' );
+  /*
+   * Header scripts
+   * Bootstrap, plugins, other
+   */
+	// OPTIONAL: wp_enqueue_style( 'bootstrap', get_stylesheet_directory_uri() . '/css/bootstrap.min.css', array(), '4.1.3' );
 	wp_enqueue_style( 'bootstrap-grid', get_stylesheet_directory_uri() . '/css/bootstrap-grid.min.css', array(), '4.1.3' );
-//  wp_enqueue_style( 'font-awesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css', array(), '4.7.0' );
+  // ALTERNATE: wp_enqueue_style( 'font-awesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css', array(), '4.7.0' );
   wp_enqueue_style( 'font-awesome', 'https://use.fontawesome.com/releases/v5.1.1/css/all.css', array(), '5.1.1' );
 
-	// plugin styles: could opt to put in header-{custom}.php files for select pages
-  //wp_enqueue_style( 'custom-style', get_template_directory_uri() . '/css/your-custom.css', array(), '1.0.0' );
+	// custom plugin styles: could opt to put in header-{custom}.php files for select pages
+  // EXAMPLE: wp_enqueue_style( 'custom-style', get_template_directory_uri() . '/css/your-custom.css', array(), '1.0.0' );
 
   // _s/main site styles (follows Bootstrap & plugins in case any overrides in main site styles)
   wp_enqueue_style( 'main', get_stylesheet_uri() );
@@ -216,11 +219,15 @@ function _s_scripts() {
   // Modernizr (SVG, media query, add CSS classes, Modernizr.testStyles() build)
   wp_enqueue_script( 'modernizr_js', get_template_directory_uri() . '/js/modernizr.custom.07230.js', array(), '2.8.3' );
 
-  // footer scripts
-  // note: 'jquery' dependency removed from Bootstrap array to load custom jQuery in footer (not the bundled WP version in header).
+  /*
+   * Footer scripts
+   * Note: 'jquery' dependency removed from Bootstrap and others to load custom jQuery in footer (not the bundled WP version in header).
+   * Some plugins will require jQuery and the bundled WP version will get loaded in the header. If that's the case, remove the jQuery line below to avoid loading it twice.
+   */
 	wp_enqueue_script( 'jquery_js', get_template_directory_uri() . '/js/jquery.min.js', array(), '3.3.1', TRUE );
-//	wp_enqueue_script( 'popper_js', get_template_directory_uri() . '/js/popper.min.js', array(), '1.14.3', TRUE );
-//	wp_enqueue_script( 'bootstrap_js', get_template_directory_uri() . '/js/bootstrap.min.js', array(), '4.1.0', TRUE );
+	// OPTIONAL: wp_enqueue_script( 'popper_js', get_template_directory_uri() . '/js/popper.min.js', array(), '1.14.3', TRUE );
+	// OPTIONAL: wp_enqueue_script( 'bootstrap_js', get_template_directory_uri() . '/js/bootstrap.min.js', array(), '4.1.0', TRUE );
+
 	// plugin scripts, followed by main site script
 	wp_enqueue_script( 'jquery_scrollTo', get_template_directory_uri() . '/js/jquery.scrollTo.min.js', array(), '2.1.2', TRUE );
 	wp_enqueue_script( 'jquery_localScroll', get_template_directory_uri() . '/js/jquery.localScroll.min.js', array(), '2.0.0', TRUE );
@@ -267,8 +274,7 @@ if ( class_exists( 'WooCommerce' ) ) {
 }
 
 /*
- * remove WordPress emoji script from head
- * original source/license: unknown
+ * Remove WordPress emoji script from head.
  */
 /*
 remove_action('wp_head', 'print_emoji_detection_script', 7);
