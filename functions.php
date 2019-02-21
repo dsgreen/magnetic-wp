@@ -24,7 +24,9 @@ if ( ! function_exists( '_s_setup' ) ) :
 		 */
 		load_theme_textdomain( '_s', get_template_directory() . '/languages' );
 
-		// Add default posts and comments RSS feed links to head.
+		/*
+		 * Add default posts and comments RSS feed links to head.
+		 */
 		add_theme_support( 'automatic-feed-links' );
 
 		/*
@@ -36,7 +38,7 @@ if ( ! function_exists( '_s_setup' ) ) :
 		add_theme_support( 'title-tag' );
 
 		/*
-		 * Add wide image support
+		 * Add wide image support.
 		 */
 		add_theme_support( 'align-wide' );
 
@@ -47,10 +49,14 @@ if ( ! function_exists( '_s_setup' ) ) :
 		 */
 		add_theme_support( 'post-thumbnails' );
 
-    // custom image sizes
+    /*
+     * Register custom image sizes.
+     */
 		add_image_size( 'extra_large', 1400, 1400 );
 
-		// add sizes to media uploader
+		/*
+		 * Add sizes for use in attachment display settings menu.
+		 */
 		add_filter( 'image_size_names_choose', 'custom_image_sizes' );
 		function custom_image_sizes( $sizes ) {
 			return array_merge( $sizes, array(
@@ -58,7 +64,9 @@ if ( ! function_exists( '_s_setup' ) ) :
 			) );
 		}
 
-		// This theme uses wp_nav_menu() in one location.
+		/*
+		 * Register main navigation menu.
+		 */
 		register_nav_menus( array(
 			'primary' => esc_html__( 'Primary', '_s' ),
 		) );
@@ -75,16 +83,20 @@ if ( ! function_exists( '_s_setup' ) ) :
 			'caption',
 		) );
 
-		// post formats as needed
+		// post formats here as needed
 		// ...
 
-		// Set up the WordPress core custom background feature.
+		/*
+		 * Set up the WordPress core custom background feature.
+		 */
 		add_theme_support( 'custom-background', apply_filters( '_s_custom_background_args', array(
 			'default-color' => 'ffffff',
 			'default-image' => '',
 		) ) );
 
-		// Add theme support for selective refresh for widgets.
+		/*
+		 * Add theme support for selective refresh for widgets.
+		 */
 		add_theme_support( 'customize-selective-refresh-widgets' );
 
 		/**
@@ -99,15 +111,18 @@ if ( ! function_exists( '_s_setup' ) ) :
 			'flex-height' => true,
 		) );
 
-		// Changing excerpt more link
-   function new_excerpt_more() {
-	   global $post;
-	   return '&hellip; <div class="more-wrap"><a href="'. get_permalink($post->ID) . '" title="Continue to ' . get_the_title() . '" class="more-link">' . get_the_title() . '</a></div>';
-   }
-   add_filter('excerpt_more', 'new_excerpt_more');
+		/*
+		 * Change the excerpt 'more' link.
+		 */
+	   function new_excerpt_more() {
+		   global $post;
+		   return '&hellip; <div class="more-wrap"><a href="'. get_permalink($post->ID) . '" title="Continue to ' . get_the_title() . '" class="more-link">' . get_the_title() . '</a></div>';
+	   }
+	   add_filter('excerpt_more', 'new_excerpt_more');
 
-		// Hide WordPress version number in HTML source
-		// original source/license: unknown
+		/*
+		 * Remove the WordPress version number from the HTML source.
+		 */
 	  add_filter( 'the_generator', '__return_null' );
 	}
 endif;
