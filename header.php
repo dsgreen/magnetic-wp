@@ -19,7 +19,7 @@
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <?php wp_head(); ?>
 </head>
-<?php  if (
+<?php if (
     is_page_template('page-big-image.php') ||
     is_page_template('page-big-image-full-width.php') ||
     is_page_template('page-big-image-max-width.php')
@@ -52,9 +52,9 @@
 </header>
 
 <?php if (
-  !is_page_template('page-big-image.php') &&
-  !is_page_template('page-big-image-full-width.php') &&
-  !is_page_template('page-big-image-max-width.php')
+    !is_page_template('page-big-image.php') &&
+    !is_page_template('page-big-image-full-width.php') &&
+    !is_page_template('page-big-image-max-width.php')
 ) { ?>
 <section class="site-content container" id="content">
   <div class="row">
