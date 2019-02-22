@@ -53,7 +53,7 @@ endif;
 
 if ( ! function_exists( '_s_comments_link' ) ) :
 	/**
-	 * Outputs comments link
+	 * Prints HTML with a link to the comments for a post.
 	 */
 	function _s_comments_link() {
     if ( ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
@@ -78,27 +78,41 @@ if ( ! function_exists( '_s_comments_link' ) ) :
 endif;
 
 if ( ! function_exists( '_s_print_categories' ) ) :
-  function _s_print_categories($cat_label='') {
+	/**
+	 * Prints HTML with a list of categories for the post.
+   *
+   * @param Boolean $list_label
+   * Set $list_label parameter to true to output the text label pre-pended to the list.
+	 */
+  function _s_print_categories($list_label = false) {
 	  // Hide category and tag text for pages.
 	  if ( 'post' === get_post_type() ) {
 		  /* translators: used between list items, there is a space after the comma */
 		  $categories_list = get_the_category_list(esc_html__(' ', '_s'));
 		  if ($categories_list) {
 			  /* translators: 1: list of categories. */
-			  printf('<span class="cat-links">' . esc_html__($cat_label . '%1$s', '_s') . '</span>', $categories_list); // WPCS: XSS OK.
+			  printf('<span class="cat-links">' . esc_html__(
+			      $list_title = ($list_label ? 'Categories: ' : '') . '%1$s', '_s') . '</span>', $categories_list); // WPCS: XSS OK.
 		  }
 	  }
   }
 endif;
 if ( ! function_exists( '_s_print_tags' ) ) :
-	function _s_print_tags($tag_label='') {
+	/**
+	 * Prints HTML with a list of tags for the post.
+   *
+	 * @param Boolean $list_label
+	 * Set $list_label parameter to true to output the text label pre-pended to the list.
+	 */
+	function _s_print_tags($list_label = false) {
 		// Hide category and tag text for pages.
 		if ( 'post' === get_post_type() ) {
 			/* translators: used between list items, there is a space after the comma */
 			$tags_list = get_the_tag_list('', esc_html_x(' ', 'list item separator', '_s'));
 			if ($tags_list) {
 				/* translators: 1: list of tags. */
-				printf('<span class="tags-links">' . esc_html__($tag_label . '%1$s', '_s') . '</span>', $tags_list); // WPCS: XSS OK.
+				printf('<span class="tags-links">' . esc_html__(
+						$list_title = ($list_label ? 'Tags: ' : '') . '%1$s', '_s') . '</span>', $tags_list); // WPCS: XSS OK.
 			}
 		}
   }
@@ -106,11 +120,11 @@ endif;
 
 if ( ! function_exists( '_s_entry_footer' ) ) :
 	/**
-	 * Prints HTML with meta information for the categories, tags and comments.
+	 * Prints HTML with meta information for the categories and tags, and post edit link.
 	 */
 	function _s_entry_footer() {
-    _s_print_categories("Posted in: ");
-    _s_print_tags("Tagged: ");
+    _s_print_categories(true);
+    _s_print_tags(true);
 
 		edit_post_link(
 			sprintf(
