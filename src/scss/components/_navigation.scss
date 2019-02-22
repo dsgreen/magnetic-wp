@@ -38,6 +38,7 @@
     margin-left: .5em;
   }
 }
+// Use alternate navigation color for page with image background
 .body--transparent-header .main-navigation {
   a {
     color: $main-nav-color--transparent-header;
@@ -47,15 +48,13 @@
     }
   }
 }
-.site-header.scrolled .main-navigation {
-  > a {
+// Navigation is sticky and reverts to normal color scheme after page is scrolled
+.body--transparent-header .site-header.scrolled .main-navigation {
+  a {
     color: $main-nav-color;
-    &:hover,
-    &:focus {
-      color: $main-nav-hover;
-    }
   }
 }
+
 
 // navigation item with button styling
 .main-nav-btn a,
@@ -171,16 +170,20 @@
       border-bottom: $sub-menu-brdr solid $sub-menu-brdr-color;
     }
   }
+  // Make sure sub navigation items are the right color when scrolled with transparent header
+  .body--transparent-header .site-header.scrolled .main-navigation {
+    .sub-menu a {
+      color: $sub-menu-color;
+      &:hover,
+      &:focus {
+        color: $sub-menu-color;
+      }
+    }
+  }
   .menu-item-has-children {
     position: relative;
   }
-  // TODO to be removed, synch w/ above
-  //.menu-item-has-children > a::after {
-  //  content: "\f107";
-  //  font-family: "Font Awesome 5 Free";
-  //  font-weight: 700;
-  //  margin-left: .5em;
-  //}
+  // Use right angle for sub menu items, desktop
   .menu-item-has-children .menu-item-has-children > a::after {
     content: "\f105";
   }
