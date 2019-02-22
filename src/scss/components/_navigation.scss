@@ -31,18 +31,11 @@
       color: $main-nav-hover;
     }
   }
-  .sub-menu a {
-    color: $sub-menu-color;
-    background-color: $sub-menu-bg-color;
-    &:hover,
-    &:focus {
-      color: $sub-menu-color;
-      background-color: lighten($sub-menu-bg-color, 20%);
-    }
-  }
-  .sub-menu li {
-    text-transform: none;
-    border-bottom: $sub-menu-brdr solid $sub-menu-brdr-color;
+  .menu-item-has-children > a::after {
+    content: "\f107";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 700;
+    margin-left: .5em;
   }
 }
 .body--transparent-header .main-navigation {
@@ -164,16 +157,30 @@
     li {
       padding-top: 0;
     }
+    .sub-menu a {
+      color: $sub-menu-color;
+      background-color: $sub-menu-bg-color;
+      &:hover,
+      &:focus {
+        color: $sub-menu-color;
+        background-color: lighten($sub-menu-bg-color, 20%);
+      }
+    }
+    .sub-menu li {
+      text-transform: none;
+      border-bottom: $sub-menu-brdr solid $sub-menu-brdr-color;
+    }
   }
   .menu-item-has-children {
     position: relative;
   }
-  .menu-item-has-children > a::after {
-    content: "\f107";
-    font-family: "Font Awesome 5 Free";
-    font-weight: 700;
-    margin-left: .5em;
-  }
+  // TODO to be removed, synch w/ above
+  //.menu-item-has-children > a::after {
+  //  content: "\f107";
+  //  font-family: "Font Awesome 5 Free";
+  //  font-weight: 700;
+  //  margin-left: .5em;
+  //}
   .menu-item-has-children .menu-item-has-children > a::after {
     content: "\f105";
   }
@@ -200,7 +207,7 @@
   // position 2nd level (and greater) menus
   .sub-menu .sub-menu {
     top: 0;
-    left: 15.8rem;
+    left: 16rem;
   }
   // focus styles need some JS to make menu stay open
   // doesn't stay focused with just CSS
