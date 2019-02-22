@@ -13,6 +13,9 @@
   },
   "author": "Douglas Green",
   "license": "GPL-2.0",
+  "bugs": {
+    "url": "https://github.com/dsgreen/magnetic/issues"
+  },
   "homepage": "https://github.com/dsgreen/magnetic",
   "devDependencies": {
     "bootstrap": "^4.3.1",
