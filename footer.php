@@ -11,9 +11,9 @@
 
 ?>
 <?php if (
-	!is_page_template('page-big-image.php') &&
-	!is_page_template('page-big-image-full-width.php') &&
-	!is_page_template('page-big-image-max-width.php')
+	!is_page_template('page-image-header.php') &&
+	!is_page_template('page-image-header-no-sidebar.php') &&
+	!is_page_template('page-image-header-max-width.php')
 ) { ?>
   </div><!-- from header -->
 </section><!-- from header -->

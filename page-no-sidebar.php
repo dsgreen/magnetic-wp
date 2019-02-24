@@ -1,8 +1,8 @@
 <?php
 /**
  *
- * Template Name: Full Width
- * Full width page, no sidebar.
+ * Template Name: No Sidebar
+ * Page with no sidebar.
  *
  * @package _s
  */

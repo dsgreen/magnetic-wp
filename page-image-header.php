@@ -1,8 +1,8 @@
 <?php
 /**
  *
- * Template Name: Big Image Header
- * Page with a big image header.
+ * Template Name: Background Image Header
+ * Page with a background image header.
  *
  * @package _s
  */

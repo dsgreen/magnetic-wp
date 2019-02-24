@@ -1,8 +1,8 @@
 <?php
 /**
  *
- * Template Name: Big Image Header, Max Width
- * Page with a big image header.
+ * Template Name: Background Image Header, Max Width
+ * Page with a background image header, maximum width.
  *
  * @package _s
  */

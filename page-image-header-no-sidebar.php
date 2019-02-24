@@ -1,8 +1,8 @@
 <?php
 /**
  *
- * Template Name: Big Image Header, Full Width
- * Page with a big image header.
+ * Template Name: Background Image Header, No Sidebar
+ * Page with a background image header, no sidebar.
  *
  * @package _s
  */
