@@ -1,7 +1,9 @@
+// Add top padding for fixed header
 body {
-  // top padding for fixed header
   padding-top: 5rem;
 }
+// Override top padding for transparent header -
+// We want a background image under the navigation.
 body.body--transparent-header {
   padding-top: 0;
 }
