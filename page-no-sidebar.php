@@ -8,7 +8,10 @@
  */
 
 get_header(); ?>
-    <main class="col-12 col site-main" id="main" role="main">
+<section class="site-content container" id="content">
+  <div class="row">
+    <div class="col-12">
+      <main class="site-main" id="main" role="main">
 
 			<?php
 			while ( have_posts() ) : the_post();
@@ -23,6 +26,9 @@ get_header(); ?>
 			endwhile; // End of the loop.
 			?>
 
-		</main>
+		  </main>
+    </div>
+  </div>
+</section>
 <?php
 get_footer();

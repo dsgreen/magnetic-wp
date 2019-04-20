@@ -62,9 +62,9 @@
 <section class="site-content container" id="content">
   <div class="row">
 	  <?php
-    // no sidebar active, center main column
+    // no sidebar active
     if ( ! is_active_sidebar( 'sidebar-1' ) ) : ?>
-    <div class="col-md-10 offset-sm-1">
+    <div class="col-12">
     <?php
     // else, we have a sidebar
     else : ?>
