@@ -1,12 +1,14 @@
 // if no js, menu will be hidden - need to override
-.no-js .main-navigation.hidden {
+.no-js .main-navigation.hidden,
+.no-js .mobile-navigation.hidden {
   display: block !important;
 }
 // don't need nav toggle if no js
 .no-js .nav-toggle {
   display: none;
 }
-.main-navigation {
+.main-navigation,
+.mobile-navigation {
   ul {
     @include list-nostyle;
     margin: 0;
@@ -39,7 +41,8 @@
   }
 }
 // Use alternate navigation color for page with image background
-.body--transparent-header .main-navigation {
+.body--transparent-header .main-navigation,
+.body--transparent-header .mobile-navigation {
   a {
     color: $main-nav-color--transparent-header;
     &:hover,
@@ -49,7 +52,8 @@
   }
 }
 // Navigation is sticky and reverts to normal color scheme after page is scrolled
-.body--transparent-header .site-header.scrolled .main-navigation {
+.body--transparent-header .site-header.scrolled .main-navigation,
+.body--transparent-header .site-header.scrolled .mobile-navigation {
   a {
     color: $main-nav-color;
   }
@@ -82,6 +86,14 @@
 
 // nav toggle button and mobile only adjustments
 @media (max-width: 767px) {
+  // show mobile nav
+  .mobile-navigation {
+    display: block;
+  }
+  // hide desktop nav
+  .main-navigation {
+    display: none;
+  }
   .nav-toggle {
     position: absolute;
     top: 2.25rem;
@@ -135,12 +147,20 @@
     }
   }
 
-  .main-navigation ul {
+  .mobile-navigation ul {
     margin-bottom: 1em;
   }
 }
 // tablet and up, header & nav styles
 @media screen and (min-width: 768px) {
+  // hide mobile nav & toggle
+  .mobile-navigation {
+    display: none;
+  }
+  // show desktop nav
+  .main-navigation {
+    display: block;
+  }
   .brand {
     float: left;
   }
@@ -225,7 +245,8 @@
   }
 }
 // debug
-.main-navigation {
+.main-navigation,
+.mobile-navigation {
   //li {border: 1px solid aqua;}
   //a {border: 1px solid red;}
 }
