@@ -39,6 +39,16 @@
 			<span class="bar"></span>
 			<span class="bar"></span>
 		</button>
+    <nav class="mobile-navigation hidden" role="navigation">
+			<?php wp_nav_menu( array(
+				'theme_location'    => 'primary',
+				'menu'              => 'primary',
+				'container'         => '',
+				'container_class'   => '',
+				'container_id'      => '',
+				'menu_class'        => ''
+			)); ?>
+    </nav>
 		<nav class="main-navigation hidden" role="navigation">
 			<?php wp_nav_menu( array(
 					'theme_location'    => 'primary',
