@@ -11,12 +11,15 @@
 
 ?>
 <?php if (
+	// these templates have special markup, exclude from the following
+  // closing tags from header.php
 	!is_page_template('page-image-header.php') &&
 	!is_page_template('page-image-header-no-sidebar.php') &&
-	!is_page_template('page-image-header-max-width.php')
+	!is_page_template('page-image-header-max-width.php') &&
+	!is_page_template('page-no-sidebar.php')
 ) { ?>
-  </div><!-- from header -->
-</section><!-- from header -->
+  </div>
+</section>
 <?php } ?>
 
 <?php if ( is_active_sidebar( 'footer-1' ) || is_active_sidebar( 'footer-2' ) || is_active_sidebar( 'footer-3' ) ) : ?>

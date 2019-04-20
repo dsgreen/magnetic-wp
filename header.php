@@ -20,6 +20,7 @@
 <?php wp_head(); ?>
 </head>
 <?php if (
+    // add a page class to style header & navigation with a featured background image
     is_page_template('page-image-header.php') ||
     is_page_template('page-image-header-no-sidebar.php') ||
     is_page_template('page-image-header-max-width.php')
@@ -52,20 +53,22 @@
 </header>
 
 <?php if (
+    // these templates have special markup, exclude from the following
     !is_page_template('page-image-header.php') &&
     !is_page_template('page-image-header-no-sidebar.php') &&
-    !is_page_template('page-image-header-max-width.php')
+    !is_page_template('page-image-header-max-width.php') &&
+    !is_page_template('page-no-sidebar.php')
 ) { ?>
 <section class="site-content container" id="content">
   <div class="row">
 	  <?php
     // no sidebar active, center main column
     if ( ! is_active_sidebar( 'sidebar-1' ) ) : ?>
-    <div class="col-sm-10 offset-sm-1">
+    <div class="col-md-10 offset-sm-1">
     <?php
     // else, we have a sidebar
     else : ?>
-    <div class="col-sm-9">
+    <div class="col-md-8 col-lg-9">
     <?php endif; ?>
       <main class="site-main" id="main" role="main">
 <?php } ?>
