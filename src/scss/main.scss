@@ -14,9 +14,11 @@ _s is based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, In
 Underscores is distributed under the terms of the GNU GPL v2 or later.
 */
 
+// config
 @import "variables";
 @import "vendor/normalize";
 
+// mixins
 @import "mixins/utils";
 @import "mixins/lists";
 @import "mixins/links";
@@ -24,20 +26,25 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 @import "mixins/buttons";
 @import "mixins/visibility";
 
+// defaults
 @import "base/defaults";
 @import "base/type";
 @import "base/forms";
 
+// main structure
 @import "components/containers";
 @import "components/header";
 @import "components/header-fixed";
 @import "components/footer";
 @import "components/navigation";
+
+// components & parts
 @import "components/buttons";
 @import "components/skiplink";
 @import "components/hero";
 //@import "components/grid-float";
 
+// classes
 @import "classes/presentational";
 @import "classes/alignment";
 
