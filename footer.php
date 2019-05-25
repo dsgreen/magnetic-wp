@@ -60,7 +60,7 @@
 	      <?php } ?>
       </div>
       <div class="col-sm-6">
-        <p class="text-right"><a href="#top"><i class="fas fa-angle-up fa-2x" title="<?php esc_html_e( 'Back to top', '_s' ); ?>"></i></a></p>
+        <p class="text-right"><a href="#top" class="back-to-top"><i class="fas fa-angle-up fa-2x" title="<?php esc_html_e( 'Back to top', '_s' ); ?>"></i></a></p>
       </div>
     </div>
 	</div>
