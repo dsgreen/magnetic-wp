@@ -229,9 +229,8 @@ function _s_scripts() {
 	// OPTIONAL: wp_enqueue_script( 'bootstrap_js', get_template_directory_uri() . '/js/bootstrap.min.js', array(), '4.1.0', TRUE );
 
 	// plugin scripts, followed by main site script
-	wp_enqueue_script( 'jquery_scrollTo', get_template_directory_uri() . '/js/jquery.scrollTo.min.js', array(), '2.1.2', TRUE );
-	wp_enqueue_script( 'jquery_localScroll', get_template_directory_uri() . '/js/jquery.localScroll.min.js', array(), '2.0.0', TRUE );
-  wp_enqueue_script( 'main_js', get_template_directory_uri() . '/js/main.js', array(), '1.0', TRUE );
+	wp_enqueue_script( 'smoothscroll', get_template_directory_uri() . '/js/smoothscroll.min.js', array(), '0.4.4', TRUE );
+	wp_enqueue_script( 'main_js', get_template_directory_uri() . '/js/main.js', array(), rand(), TRUE );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

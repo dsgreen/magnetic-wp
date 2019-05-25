@@ -3,16 +3,12 @@ jQuery(document).ready(function($) {
   /*
    * back to top button
    */
-  $.localScroll.defaults.axis = 'y';
-
-  // Scroll initially if there's a hash (#something) in the url
-  $.localScroll.hash({
-    duration:500
-  });
-
-  $.localScroll({
-    duration:500,
-    hash:true
+  $('.back-to-top').click(function () {
+    window.scroll({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
+    });
   });
 
 });
