@@ -14,7 +14,7 @@ get_header();
 <?php get_template_part( 'template-parts/image-header' ); ?>
 <section class="site-content container" id="content">
   <div class="row">
-      <main class="col-12 col site-main" id="main" role="main">
+      <main class="col-12 col site-main" id="main">
 
               <?php get_template_part( 'template-parts/content', 'page' ); ?>
 

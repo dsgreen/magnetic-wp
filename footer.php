@@ -46,7 +46,7 @@
 </section>
 <?php endif; ?>
 
-<footer class="site-footer" role="contentinfo">
+<footer class="site-footer">
 	<div class="container site-info">
     <div class="row">
       <div class="col-sm-6">

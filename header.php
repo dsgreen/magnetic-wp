@@ -30,7 +30,7 @@
 <body <?php body_class(); ?>>
 <?php }  ?>
 <a class="skiplink" href="#content"><?php esc_html_e( 'Skip to main content', '_s' ); ?></a>
-<header class="site-header" id="top" role="banner">
+<header class="site-header" id="top">
 	<div class="container">
 		<?php the_custom_logo(); ?>
     <p class="site-title">
@@ -48,7 +48,7 @@
 			<span class="bar"></span>
 			<span class="bar"></span>
 		</button>
-    <nav class="mobile-navigation hidden" role="navigation">
+    <nav class="mobile-navigation hidden">
 			<?php wp_nav_menu( array(
 				'theme_location'    => 'primary',
 				'menu'              => 'primary',
@@ -58,7 +58,7 @@
 				'menu_class'        => ''
 			)); ?>
     </nav>
-		<nav class="main-navigation hidden" role="navigation">
+		<nav class="main-navigation hidden">
 			<?php wp_nav_menu( array(
 					'theme_location'    => 'primary',
 					'menu'              => 'primary',
@@ -89,5 +89,5 @@
     else : ?>
     <div class="col-md-8 col-lg-9">
     <?php endif; ?>
-      <main class="site-main" id="main" role="main">
+      <main class="site-main" id="main">
 <?php } ?>
