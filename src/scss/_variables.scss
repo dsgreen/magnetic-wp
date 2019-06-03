@@ -10,13 +10,6 @@ $gray-80: lighten(black,20%);
 $gray-90: lighten(black,10%);
 
 // various colors
-$magenta: magenta;
-$yellow: yellow;
-$lime: lime;
-$lime-green: #32cd32;
-$forest-green: #228b22;
-$navy: #000080;
-$medium-blue: #0000cd;
 $light-gray-01: #eaeaea;
 $light-gray-02: #d3d3d3;
 $light-gray-03: #cccccc;
@@ -34,24 +27,14 @@ $sea-foam: #39A074;
 $slate: #6E7E93;
 $storm: #233550;
 $rock: #212833;
-// orig
-//$mint: #81D878;
-//$sea-foam: #4DB98B;
-//$slate: #77869A;
 
+$brand: $sea-foam;
+$brand-hover: lighten($brand, 10%);
 $accent: $mint;
 $accent-light: $mint;
 $accent-dark: $slate;
-$brand: $sea-foam;
 $light: $alabaster;
-$dark: $rock;//$storm;
-
-$brand-hover: lighten($brand, 10%);
-
-// ui elements
-//Chateau Green	#4db262	Success
-//Hokey Pokey	#caa22a	Warning
-//Pomegranate	#f44336	Danger
+$dark: $rock;
 
 // text
 $copy-color: $dark;
@@ -150,12 +133,21 @@ $header-shadow: false;
 $max-container-width: 1200px;
 $max-container-width-header: $max-container-width;
 
+// revise these, bootstrap
 $breakpoint-xs: 570px;
 $breakpoint-sm: 768px;
 $breakpoint-md: 992px;
 $breakpoint-lg: 1200px;
+// bootstrap, except xxl, need 1400/1600 --
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+$breakpoint-xxl: 1800px;
 
 // font import
+// move to header
+
 //@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,400italic,600,700');
 //@import url('https://fonts.googleapis.com/css?family=Lato:300,400,400italic,700');
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,400italic,500,700');
