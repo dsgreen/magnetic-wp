@@ -1,5 +1,6 @@
 # Workflow
 _dev/
+dist/
 node_modules/
 *.map
 sass/style.css
