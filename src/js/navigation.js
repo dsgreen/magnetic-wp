@@ -72,9 +72,13 @@ jQuery(document).ready(function($) {
   $(window).scroll(function() {
     if ($(document).scrollTop() > 75) {
       $('.site-header').addClass('scrolled');
+      // logo swap
+      // $('.custom-logo').attr('src','/PATH/YOUR_SCROLLED_LOGO');
     }
     else {
       $('.site-header').removeClass('scrolled');
+      // logo swap
+      // $('.custom-logo').attr('src','/PATH/YOUR_REGULAR_LOGO');
     }
   });
 
