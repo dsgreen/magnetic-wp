@@ -96,7 +96,7 @@ $main-nav-color--transparent-header: $light;
 $main-nav-hover: $brand-hover;
 $sub-menu-color: $light;
 $sub-menu-bg-color: $brand;
-$sub-menu-brdr: 0;//.1rem;
+$sub-menu-brdr: 0;
 $sub-menu-brdr-color: lighten($sub-menu-bg-color, 10%);
 $brand-txt-color: $copy-color;
 $brand-txt-hover: $brand-hover;
@@ -133,17 +133,17 @@ $header-shadow: false;
 $max-container-width: 1200px;
 $max-container-width-header: $max-container-width;
 
-// revise these, bootstrap
-$breakpoint-xs: 570px;
-$breakpoint-sm: 768px;
-$breakpoint-md: 992px;
-$breakpoint-lg: 1200px;
-// bootstrap, except xxl, need 1400/1600 --
+// Bootstrap breakpoints, except 2xl+
+// xs < 576
 $breakpoint-sm: 576px;
 $breakpoint-md: 768px;
 $breakpoint-lg: 992px;
 $breakpoint-xl: 1200px;
-$breakpoint-xxl: 1800px;
+$breakpoint-2xl: 1400px;
+$breakpoint-3xl: 1600px;
+$breakpoint-4xl: 1800px;
+
+//$nav-breakpoint: 1040px;
 
 // font import
 // move to header
