@@ -42,31 +42,26 @@ jQuery(document).ready(function($) {
    */
   setupMobileMenu();
 
-  // mobile
-  // if (window.innerWidth < 768) {}
-
   /**
    * browser resize, collapse mobile menu
    */
-  /*
   $(window).resize(function() {
     // toggled class needed for pages with image header on mobile
     $('.site-header').removeClass('toggled');
 
     // desktop
-    if (window.innerWidth > 767) {
+    // if (window.innerWidth > 991) {
       // $('.main-navigation').show();
       // undo the slideToggle stuff, mobile menu
       // $('.sub-menu').attr('style', '');
-    }
+    // }
     // mobile
-    else if (window.innerWidth < 768) {
+    if (window.innerWidth < 992) {
       // hide nav if it's open
       $('.mobile-navigation').hide();
       $('.mobile-navigation .sub-menu').hide();
     }
   });
-  */
 
   // add class when scrolling, for pages with transparent header
   $(window).scroll(function() {

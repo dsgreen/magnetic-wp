@@ -85,7 +85,7 @@
 }
 
 // nav toggle button and mobile only adjustments
-@media (max-width: ($breakpoint-md - 1)) {
+@media (max-width: ($nav-breakpoint - 1)) {
   // show mobile nav
   .mobile-navigation {
     display: block;
@@ -152,7 +152,7 @@
   }
 }
 // tablet and up, header & nav styles
-@media screen and (min-width: $breakpoint-md) {
+@media screen and (min-width: $nav-breakpoint) {
   // hide mobile nav & toggle
   .mobile-navigation {
     display: none;
