@@ -13,7 +13,7 @@
   margin-left: auto;
   margin-right: auto;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: $breakpoint-md) {
   .hero-inner {
     max-width: 80%;
   }

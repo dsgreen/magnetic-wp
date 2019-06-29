@@ -139,7 +139,7 @@ ol.comment-list {
 //  .required {}
 //}
 // remove indentation on mobile if needed
-//@media screen and (max-width: 767px) {
+//@media screen and (max-width: ($breakpoint-md - 1)) {
 //  #comments {
 //    ol ol {
 //      padding-left: 0;

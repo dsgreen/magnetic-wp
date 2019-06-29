@@ -10,7 +10,7 @@
   @include clearfix;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: $breakpoint-md) {
   // negative margins cancel out outer column padding so column content
   // lines up with other content on the page.
   .row {
@@ -19,6 +19,7 @@
   }
   // use if you want an edge to edge background color within a column, use .row--no-margin and don't wrap row with container.
   // use .row--no-col-padding to remove column padding (or grid gutters).
+  // TODO change this to no-gutter or no-padding, or something
   .row.row--no-margin,
   .row.row--no-col-padding {
     margin-right: 0;
