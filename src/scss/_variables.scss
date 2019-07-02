@@ -74,6 +74,8 @@ $single-nav-color: $copy-color;
 $single-nav-hover: $brand-hover;
 $footer-widgets-link-color: $light;
 $footer-widgets-link-hover: $dark;
+$footer-widgets-btn-color: $dark;
+$footer-widgets-btn-hover: lighten($dark, 10%);
 $footer-link-color: $light;
 $footer-link-hover: $link-hover;
 $text-decoration-global: none;

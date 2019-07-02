@@ -12,6 +12,15 @@
   a:focus {
     color: $footer-widgets-link-hover;
   }
+  a.btn {
+    background-color: $footer-widgets-btn-color;
+    border-color: $footer-widgets-btn-color;
+    &:hover,
+    &:focus {
+      background-color: $footer-widgets-btn-hover;
+      border-color: $footer-widgets-btn-hover;
+    }
+  }
 }
 .footer-widgets h2.widget-title {
   color: $footer-widgets-txt-color;
