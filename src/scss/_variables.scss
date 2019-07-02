@@ -147,17 +147,6 @@ $max-container-width-header: $max-container-width;
 
 $nav-breakpoint: $breakpoint-lg;
 
-// font import
-// move to header
-
-//@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,400italic,600,700');
-//@import url('https://fonts.googleapis.com/css?family=Lato:300,400,400italic,700');
-@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,400italic,500,700');
-//@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,400italic,600,700');
-//@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
-//@import url('https://fonts.googleapis.com/css?family=Droid+Serif:400,400italic,700');
-//@import url('https://fonts.googleapis.com/css?family=Droid+Sans:400,700');
-
 // type
 $sans-default: "Helvetica Neue", Helvetica, Arial, sans-serif;
 //$serif-default: Georgia, serif;
@@ -167,15 +156,3 @@ $sans-custom: "Roboto";
 
 $sans: $sans-custom, $sans-default;
 //$serif: $serif-custom, $serif-default;
-
-// Note: Typekit includes a sans-serif fallback, no need to specify fallback here, example --
-// $futura: "futura-pt";
-// may need to increase font size with Typekit fonts
-
-// old font stacks
-// "Helvetica Neue", Helvetica, Geneva, Arial, sans-serif;
-// "Lucida Grande", Lucida, Verdana, sans-serif;
-// "Times New Roman", Times, serif;
-// Georgia, serif;
-// "Courier New", Courier, monospace;
-// "Lucida Console", Monaco, monospace;

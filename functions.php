@@ -202,35 +202,39 @@ add_action( 'widgets_init', '_s_widgets_init' );
  */
 function _s_scripts() {
   /*
-   * Header scripts
-   * Bootstrap, plugins, other
+   * Header scripts and styles
+   * Bootstrap grid, plugins, other
    */
-	// OPTIONAL: wp_enqueue_style( 'bootstrap', get_stylesheet_directory_uri() . '/css/bootstrap.min.css', array(), '4.1.3' );
+	// ALTERNATE, full Bootstrap: wp_enqueue_style( 'bootstrap', get_stylesheet_directory_uri() . '/css/bootstrap.min.css', array(), '4.1.3' );
+	// Bootstrap grid only:
 	wp_enqueue_style( 'bootstrap-grid', get_stylesheet_directory_uri() . '/css/bootstrap-grid.min.css', array(), '4.1.3' );
-  // ALTERNATE: wp_enqueue_style( 'font-awesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css', array(), '4.7.0' );
+
+	// ALTERNATE, earlier Font Awesome: wp_enqueue_style( 'font-awesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css', array(), '4.7.0' );
   wp_enqueue_style( 'font-awesome', 'https://use.fontawesome.com/releases/v5.1.1/css/all.css', array(), '5.1.1' );
 
-	// custom plugin styles: could opt to put in header-{custom}.php files for select pages
+	// custom plugin styles: could opt to put in header-{custom}.php files for select pages, or use template conditionals here
   // EXAMPLE: wp_enqueue_style( 'custom-style', get_template_directory_uri() . '/css/your-custom.css', array(), '1.0.0' );
 
+	// Google fonts
+	wp_enqueue_style( 'roboto', 'https://fonts.googleapis.com/css?family=Roboto:300,400,400italic,500,700', array() );
+
   // _s/main site styles (follows Bootstrap & plugins in case any overrides in main site styles)
-  wp_enqueue_style( 'main', get_stylesheet_uri() );
+  wp_enqueue_style( 'main', get_stylesheet_uri(), array(), '1.0' );
 
   // Modernizr (SVG, media query, add CSS classes, Modernizr.testStyles() build)
   wp_enqueue_script( 'modernizr_js', get_template_directory_uri() . '/js/modernizr.custom.07230.js', array(), '2.8.3' );
 
   /*
    * Footer scripts
-   * Note: 'jquery' dependency removed from Bootstrap and others to load custom jQuery in footer (not the bundled WP version in header).
-   * Some plugins will require jQuery and the bundled WP version will get loaded in the header. If that's the case, remove the jQuery line below to avoid loading it twice.
+   * jQuery note: Remove the 'jquery' dependency from Bootstrap and others to load a custom jQuery version in the footer (not the bundled WP version in header). Some plugins will require jQuery and the bundled WP version will get loaded in the header. If that's the case, don't use the jQuery line below to avoid loading it twice.
    */
-	wp_enqueue_script( 'jquery_js', get_template_directory_uri() . '/js/jquery.min.js', array(), '3.3.1', TRUE );
+	// OPTIONAL: wp_enqueue_script( 'jquery_js', get_template_directory_uri() . '/js/jquery.min.js', array(), '3.3.1', TRUE );
 	// OPTIONAL: wp_enqueue_script( 'popper_js', get_template_directory_uri() . '/js/popper.min.js', array(), '1.14.3', TRUE );
-	// OPTIONAL: wp_enqueue_script( 'bootstrap_js', get_template_directory_uri() . '/js/bootstrap.min.js', array(), '4.1.0', TRUE );
+	// OPTIONAL: wp_enqueue_script( 'bootstrap_js', get_template_directory_uri() . '/js/bootstrap.min.js', array('jquery'), '4.1.0', TRUE );
 
 	// plugin scripts, followed by main site script
 	wp_enqueue_script( 'smoothscroll', get_template_directory_uri() . '/js/smoothscroll.min.js', array(), '0.4.4', TRUE );
-	wp_enqueue_script( 'main_js', get_template_directory_uri() . '/js/main.js', array(), rand(), TRUE );
+	wp_enqueue_script( 'main_js', get_template_directory_uri() . '/js/main.js', array('jquery'), rand(), TRUE );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
