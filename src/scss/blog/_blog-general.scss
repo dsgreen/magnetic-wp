@@ -24,9 +24,15 @@
   display: block;
   margin-bottom: 2em;
 }
-.entry-footer {
-  padding-bottom: 2em;
-  border-bottom: 1px solid $post-bottom-border-color;
+.blog,
+.single,
+.search,
+.archive
+{
+  .entry-footer {
+    padding-bottom: 2em;
+    border-bottom: 1px solid $post-bottom-border-color;
+  }
 }
 // sidebar
 #secondary {
