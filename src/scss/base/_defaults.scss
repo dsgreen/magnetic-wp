@@ -15,7 +15,6 @@ body {
 // headings, other
 h1, h2, h3, h4, h5, h6,
 th,
-//th a,
 legend {
   color: $heading-color;
 }
@@ -97,4 +96,9 @@ abbr[title] {
 }
 abbr[title]:hover {
   cursor: help;
+}
+figure,
+figcaption {
+  margin: 0;
+  padding: 0;
 }
