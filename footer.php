@@ -56,7 +56,7 @@
           <p>&copy; <?php esc_html_e('Copyright ', '_s'); echo date('Y') . ' '; bloginfo( 'name' );
           esc_html_e('. Proudly powered by ', '_s'); ?>
           <a href="<?php echo esc_url( __( 'https://wordpress.org/', '_s' ) ); ?>"><?php esc_html_e('WordPress', '_s'); ?></a><?php esc_html_e(' and ', '_s'); ?>
-          <a href="<?php echo esc_url( __( 'https://github.com/dsgreen/wp-base', '_s') ); ?>"><?php esc_html_e('WP Base', '_s'); ?></a>.</p>
+          <a href="<?php echo esc_url( __( 'https://douglasgreen.com/themes', '_s') ); ?>"><?php esc_html_e('Magnetic', '_s'); ?></a>.</p>
 	      <?php } ?>
       </div>
       <div class="col-sm-6">
