@@ -23,6 +23,10 @@
     &.active a {
       color: $main-nav-hover;
     }
+    // highlight current menu item
+    &.current-menu-item > a {
+      color: $main-nav-active;
+    }
   }
   a {
     padding: .7em 1em;
@@ -106,14 +110,14 @@
     background: none;
     border: none;
     padding: 0;
-    // default outline looks bad, try to improve without ruining accessibility
-    // ideally for keyboard only, not mouse selection
-    // applies to chrome, and ...?
-    &:focus,
-    &:active {
-      outline: none;
-      //border: .1rem dotted $light-gray-02;
-    }
+    // default outline not ideal, try to improve without ruining accessibility
+    // ideally solution for keyboard only, not mouse selection
+    // nav toggle is for mobile only (no keyboard tabbing), so not a big issue
+    //&:focus,
+    //&:active {
+    //  outline: none;
+    //  border: .1rem dotted $light-gray-02;
+    //}
   }
   .nav-toggle-text {
     display: inline-block;
@@ -159,6 +163,8 @@
   }
   // show desktop nav
   .main-navigation {
+    // need to add margin with a custom logo
+    //margin-top: 1em;
     display: block;
   }
   .brand,
@@ -190,6 +196,11 @@
     .sub-menu li {
       text-transform: none;
       border-bottom: $sub-menu-brdr solid $sub-menu-brdr-color;
+    }
+    // current/active menu style
+    li.current-menu-item > a {
+      color: $main-nav-active;
+      //border-bottom: .2rem solid $main-nav-active;
     }
   }
   // Make sure sub navigation items are the right color when scrolled with transparent header
@@ -246,9 +257,9 @@
     display: block;
   }
 }
-// debug
-.main-navigation,
-.mobile-navigation {
-  //li {border: 1px solid aqua;}
-  //a {border: 1px solid red;}
-}
+// menu style debug
+//.main-navigation,
+//.mobile-navigation {
+//  li {border: 1px solid aqua;}
+//  a {border: 1px solid red;}
+//}
