@@ -12,8 +12,8 @@ img {
 }
 //}
 
-body.archive,
-body.search {
+.archive,
+.search {
   h1.page-title {
     margin-bottom: 1.5em;
     font-size: 1.8rem;
@@ -29,8 +29,8 @@ body.search {
   display: block;
   padding: 1em 0;
 
-  // temporary
-  display: none;
+  // temporary, to hide edit link when designing theme
+  //display: none;
 }
 
 /**

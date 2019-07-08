@@ -1,6 +1,4 @@
-// TODO cleanup
-
-.comments-area {}
+//.comments-area {}
 .comment-reply-title {
   font-weight: 500;
 }
@@ -27,10 +25,8 @@ ol.comment-list {
   .comment-meta {
     @include clearfix;
   }
-  .comment-author {
-    //padding-top: 2em;
-  }
-  .comment-metadata {}
+  //.comment-author {}
+  //.comment-metadata {}
   .fn,
   .says {
     display: inline-block;
@@ -41,7 +37,7 @@ ol.comment-list {
     float: left;
     border-radius: 36px;
   }
-  /* fiddle with later, if needed
+  /* as needed
   .comment-content {
     p,
     li,

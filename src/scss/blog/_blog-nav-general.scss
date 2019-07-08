@@ -1,24 +1,16 @@
-// remove page classes, I think...
-//body.blog,
-//body.archive,
-//body.search,
-//body.single
-//{
-  .navigation {
-    @include clearfix;
-    margin-top: .5em;
-    margin-bottom: 2em;
-  }
-  .nav-previous {
-    display: inline-block;
-    float: left;
-  }
-  .nav-next {
-    display: inline-block;
-    float: right;
-  }
-//}
-
+.navigation {
+  @include clearfix;
+  margin-top: .5em;
+  margin-bottom: 2em;
+}
+.nav-previous {
+  display: inline-block;
+  float: left;
+}
+.nav-next {
+  display: inline-block;
+  float: right;
+}
 // read more link
 .more-wrap {
   display: block;
