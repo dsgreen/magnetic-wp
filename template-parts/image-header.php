@@ -1,12 +1,12 @@
 <style>
-	.hero--sub {
+	.hero {
 		background-image: url('<?php
     if ( has_post_thumbnail() ) {
       the_post_thumbnail_url('full');
     } ?>');
 	}
 </style>
-<section class="hero hero--sub" id="hero">
+<section class="hero" id="hero">
 	<div class="container">
 		<?php the_title( '<h1>', '</h1>' ); ?>
 		<?php if ($lead = get_post_meta(get_the_ID(), 'lead', true)): ?>
