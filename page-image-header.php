@@ -14,7 +14,8 @@ get_header();
 <?php get_template_part( 'template-parts/image-header' ); ?>
 <section class="site-content container" id="content">
   <div class="row">
-      <main class="col-10 col site-main" id="main">
+    <div class="col-md-8 col-lg-9">
+      <main class="site-main" id="main">
 
               <?php get_template_part( 'template-parts/content', 'page' ); ?>
 
@@ -28,6 +29,7 @@ get_header();
           <?php endwhile; // End of the loop. ?>
 
       </main>
+    </div>
 <?php get_sidebar(); ?>
   </div>
 </section>
