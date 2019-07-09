@@ -205,7 +205,11 @@ add_action( 'widgets_init', '_s_widgets_init' );
 function _s_scripts() {
 	/*
 	 * Development mode
-	 * Use a random number for development, or none for production to optimize static resource loading
+	 * Use a random number for development to avoid browser caching the theme CSS while it's being worked on
+	 * (replace theme version number with $resource_version, or just use rand()).
+	 * Could opt to use no query string for production to optimize static resource loading, however:
+	 * Query strings for static resources OK. See: https://sirv.com/help/resources/remove-query-strings-from-static-resources/
+	 * So just use this for development purposes.
 	 */
 	// $dev = true;
 	// $resource_version = ($dev === true) ? rand() : null;
