@@ -61,6 +61,13 @@
   a {
     color: $main-nav-color;
   }
+  // highlight current menu item
+  .current-menu-item > a {
+    color: $main-nav-active;
+  }
+  .sub-menu .current-menu-item > a {
+    color: $main-nav-active;
+  }
 }
 
 
