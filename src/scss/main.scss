@@ -14,6 +14,8 @@ _s is based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, In
 Underscores is distributed under the terms of the GNU GPL v2 or later.
 */
 
+// Note: sass directory from _s is not in use, but included for reference.
+
 // config
 @import "variables";
 @import "vendor/normalize";
@@ -49,11 +51,8 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 @import "classes/alignment";
 
 // site styles
-@import "site/home";
-
 @import "blog/wordpress";
 @import "blog/comments";
-
 @import "blog/blog-general";
 @import "blog/blog-meta";
 @import "blog/blog-nav-general";
