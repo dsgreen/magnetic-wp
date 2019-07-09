@@ -203,6 +203,12 @@ add_action( 'widgets_init', '_s_widgets_init' );
  * Enqueue scripts and styles.
  */
 function _s_scripts() {
+	/*
+	 * Development mode
+	 * Use a random number for development, or none for production to optimize static resource loading
+	 */
+	// $dev = true;
+	// $resource_version = ($dev === true) ? rand() : null;
   /*
    * Header scripts and styles
    * Bootstrap grid, plugins, other
