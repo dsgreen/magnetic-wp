@@ -9,6 +9,11 @@
 .row {
   @include clearfix;
 }
+// for troubleshooting column styles
+//.col {
+//  background-color: $light-gray-01;
+//  border: .1rem solid $light-gray-03;
+//}
 
 @media only screen and (min-width: $breakpoint-md) {
   // negative margins cancel out outer column padding so column content
