@@ -12,13 +12,13 @@
   @include hero-bg-img('../images/hero.jpg');
   position: relative;
   overflow: hidden;
-  padding-top: 18em;
-  padding-bottom: 3em;
+  padding-top: 8em;
+  padding-bottom: 2em;
   h1 {
     @include font-smoothing;
     position: relative;
     margin-bottom: 0;
-    font-size: 7rem;
+    font-size: 5rem;
     font-weight: 300;
     color: #fff;
     z-index: 100;
@@ -37,16 +37,11 @@
     }
   }
 }
-@media only screen and (min-width: $breakpoint-md) {
-  .hero .lead {
-    width: 83.3333333333%;
-  }
-}
-// mobile
-@media screen and (max-width: ($breakpoint-md - 1)) {
+// sm to md breakpoint
+@media screen and (min-width: $breakpoint-sm)
+              and (max-width: ($breakpoint-md - 1)) {
   .hero {
     padding-top: 12em;
-    padding-bottom: 2em;
     h1 {
       font-size: 6rem;
     }
@@ -55,14 +50,16 @@
     }
   }
 }
-@media screen and (max-width: 500px) {
+// md breakpoint
+@media screen and (min-width: $breakpoint-md) {
   .hero {
-    padding-top: 8em;
-    padding-bottom: 2em;
+    padding-top: 18em;
+    padding-bottom: 3em;
     h1 {
-      font-size: 5rem;
+      font-size: 7rem;
+    }
+    .lead {
+      width: 83.3333333333%;
     }
   }
 }
-
-
