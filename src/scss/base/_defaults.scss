@@ -90,15 +90,22 @@ textarea {
   resize: vertical;
 }
 
-abbr[title] {
+abbr[title],
+acronym[title] {
   text-decoration: none;
   border-bottom: .1rem dotted $gray-40;
 }
-abbr[title]:hover {
+abbr[title]:hover,
+acronym[title]:hover {
   cursor: help;
 }
+
 figure,
 figcaption {
   margin: 0;
   padding: 0;
+}
+
+img {
+  @include img-responsive;
 }

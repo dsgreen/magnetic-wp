@@ -5,7 +5,8 @@
     list-style-type: none;
   }
 }
-.list-unstyled {
+.list-unstyled,
+.list-nostyle {
   @include list-nostyle;
 }
 @mixin list-inline {

@@ -42,6 +42,7 @@ input,
 select,
 textarea,
 button,
+optgroup,
 address,
 blockquote {
   font-size: 1.6rem;
@@ -65,13 +66,11 @@ caption,
 th {
   font-weight: normal;
 }
-strong {
-  font-weight: bold;
-}
+strong,
 b {
   font-weight: bold;
 }
-em {
+em, i, dfn, cite {
   font-style: italic;
 }
 address {
@@ -93,7 +92,8 @@ h6 {
 p,
 dd,
 address,
-blockquote {
+blockquote,
+pre {
   margin-bottom: 1.625em;
 }
 table,
@@ -103,15 +103,24 @@ dl {
   margin-bottom: 2.4em;
 }
 
+// lists
+// define left margin on lists if needed
+ul {
+  list-style: disc;
+}
+ol {
+  list-style: decimal;
+}
+
 // nested lists
-li ul {
+// zero out left margin on nested lists if needed
+li > ul,
+li > ol {
   margin-bottom: 0;
 }
-li ul li {
+// switch to circle for nested list items
+li > ul li {
   list-style-type: circle;
-}
-ul li {
-  list-style-type: disc;
 }
 
 //tables
@@ -136,6 +145,26 @@ caption {
 }
 
 // other
+pre {
+  background: $pre-bg-color;
+  font-family: $font__pre;
+  font-size: 1.5rem;
+  line-height: 1.625;
+  max-width: 100%;
+  overflow: auto;
+  padding: 1.6em;
+}
+code, kbd, tt, var {
+  font-family: $font__code;
+}
+mark, ins {
+  background: $color__background-ins;
+  text-decoration: none;
+}
+big {
+  font-size: 125%;
+}
+
 //blockquote {
 //  .author {}
 //}

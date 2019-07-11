@@ -1,9 +1,9 @@
 /*!
 Theme Name: Magnetic
-Theme URI: https://douglasgreen.com/
+Theme URI: https://demo.magneticthemes.com/magnetic/
 Author: Douglas Green
 Author URI: https://douglasgreen.com/
-Description: Base WordPress theme for commercial projects.
+Description: Minimal and customizable WordPress theme.
 Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
@@ -27,6 +27,12 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 @import "mixins/hero";
 @import "mixins/buttons";
 @import "mixins/visibility";
+
+// from _s sass
+@import "_s/variables-site/variables-site";
+@import "_s/mixins/mixins-master";
+@import "_s/modules/infinite-scroll";
+@import "_s/media/media";
 
 // defaults
 @import "base/defaults";

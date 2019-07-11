@@ -41,42 +41,37 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 # Media
 	## Captions
 	## Galleries
-# Custom
 --------------------------------------------------------------*/
-@import "variables-site/variables-site";
-@import "mixins/mixins-master";
+// imported in main.scss
+//@import "variables-site/variables-site";
+//@import "mixins/mixins-master";
 
 ///*--------------------------------------------------------------
 //# Normalize
 //--------------------------------------------------------------*/
-// not needed, in Bootstrap
+// imported in main.scss
 //@import "normalize";
 
 ///*--------------------------------------------------------------
 //# Typography
 //--------------------------------------------------------------*/
-// not needed, Bootstrap instead
-// but, could use to set color
+// fonts defined in base/type
 //@import "typography/typography";
 
 ///*--------------------------------------------------------------
 //# Elements
 //--------------------------------------------------------------*/
-// not needed, Bootstrap instead
-// but, could use some element styling, see img tag
+// elemnts defined in base/defaults
 //@import "elements/elements";
 
 ///*--------------------------------------------------------------
 //# Forms
 //--------------------------------------------------------------*/
-// not needed, Bootstrap or custom instead
-// but, could use some button styling
-//@import "forms/forms";
+@import "forms/forms";
 
 ///*--------------------------------------------------------------
 //# Navigation
 //--------------------------------------------------------------*/
-// could use some link styling, or use custom
 //@import "navigation/navigation";
 
 /*--------------------------------------------------------------
@@ -117,8 +112,3 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 # Media
 --------------------------------------------------------------*/
 @import "media/media";
-
-/*--------------------------------------------------------------
-# Custom
---------------------------------------------------------------*/
-@import "custom";
