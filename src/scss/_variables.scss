@@ -119,8 +119,10 @@ $btn-border-width: .2rem;
 $btn-border-radius: 0;
 
 // forms, tables, borders
+$form-input-color: $copy-color;
 $form-input-outline-color: $light-gray-02;
 $form-input-outline-hover: darken($form-input-outline-color, 20%);
+$form-required-color: red;
 $table-head-bg-color: $light;
 $table-border-color: $light-gray-01;
 $post-bottom-border-color: $light-gray-02;

@@ -61,13 +61,14 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 ///*--------------------------------------------------------------
 //# Elements
 //--------------------------------------------------------------*/
-// elemnts defined in base/defaults
+// elements defined in base/defaults
 //@import "elements/elements";
 
 ///*--------------------------------------------------------------
 //# Forms
 //--------------------------------------------------------------*/
-@import "forms/forms";
+// form elements defined in base/forms
+//@import "forms/forms";
 
 ///*--------------------------------------------------------------
 //# Navigation

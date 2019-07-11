@@ -1,3 +1,6 @@
+legend {
+  margin-bottom: 1em;
+}
 label {
   display: block;
 }
@@ -6,32 +9,16 @@ select,
 textarea {
   margin-bottom: 1em;
   padding: .4em;
+}
+textarea {
   width: 100%;
 }
-.radio input,
-.checkbox input,
-input[type="radio"],
-input[type="checkbox"] {
-  width: auto;
-  float: left;
-  margin: .4em;
-}
-.radio,
-.checkbox {
-  clear: both;
-}
-.radio label,
-.checkbox label {
-  float: left;
-  margin-bottom: .5em;
-}
-.radio p,
-.checkbox p {
-  margin-bottom: .5em;
-}
+button,
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
 input.btn,
-input.button,
-input[type="submit"] {
+input.button {
   display: inline-block;
   clear: both;
   width: auto;
@@ -47,6 +34,7 @@ input[type="submit"] {
   border: solid .2rem $btn-bg-color;
   transition: all 0.1s ease;
   &:hover,
+  &:active,
   &:focus {
     background-color: lighten($btn-bg-color, 5%);
     border-color: lighten($btn-bg-color, 5%);
@@ -62,6 +50,7 @@ label.hidden {
 input,
 select,
 textarea {
+  color: $form-input-color;
   border: .1rem solid $form-input-outline-color;
 }
 
@@ -79,5 +68,31 @@ select:active {
 
 .req,
 .required {
-  color: red;
+  color: $form-required-color;
+}
+
+/* wrap elements with .form-group to give them 100% width and apply other formatting */
+.form-group {
+  // default label margins throw off the search widget style
+  label {
+    margin: .25em 0 .5em 0;
+  }
+  input,
+  select {
+    width: 100%;
+  }
+}
+.form-check {
+  @include clearfix;
+  label,
+  input[type="radio"],
+  input[type="checkbox"] {
+    width: auto;
+    float: left;
+    margin: .4em;
+  }
+  label {
+    margin-top: 0;
+    margin-bottom: .5em;
+  }
 }
