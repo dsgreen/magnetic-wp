@@ -73,43 +73,47 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 ///*--------------------------------------------------------------
 //# Navigation
 //--------------------------------------------------------------*/
+// navigation defined in components/navigation
 //@import "navigation/navigation";
 
 /*--------------------------------------------------------------
 # Accessibility
 --------------------------------------------------------------*/
-// could be replaced with Bootstrap 4 accessibility features
-@import "modules/accessibility";
+// see mixins/visibility
+//@import "modules/accessibility";
 
 /*--------------------------------------------------------------
 # Alignments
 --------------------------------------------------------------*/
-// WordPress default alignment classes
-@import "modules/alignments";
+// WordPress default alignment classes, see blog/wordpress
+//@import "modules/alignments";
 
 /*--------------------------------------------------------------
 # Clearings
 --------------------------------------------------------------*/
-@import "modules/clearings";
+// not needed
+//@import "modules/clearings";
 
 /*--------------------------------------------------------------
 # Widgets
 --------------------------------------------------------------*/
-// might add unnecessary margin
-@import "site/secondary/widgets";
+// styled elsewhere
+//@import "site/secondary/widgets";
 
 /*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
-// various WP
-@import "site/site";
+// styled elsewhere
+//@import "site/site";
 
 /*--------------------------------------------------------------
 # Infinite scroll
 --------------------------------------------------------------*/
-@import "modules/infinite-scroll";
+// imported in main.scss
+//@import "modules/infinite-scroll";
 
 /*--------------------------------------------------------------
 # Media
 --------------------------------------------------------------*/
-@import "media/media";
+// imported in main.scss
+//@import "media/media";
