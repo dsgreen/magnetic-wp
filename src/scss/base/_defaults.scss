@@ -21,15 +21,17 @@ legend {
 
 // links, buttons
 a,
-a:link,
-a:active,
-a:visited {
+a:link {
   color: $link-color;
   text-decoration: $text-decoration-global;
 }
 a:hover,
+a:active,
 a:focus {
   color: $link-hover;
+}
+a:visited {
+  color: $link-visited;
 }
 a,
 .btn,
