@@ -242,7 +242,10 @@
     display: block;
   }
   // display sub menu on hover
-  .menu-item-has-children:hover {
+  // focus-within not fully supported, edge 18 https://caniuse.com/#feat=css-focus-within
+  // ultimately need full support, or JS solution
+  .menu-item-has-children:hover,
+  .menu-item-has-children:focus-within {
     > .sub-menu {
       display: block;
     }
@@ -254,12 +257,13 @@
   }
   // focus styles need some JS to make menu stay open
   // doesn't stay focused with just CSS
+  // open the sub menu on keyboard focus
   //.menu-item-has-children a:focus {
   //  + .sub-menu {
   //    display: block;
   //  }
   //}
-  // applied with JS
+  // menu open class applied with JS
   .sub-menu.open {
     display: block;
   }

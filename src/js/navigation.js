@@ -50,11 +50,7 @@ jQuery(document).ready(function($) {
     $('.site-header').removeClass('toggled');
 
     // desktop
-    // if (window.innerWidth > 991) {
-      // $('.main-navigation').show();
-      // undo the slideToggle stuff, mobile menu
-      // $('.sub-menu').attr('style', '');
-    // }
+    // if (window.innerWidth > 991) {}
     // mobile
     if (window.innerWidth < 992) {
       // hide nav if it's open
@@ -77,24 +73,35 @@ jQuery(document).ready(function($) {
     }
   });
 
-  /*
-  menu keyboard focus needs work
-  // add sub-menu focus class
-  $('.menu-item-has-children > a').focus(function() {
-    // console.log('.menu-item-has-children > a focus');
-    $(this).next().addClass('open');
-  });
+  // TODO keyboard focus handling in progress. Using :focus-within pseudo class for now.
+  // add .open class to .sub-menu on keyboard focus to keep menu open
+  // menu item has a .sub-menu
+  // $('.menu-item-has-children > a').focus(function() {
+  //   $(this).next().addClass('open');
+  // });
 
-  // target last menu item
-  $('.sub-menu > li:last-of-type > a').blur(function() {
-    // console.log($(this).parent().hasClass('menu-item-has-children'));
+  // TODO menu keyboard focus/blur logic needs work
+  // remove .open class when tabbing out of the .sub-menu
+  // $('.sub-menu > li:last-of-type > a').blur(function() {
 
-    // if last item does not have a sub menu, remove open menu class
-    if ( ! $(this).parent().hasClass('menu-item-has-children') ) {
-      console.log('last');
-      $(this).parent().parent().removeClass('open');
-    }
-  });
-  */
+    // removing the class works, except in case of last item having a sub menu
+
+    // IN PROGRESS: if last menu item contains another .sub-menu, account for that and don't hide the menu immediately
+    // if ($(this).parent().hasClass('menu-item-has-children') ) {
+      // console.log('last menu item, .menu-item-has-children');
+      // keep the nested .sub-menu open
+      // $(this).next().addClass('open');
+
+      // $('.sub-menu li:last-of-type a').blur(function() {
+      //   $(this).parent().parent().removeClass('open');
+      // });
+
+    // }
+    // else {
+    //   $(this).parent().parent().removeClass('open');
+    // }
+  // });
+
+  // need to handle tabbing backwards through menu
 
 });
