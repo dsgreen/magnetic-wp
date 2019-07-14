@@ -7,10 +7,6 @@
   }
 }
 
-.widget ul {
-  @include list-nostyle;
-}
-
 .edit-link {
   display: block;
   padding: 1em 0;
@@ -19,9 +15,13 @@
   //display: none;
 }
 
+.updated:not(.published) {
+  display: none;
+}
+
 /**
 
- general WordPress alignment classes
+ WordPress alignment classes
 
  */
 .alignleft {
