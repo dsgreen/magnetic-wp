@@ -16,7 +16,8 @@
 	!is_page_template('page-image-header.php') &&
 	!is_page_template('page-image-header-no-sidebar.php') &&
 	!is_page_template('page-image-header-max-width.php') &&
-	!is_page_template('page-no-sidebar.php')
+	!is_page_template('page-no-sidebar.php') &&
+	!is_page_template('page-max-width.php')
 ) { ?>
   </div>
 </section>
