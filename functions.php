@@ -40,9 +40,9 @@ if ( ! function_exists( 'magnetic_setup' ) ) :
 		/*
 		 * Gutenberg opt-in
 		 */
-//		add_theme_support( 'wp-block-styles' );
-//		add_theme_support( 'align-wide' );
-//		add_theme_support( 'responsive-embeds' );
+		add_theme_support( 'wp-block-styles' );
+		add_theme_support( 'align-wide' );
+		add_theme_support( 'responsive-embeds' );
 
 		/*
 		 * Enable support for Post Thumbnails on posts and pages.

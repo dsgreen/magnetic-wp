@@ -1,0 +1,40 @@
+// basic Gutenberg styles
+.wp-block-image.alignwide,
+.wp-block-image.alignfull,
+.wp-block-embed.alignwide,
+.wp-block-embed.alignfull
+{
+  margin-bottom: 2em;
+}
+
+// full-width images
+.page-template-page-no-sidebar .site-content .alignfull,
+.page-template-page-max-width .site-content .alignfull,
+.page-template-page-image-header-no-sidebar .site-content .alignfull,
+.page-template-page-image-header-max-width .site-content .alignfull
+{
+  margin-left: calc(-100vw / 2 + 100% / 2);
+  margin-right: calc(-100vw / 2 + 100% / 2);
+  max-width: 100vw;
+}
+
+// cover image
+.page-template-page-no-sidebar .site-content .wp-block-cover.alignfull,
+.page-template-page-max-width .site-content .wp-block-cover.alignfull,
+.page-template-page-image-header-no-sidebar .site-content .wp-block-cover.alignfull,
+.page-template-page-image-header-max-width .site-content .wp-block-cover.alignfull
+{
+  width: 100vw;
+}
+
+// blockquotes
+.wp-block-pullquote,
+.wp-block-quote {
+  p {
+    margin-bottom: .5em;
+  }
+}
+.wp-block-quote.is-large,
+.wp-block-quote.is-style-large {
+  margin-bottom: 2em;
+}
