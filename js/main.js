@@ -1,1 +1,48 @@
-jQuery(document).ready(function(i){i(".main-navigation").removeClass("hidden"),window.innerWidth<768&&i(".main-navigation").hide(),i(".nav-toggle").click(function(){i(".main-navigation").slideToggle("fast"),i(".site-header").toggleClass("toggled")}),i(window).resize(function(){i(".site-header").removeClass("toggled"),767<window.innerWidth?i(".main-navigation").show():window.innerWidth<768&&i(".main-navigation").hide()}),i(window).scroll(function(){75<i(document).scrollTop()?i(".site-header").addClass("scrolled"):i(".site-header").removeClass("scrolled")})}),jQuery(document).ready(function(i){i.localScroll.defaults.axis="y",i.localScroll.hash({duration:500}),i.localScroll({duration:500,hash:!0})}),Modernizr.svg||$('img[src$=".svg"]').each(function(){$(this).attr("src",$(this).attr("src").replace(".svg",".png"))});
+jQuery(document).ready(function($) {
+    $(".main-navigation").removeClass("hidden");
+    $(".mobile-navigation").removeClass("hidden");
+    function setupMobileMenu() {
+        $(".mobile-navigation").hide();
+        $(".mobile-navigation .sub-menu").hide();
+        $(".mobile-navigation .menu-item-has-children > a").click(function(e) {
+            e.preventDefault();
+            $(this).attr("aria-expanded", $(this).attr("aria-expanded") === "true" ? "false" : "true");
+            $(this).next(".sub-menu").slideToggle("fast");
+        });
+    }
+    $(".nav-toggle").click(function() {
+        $(".mobile-navigation").slideToggle("fast");
+        $(".site-header").toggleClass("toggled");
+    });
+    setupMobileMenu();
+    $(window).resize(function() {
+        $(".site-header").removeClass("toggled");
+        if (window.innerWidth < 992) {
+            $(".mobile-navigation").hide();
+            $(".mobile-navigation .sub-menu").hide();
+        }
+    });
+    $(window).scroll(function() {
+        if ($(document).scrollTop() > 75) {
+            $(".site-header").addClass("scrolled");
+        } else {
+            $(".site-header").removeClass("scrolled");
+        }
+    });
+});
+
+jQuery(document).ready(function($) {
+    $(".back-to-top").click(function() {
+        window.scroll({
+            top: 0,
+            left: 0,
+            behavior: "smooth"
+        });
+    });
+});
+
+if (!Modernizr.svg) {
+    $('img[src$=".svg"]').each(function() {
+        $(this).attr("src", $(this).attr("src").replace(".svg", ".png"));
+    });
+}

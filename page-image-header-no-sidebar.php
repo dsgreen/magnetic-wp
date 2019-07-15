@@ -4,7 +4,7 @@
  * Template Name: Background Image Header, No Sidebar
  * Page with a background image header, no sidebar.
  *
- * @package _s
+ * @package magnetic
  */
 
 get_header();

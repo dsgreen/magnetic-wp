@@ -4,7 +4,7 @@
  * Template Name: Background Image Header, Max Width
  * Page with a background image header, maximum width.
  *
- * @package _s
+ * @package magnetic
  */
 
 get_header();

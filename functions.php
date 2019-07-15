@@ -1,13 +1,13 @@
 <?php
 /**
- * _s functions and definitions
+ * magnetic functions and definitions
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package _s
+ * @package magnetic
  */
 
-if ( ! function_exists( '_s_setup' ) ) :
+if ( ! function_exists( 'magnetic_setup' ) ) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
 	 *
@@ -15,14 +15,14 @@ if ( ! function_exists( '_s_setup' ) ) :
 	 * runs before the init hook. The init hook is too late for some features, such
 	 * as indicating support for post thumbnails.
 	 */
-	function _s_setup() {
+	function magnetic_setup() {
 		/*
 		 * Make theme available for translation.
 		 * Translations can be filed in the /languages/ directory.
-		 * If you're building a theme based on _s, use a find and replace
-		 * to change '_s' to the name of your theme in all the template files.
+		 * If you're building a theme based on magnetic, use a find and replace
+		 * to change 'magnetic' to the name of your theme in all the template files.
 		 */
-		load_theme_textdomain( '_s', get_template_directory() . '/languages' );
+		load_theme_textdomain( 'magnetic', get_template_directory() . '/languages' );
 
 		/*
 		 * Add default posts and comments RSS feed links to head.
@@ -62,7 +62,7 @@ if ( ! function_exists( '_s_setup' ) ) :
 		add_filter( 'image_size_names_choose', 'custom_image_sizes' );
 		function custom_image_sizes( $sizes ) {
 			return array_merge( $sizes, array(
-				'extra_large' => __( 'Extra Large', '_s' )
+				'extra_large' => __( 'Extra Large', 'magnetic' )
 			) );
 		}
 
@@ -70,7 +70,7 @@ if ( ! function_exists( '_s_setup' ) ) :
 		 * Register main navigation menu.
 		 */
 		register_nav_menus( array(
-			'primary' => esc_html__( 'Primary', '_s' ),
+			'primary' => esc_html__( 'Primary', 'magnetic' ),
 		) );
 
 		/*
@@ -91,7 +91,7 @@ if ( ! function_exists( '_s_setup' ) ) :
 		/*
 		 * Set up the WordPress core custom background feature.
 		 */
-		add_theme_support( 'custom-background', apply_filters( '_s_custom_background_args', array(
+		add_theme_support( 'custom-background', apply_filters( 'magnetic_custom_background_args', array(
 			'default-color' => 'ffffff',
 			'default-image' => '',
 		) ) );
@@ -128,7 +128,7 @@ if ( ! function_exists( '_s_setup' ) ) :
 	  add_filter( 'the_generator', '__return_null' );
 	}
 endif;
-add_action( 'after_setup_theme', '_s_setup' );
+add_action( 'after_setup_theme', 'magnetic_setup' );
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
@@ -142,67 +142,67 @@ add_action( 'after_setup_theme', '_s_setup' );
  * https://codex.wordpress.org/Content_Width
  * https://wycks.wordpress.com/2013/02/14/why-the-content_width-wordpress-global-kinda-sucks/#comments
  */
-function _s_content_width() {
-	$GLOBALS['content_width'] = apply_filters( '_s_content_width', 2500 );
+function magnetic_content_width() {
+	$GLOBALS['content_width'] = apply_filters( 'magnetic_content_width', 2500 );
 }
-add_action( 'after_setup_theme', '_s_content_width', 0 );
+add_action( 'after_setup_theme', 'magnetic_content_width', 0 );
 
 /**
  * Register widget area.
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
-function _s_widgets_init() {
+function magnetic_widgets_init() {
 	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', '_s' ),
+		'name'          => esc_html__( 'Sidebar', 'magnetic' ),
 		'id'            => 'sidebar-1',
-		'description'   => esc_html__( 'Add widgets here.', '_s' ),
+		'description'   => esc_html__( 'Add widgets here.', 'magnetic' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
 	register_sidebar( array(
-		'name'          => esc_html__( 'Footer 1', '_s' ),
+		'name'          => esc_html__( 'Footer 1', 'magnetic' ),
 		'id'            => 'footer-1',
-		'description'   => esc_html__( 'Add widgets here.', '_s' ),
+		'description'   => esc_html__( 'Add widgets here.', 'magnetic' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
 	register_sidebar( array(
-		'name'          => esc_html__( 'Footer 2', '_s' ),
+		'name'          => esc_html__( 'Footer 2', 'magnetic' ),
 		'id'            => 'footer-2',
-		'description'   => esc_html__( 'Add widgets here.', '_s' ),
+		'description'   => esc_html__( 'Add widgets here.', 'magnetic' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
 	register_sidebar( array(
-		'name'          => esc_html__( 'Footer 3', '_s' ),
+		'name'          => esc_html__( 'Footer 3', 'magnetic' ),
 		'id'            => 'footer-3',
-		'description'   => esc_html__( 'Add widgets here.', '_s' ),
+		'description'   => esc_html__( 'Add widgets here.', 'magnetic' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
 	register_sidebar( array(
-		'name'          => esc_html__( 'Footer Text', '_s' ),
+		'name'          => esc_html__( 'Footer Text', 'magnetic' ),
 		'id'            => 'footer-text',
-		'description'   => esc_html__( 'Set footer text here.', '_s' ),
+		'description'   => esc_html__( 'Set footer text here.', 'magnetic' ),
 		'before_widget' => '',
 		'after_widget'  => '',
 	) );
 }
-add_action( 'widgets_init', '_s_widgets_init' );
+add_action( 'widgets_init', 'magnetic_widgets_init' );
 
 /**
  * Enqueue scripts and styles.
  */
-function _s_scripts() {
+function magnetic_scripts() {
 	/*
 	 * Development mode
 	 * Use a random number for development to avoid browser caching the theme CSS while it's being worked on
@@ -230,7 +230,7 @@ function _s_scripts() {
 	// Google fonts
 	wp_enqueue_style( 'roboto', 'https://fonts.googleapis.com/css?family=Roboto:300,400,400italic,500,700', array() );
 
-  // _s/main site styles (follows Bootstrap & plugins in case any overrides in main site styles)
+  // magnetic/main site styles (follows Bootstrap & plugins in case any overrides in main site styles)
   wp_enqueue_style( 'main', get_stylesheet_uri(), array(), '1.0' );
 
   // Modernizr (SVG, media query, add CSS classes, Modernizr.testStyles() build)
@@ -252,7 +252,7 @@ function _s_scripts() {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
-add_action( 'wp_enqueue_scripts', '_s_scripts' );
+add_action( 'wp_enqueue_scripts', 'magnetic_scripts' );
 
 /**
  * Implement the Custom Header feature.

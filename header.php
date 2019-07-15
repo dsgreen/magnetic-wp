@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package _s
+ * @package magnetic
  */
 
 ?>
@@ -29,7 +29,7 @@
 <?php } else { ?>
 <body <?php body_class(); ?>>
 <?php }  ?>
-<a class="skiplink" href="#content"><?php esc_html_e( 'Skip to main content', '_s' ); ?></a>
+<a class="skiplink" href="#content"><?php esc_html_e( 'Skip to main content', 'magnetic' ); ?></a>
 <header class="site-header" id="top">
 	<div class="container">
 		<?php the_custom_logo(); ?>

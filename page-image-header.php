@@ -4,7 +4,7 @@
  * Template Name: Background Image Header
  * Page with a background image header.
  *
- * @package _s
+ * @package magnetic
  */
 
 get_header();

@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package _s
+ * @package magnetic
  */
 
 ?>
@@ -14,7 +14,7 @@
     <header class="entry-header">
       <div class="entry-meta">
       <?php
-      _s_print_categories();
+      magnetic_print_categories();
       ?>
       </div>
       <?php
@@ -27,20 +27,20 @@
       <div class="entry-meta">
       <?php
       if ( 'post' === get_post_type() ) :
-        _s_posted_on();
-        _s_posted_by();
-        _s_comments_link();
+        magnetic_posted_on();
+        magnetic_posted_by();
+        magnetic_comments_link();
       endif; ?>
       </div>
     </header>
     <div class="entry-content">
-    <?php _s_post_thumbnail('extra_large'); ?>
+    <?php magnetic_post_thumbnail('extra_large'); ?>
     <?php
     if ( is_single() ) {
       the_content( sprintf(
         wp_kses(
           /* translators: %s: Name of current post. Only visible to screen readers */
-          __( 'Continue reading<span class="sr-only"> "%s"</span>', '_s' ),
+          __( 'Continue reading<span class="sr-only"> "%s"</span>', 'magnetic' ),
           array(
             'span' => array(
               'class' => array(),
@@ -51,7 +51,7 @@
       ) );
 
       wp_link_pages( array(
-        'before' => '<div class="page-links">' . esc_html__( 'Pages:', '_s' ),
+        'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'magnetic' ),
         'after'  => '</div>',
       ) );
     } else {
@@ -62,7 +62,7 @@
     <footer class="entry-footer">
       <?php
       if ( is_single() ) {
-        _s_entry_footer();
+        magnetic_entry_footer();
       }
       ?>
     </footer>

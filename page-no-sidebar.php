@@ -4,7 +4,7 @@
  * Template Name: No Sidebar
  * Page with no sidebar.
  *
- * @package _s
+ * @package magnetic
  */
 
 get_header(); ?>

@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package _s
+ * @package magnetic
  */
 
 ?>
@@ -16,7 +16,7 @@
 	!is_page_template('page-image-header-no-sidebar.php') &&
 	!is_page_template('page-image-header-max-width.php')
 	) { ?>
-	<?php _s_post_thumbnail(); ?>
+	<?php magnetic_post_thumbnail(); ?>
 
 	<header class="entry-header">
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
@@ -27,7 +27,7 @@
 			the_content();
 
 			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', '_s' ),
+				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'magnetic' ),
 				'after'  => '</div>',
 			) );
 		?>
@@ -40,7 +40,7 @@
 					sprintf(
 						wp_kses(
 							/* translators: %s: Name of current post. Only visible to screen readers */
-							__( 'Edit <span class="sr-only">%s</span>', '_s' ),
+							__( 'Edit <span class="sr-only">%s</span>', 'magnetic' ),
 							array(
 								'span' => array(
 									'class' => array(),
