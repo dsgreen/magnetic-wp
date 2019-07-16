@@ -1,0 +1,28 @@
+.home {
+  .section-intro {
+    margin-bottom: 2em;
+  }
+  .section-1 {
+    border-top: solid .01rem $light-gray-01;
+  }
+  .section-1,
+  .section-2,
+  .section-3,
+  .section-4
+  {
+    .wrap-inner {
+      padding: 0 4em 2em;
+    }
+  }
+  .section-5 {
+    padding: 3em;
+    color: $light;
+    background-color: $dark;
+    .btn {
+      margin-left: 1em;
+    }
+  }
+  .footer-widgets {
+    margin-top: 0;
+  }
+}

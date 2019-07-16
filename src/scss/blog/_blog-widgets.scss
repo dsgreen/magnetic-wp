@@ -1,5 +1,7 @@
 // general
-h2.widget-title {
+#secondary      h2.widget-title,
+.footer-widgets h2.widget-title,
+.site-footer    h2.widget-title {
   font-size: 1.5rem;
   font-weight: 600;
   line-height: 1.4;
@@ -11,7 +13,9 @@ h2.widget-title {
   background-color: $widget-title-bg-color;
   border-left: $widget-title-border;
 }
-.widget {
+#secondary      .widget,
+.footer-widgets .widget,
+.site-footer    .widget {
   ul {
     @include list-nostyle;
   }
