@@ -140,7 +140,7 @@ add_action( 'after_setup_theme', 'magnetic_setup' );
  * Set this to a larger size. Image responsiveness handled via CSS in this theme.
  *
  * https://codex.wordpress.org/Content_Width
- * https://wycks.wordpress.com/2013/02/14/why-the-content_width-wordpress-global-kinda-sucks/#comments
+ * https://wycks.wordpress.com/2013/02/14/why-the-content_width-wordpress-global-kinda-sucks/
  */
 function magnetic_content_width() {
 	$GLOBALS['content_width'] = apply_filters( 'magnetic_content_width', 2500 );
