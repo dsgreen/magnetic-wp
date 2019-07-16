@@ -163,6 +163,87 @@ function magnetic_widgets_init() {
 		'after_title'   => '</h2>',
 	) );
 	register_sidebar( array(
+		'name'          => esc_html__( 'Home Page 1 Left Column', 'magnetic' ),
+		'id'            => 'home-1-1',
+		'description'   => esc_html__( 'First home page section, left content area.', 'magnetic' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+	register_sidebar( array(
+		'name'          => esc_html__( 'Home Page 1 Right Column', 'magnetic' ),
+		'id'            => 'home-1-2',
+		'description'   => esc_html__( 'First home page section, right content area.', 'magnetic' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+	register_sidebar( array(
+		'name'          => esc_html__( 'Home Page 2 Left Column', 'magnetic' ),
+		'id'            => 'home-2-1',
+		'description'   => esc_html__( 'Second home page section, left content area.', 'magnetic' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+	register_sidebar( array(
+		'name'          => esc_html__( 'Home Page 2 Right Column', 'magnetic' ),
+		'id'            => 'home-2-2',
+		'description'   => esc_html__( 'Second home page section, right content area.', 'magnetic' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+	register_sidebar( array(
+		'name'          => esc_html__( 'Home Page 3 Left Column', 'magnetic' ),
+		'id'            => 'home-3-1',
+		'description'   => esc_html__( 'Third home page section, left content area.', 'magnetic' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+	register_sidebar( array(
+		'name'          => esc_html__( 'Home Page 3 Right Column', 'magnetic' ),
+		'id'            => 'home-3-2',
+		'description'   => esc_html__( 'Third home page section, right content area.', 'magnetic' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+	register_sidebar( array(
+		'name'          => esc_html__( 'Home Page 4 Left Column', 'magnetic' ),
+		'id'            => 'home-4-1',
+		'description'   => esc_html__( 'Fourth home page section, left content area.', 'magnetic' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+	register_sidebar( array(
+		'name'          => esc_html__( 'Home Page 4 Right Column', 'magnetic' ),
+		'id'            => 'home-4-2',
+		'description'   => esc_html__( 'Fourth home page section, right content area.', 'magnetic' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+	register_sidebar( array(
+		'name'          => esc_html__( 'Home Page 5', 'magnetic' ),
+		'id'            => 'home-5',
+		'description'   => esc_html__( 'Fifth home page section.', 'magnetic' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+	register_sidebar( array(
 		'name'          => esc_html__( 'Footer 1', 'magnetic' ),
 		'id'            => 'footer-1',
 		'description'   => esc_html__( 'Add widgets here.', 'magnetic' ),
