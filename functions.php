@@ -206,13 +206,13 @@ function magnetic_scripts() {
 	/*
 	 * Development mode
 	 * Use a random number for development to avoid browser caching the theme CSS while it's being worked on
-	 * (replace theme version number with $resource_version, or just use rand()).
-	 * Could opt to use no query string for production to optimize static resource loading, however:
+	 * (set $dev to true).
+	 * Could opt to use no query string for production to optimize static resource loading (set $theme_version to null), however:
 	 * Query strings for static resources OK. See: https://sirv.com/help/resources/remove-query-strings-from-static-resources/
-	 * So just use this for development purposes.
 	 */
-	// $dev = true;
-	// $resource_version = ($dev === true) ? rand() : null;
+	 $dev = false;
+	 $theme_version = '1.0';
+	 $resource_version = ($dev === true) ? rand() : $theme_version;
   /*
    * Header scripts and styles
    * Bootstrap grid, plugins, other
@@ -231,7 +231,7 @@ function magnetic_scripts() {
 	wp_enqueue_style( 'roboto', 'https://fonts.googleapis.com/css?family=Roboto:300,400,400italic,500,700', array() );
 
   // magnetic/main site styles (follows Bootstrap & plugins in case any overrides in main site styles)
-  wp_enqueue_style( 'main', get_stylesheet_uri(), array(), '1.0' );
+  wp_enqueue_style( 'main', get_stylesheet_uri(), array(), $resource_version );
 
   // Modernizr (SVG, media query, add CSS classes, Modernizr.testStyles() build)
   wp_enqueue_script( 'modernizr_js', get_template_directory_uri() . '/js/modernizr.custom.07230.js', array(), '2.8.3' );
@@ -246,7 +246,7 @@ function magnetic_scripts() {
 
 	// plugin scripts, followed by main site script
 	wp_enqueue_script( 'smoothscroll', get_template_directory_uri() . '/js/smoothscroll.min.js', array(), '0.4.4', TRUE );
-	wp_enqueue_script( 'main_js', get_template_directory_uri() . '/js/main.js', array('jquery'), rand(), TRUE );
+	wp_enqueue_script( 'main_js', get_template_directory_uri() . '/js/main.js', array('jquery'), $resource_version, TRUE );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
