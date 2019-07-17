@@ -58,7 +58,7 @@
           <p>&copy; <?php esc_html_e('Copyright ', 'magnetic'); echo date('Y') . ' '; bloginfo( 'name' );
           esc_html_e('. Proudly powered by ', 'magnetic'); ?>
           <a href="<?php echo esc_url( __( 'https://wordpress.org/', 'magnetic' ) ); ?>"><?php esc_html_e('WordPress', 'magnetic'); ?></a><?php esc_html_e(' and ', 'magnetic'); ?>
-          <a href="<?php echo esc_url( __( 'https://douglasgreen.com/themes', 'magnetic') ); ?>"><?php esc_html_e('Magnetic', 'magnetic'); ?></a>.</p>
+          <a href="<?php echo esc_url( __( 'https://magneticthemes.com/', 'magnetic') ); ?>"><?php esc_html_e('Magnetic', 'magnetic'); ?></a>.</p>
 	      <?php } ?>
       </div>
       <div class="col-sm-6">
