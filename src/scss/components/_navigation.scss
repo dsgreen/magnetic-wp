@@ -107,6 +107,11 @@
   }
   .nav-toggle {
     position: absolute;
+    // to center toggle in navbar:
+    // top w/ Logo, depends on height of logo
+    // top w/ Site Title and Tagline
+    //top: 3.25rem;
+    // top w/ Site Title only
     top: 2.25rem;
     right: 2rem;
     display: block;
