@@ -13,7 +13,7 @@ textarea {
 textarea {
   width: 100%;
 }
-button,
+button:not(.nav-toggle),
 input[type="button"],
 input[type="submit"],
 input[type="reset"],
