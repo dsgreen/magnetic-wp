@@ -21,4 +21,3 @@ get_header();
   </main>
 </section>
 <?php get_footer();
-?>
