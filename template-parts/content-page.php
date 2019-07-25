@@ -13,8 +13,7 @@
 	<?php if (
   // exclude these templates, post thumbnail already displayed in template-parts/image-header.php
 	!is_page_template('page-image-header.php') &&
-	!is_page_template('page-image-header-no-sidebar.php') &&
-	!is_page_template('page-image-header-max-width.php')
+	!is_page_template('page-image-header-no-sidebar.php')
 	) { ?>
 	<?php magnetic_post_thumbnail(); ?>
 
