@@ -1,0 +1,30 @@
+.nf-before-form-content {
+  margin-top: 1em;
+}
+.nf-form-content {
+  padding-left: 0 !important;
+}
+.nf-form-wrap {
+  input[type="button"] {
+    display: inline-block;
+    clear: both;
+    width: auto;
+    margin: 1em 0;
+    padding: .6em 1.5em;
+    font-size: 1.4rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: .03em;
+    color: $btn-txt-color !important;
+    background-color: $btn-bg-color !important;
+    border: solid .2rem $btn-bg-color !important;
+    transition: all 0.1s ease !important;
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: lighten($btn-bg-color, 5%) !important;
+      border-color: lighten($btn-bg-color, 5%) !important;
+    }
+  }
+}
