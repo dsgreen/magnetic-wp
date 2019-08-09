@@ -76,6 +76,7 @@
     !is_page_template('page-image-header.php') &&
     !is_page_template('page-image-header-no-sidebar.php') &&
     !is_page_template('page-no-sidebar.php') &&
+    !is_page_template('page-gutenberg.php') &&
     !is_page_template('front-page.php')
 ) { ?>
 <section class="site-content container" id="content">
