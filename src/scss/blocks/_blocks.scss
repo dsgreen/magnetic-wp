@@ -214,7 +214,7 @@
     list-style-position: outside;
   }
 
-  .entry-content li {
+  .entry-content li:not(.blocks-gallery-item) {
     margin-left: 2.5em;
   }
 
