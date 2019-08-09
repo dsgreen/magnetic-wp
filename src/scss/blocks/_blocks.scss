@@ -33,17 +33,14 @@
   .entry-header > *,
   .entry-content > * {
     margin: 36px auto;
-    max-width: 580px;
-    padding-left: 14px;
-    padding-right: 14px;
+    max-width: $gutenberg-content-width;
+    padding-left: $gutenberg-side-margin;
+    padding-right: $gutenberg-side-margin;
   }
 
-  .entry-title {
-    padding: 0;
-  }
 
   .entry-content > .alignwide {
-    max-width: 1070px;
+    max-width: $gutenberg-wide-width;
   }
 
   .entry-content > .alignfull {
@@ -54,9 +51,16 @@
 }
 
 @media screen and (min-width: $breakpoint-sm) {
-  .page-template-page-gutenberg .entry-content > * {
-    padding-left: 0;
-    padding-right: 0;
+  .page-template-page-gutenberg {
+
+    .entry-content > * {
+      padding-left: 0;
+      padding-right: 0;
+    }
+    .entry-title {
+      padding: 0;
+    }
+
   }
 }
 
@@ -66,8 +70,8 @@
 
 .page-template-page-gutenberg .wp-block-code {
   padding: 0.8em 1em;
-  margin-left: 14px;
-  margin-right: 14px;
+  margin-left: $gutenberg-side-margin;
+  margin-right: $gutenberg-side-margin;
 }
 
 @media screen and (min-width: $breakpoint-sm) {
@@ -82,7 +86,7 @@
 --------------------------------------------------------------*/
 
 .page-template-page-gutenberg .wp-block-cover-text p {
-  padding: 1.5em 14px;
+  padding: 1.5em $gutenberg-side-margin;
 }
 
 @media screen and (min-width: $breakpoint-sm) {
@@ -131,13 +135,13 @@
 .page-template-page-gutenberg {
 
   .wp-block-group > .wp-block-group__inner-container > * {
-    max-width: 580px;
+    max-width: $gutenberg-content-width;
     margin-left: auto;
     margin-right: auto;
   }
 
   .wp-block-group > .wp-block-group__inner-container > .alignwide {
-    max-width: 1070px;
+    max-width: $gutenberg-wide-width;
   }
 
   .wp-block-group > .wp-block-group__inner-container > .alignfull {
@@ -196,7 +200,7 @@
   ul.wp-block-latest-posts.alignfull,
   ul.wp-block-latest-posts.is-grid.alignwide,
   ul.wp-block-latest-posts.is-grid.alignwide {
-    padding: 0 14px;
+    padding: 0 $gutenberg-side-margin;
   }
 
 }
@@ -210,7 +214,7 @@
   .entry-content ul,
   .entry-content ol {
     margin: 1.5em auto;
-    max-width: 580px;
+    max-width: $gutenberg-content-width;
     list-style-position: outside;
   }
 
@@ -257,8 +261,8 @@
 .page-template-page-gutenberg {
 
   .wp-block-quote {
-    margin-left: 14px;
-    margin-right: 14px;
+    margin-left: $gutenberg-side-margin;
+    margin-right: $gutenberg-side-margin;
     padding: 0;
   }
 
@@ -305,8 +309,8 @@
 
   .wp-block-table {
     overflow-x: auto;
-    margin-left: 14px;
-    margin-right: 14px;
+    margin-left: $gutenberg-side-margin;
+    margin-right: $gutenberg-side-margin;
     width: calc(100% - 28px);
   }
 
@@ -333,7 +337,7 @@
 --------------------------------------------------------------*/
 
 .page-template-page-gutenberg .wp-block-video video {
-  max-width: 580px;
+  max-width: $gutenberg-content-width;
 }
 
 /*--------------------------------------------------------------

@@ -137,6 +137,11 @@ $column-bottom-margin-mobile: 1.6rem;
 // other settings
 $header-shadow: false;
 
+// Gutenberg block editor
+$gutenberg-side-margin: 2rem;
+$gutenberg-content-width: 580px;
+$gutenberg-wide-width: 1070px;
+
 // Bootstrap breakpoints, except 2xl+
 // xs < 576
 $breakpoint-sm: 576px;
