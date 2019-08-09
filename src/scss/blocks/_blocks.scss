@@ -28,11 +28,16 @@
 ## General Structure
 --------------------------------------------------------------*/
 
+.entry-header > *,
 .entry-content > * {
   margin: 36px auto;
   max-width: 580px;
   padding-left: 14px;
   padding-right: 14px;
+}
+
+.entry-title {
+  padding: 0;
 }
 
 .entry-content > .alignwide {
