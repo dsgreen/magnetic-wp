@@ -4,8 +4,8 @@
 
 jQuery(document).ready(function($) {
 
-  // hidden class added in HTML for better loading at mobile (expanded menu is not shown as it loads)
-  // remove it after page loads
+  // .hidden class is added in HTML for better loading at mobile, so that expanded menus are not shown during page load
+  // remove .hidden class on menus after everything loads and page is ready
   $('.main-navigation').removeClass('hidden');
   $('.mobile-navigation').removeClass('hidden');
 
@@ -33,7 +33,7 @@ jQuery(document).ready(function($) {
    */
   $('.nav-toggle').click(function() {
     $('.mobile-navigation').slideToggle('fast');
-    // toggled class needed for pages with image header
+    // .toggled class is needed for pages with an image header for mobile menu styling
     $('.site-header').toggleClass('toggled');
   });
 
@@ -46,17 +46,17 @@ jQuery(document).ready(function($) {
    * browser resize, collapse mobile menu
    */
   $(window).resize(function() {
-    // toggled class needed for pages with image header on mobile
+    // .toggled class is needed for pages with an image header for mobile menu styling
     $('.site-header').removeClass('toggled');
 
     // desktop
     // if (window.innerWidth > 991) {}
     // mobile
-    if (window.innerWidth < 992) {
-      // hide nav if it's open
-      $('.mobile-navigation').hide();
-      $('.mobile-navigation .sub-menu').hide();
-    }
+    // if (window.innerWidth < 992) {}
+
+    // hide the mobile nav if it's open
+    $('.mobile-navigation').hide();
+    $('.mobile-navigation .sub-menu').hide();
   });
 
   // add class when scrolling, for pages with transparent header
@@ -73,35 +73,12 @@ jQuery(document).ready(function($) {
     }
   });
 
-  // TODO keyboard focus handling in progress. Using :focus-within pseudo class for now.
-  // add .open class to .sub-menu on keyboard focus to keep menu open
-  // menu item has a .sub-menu
-  // $('.menu-item-has-children > a').focus(function() {
-  //   $(this).next().addClass('open');
-  // });
-
-  // TODO menu keyboard focus/blur logic needs work
-  // remove .open class when tabbing out of the .sub-menu
-  // $('.sub-menu > li:last-of-type > a').blur(function() {
-
-    // removing the class works, except in case of last item having a sub menu
-
-    // IN PROGRESS: if last menu item contains another .sub-menu, account for that and don't hide the menu immediately
-    // if ($(this).parent().hasClass('menu-item-has-children') ) {
-      // console.log('last menu item, .menu-item-has-children');
-      // keep the nested .sub-menu open
-      // $(this).next().addClass('open');
-
-      // $('.sub-menu li:last-of-type a').blur(function() {
-      //   $(this).parent().parent().removeClass('open');
-      // });
-
-    // }
-    // else {
-    //   $(this).parent().parent().removeClass('open');
-    // }
-  // });
-
-  // need to handle tabbing backwards through menu
+  // menu keyboard accessibility and touch controls handled with superfish library
+  // also using :focus-within pseudo class in CSS
+  $('.main-navigation > ul').superfish({
+    speed: 'fast',
+    autoArrows: false,
+    cssArrows: false
+  });
 
 });
