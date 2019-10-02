@@ -284,43 +284,47 @@ add_action( 'widgets_init', 'magnetic_widgets_init' );
  * Enqueue scripts and styles.
  */
 function magnetic_scripts() {
-	/*
-	 * Development mode
-	 * Use a random number for development to avoid browser caching the theme CSS while it's being worked on
-	 * (set $dev to true).
-	 * Could opt to use no query string for production to optimize static resource loading (set $theme_version to null), however:
-	 * Query strings for static resources OK. See: https://sirv.com/help/resources/remove-query-strings-from-static-resources/
-	 */
-	 $dev = false;
-	 $theme_version = '1.0';
-	 $resource_version = ($dev === true) ? rand() : $theme_version;
-  /*
-   * Header scripts and styles
-   * Bootstrap grid, plugins, other
-   */
-	// ALTERNATE, full Bootstrap: wp_enqueue_style( 'bootstrap', get_stylesheet_directory_uri() . '/css/bootstrap.min.css', array(), '4.1.3' );
+    /*
+     * Development mode
+     * Use a random number for development to avoid browser caching the theme CSS while it's being worked on
+     * (set $dev to true).
+     * Could opt to use no query string for production to optimize static resource loading (set $theme_version to null), however:
+     * Query strings for static resources OK. See: https://sirv.com/help/resources/remove-query-strings-from-static-resources/
+     */
+    $dev = false;
+    $theme_version = '1.0';
+    $resource_version = ($dev === true) ? rand() : $theme_version;
+
+    /*
+     * Header scripts and styles
+     * Bootstrap grid, plugins, other
+     */
+    // ALTERNATE, full Bootstrap: wp_enqueue_style( 'bootstrap', get_stylesheet_directory_uri() . '/css/bootstrap.min.css', array(), '4.1.3' );
 	// Bootstrap grid only:
 	wp_enqueue_style( 'bootstrap-grid', get_stylesheet_directory_uri() . '/css/bootstrap-grid.min.css', array(), '4.1.3' );
 
 	// ALTERNATE, earlier Font Awesome: wp_enqueue_style( 'font-awesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css', array(), '4.7.0' );
-  wp_enqueue_style( 'font-awesome', 'https://use.fontawesome.com/releases/v5.1.1/css/all.css', array(), '5.1.1' );
+    wp_enqueue_style( 'font-awesome', 'https://use.fontawesome.com/releases/v5.1.1/css/all.css', array(), '5.1.1' );
 
 	// custom plugin styles: could opt to put in header-{custom}.php files for select pages, or use template conditionals here
-  // EXAMPLE: wp_enqueue_style( 'custom-style', get_template_directory_uri() . '/css/your-custom.css', array(), '1.0.0' );
+    // EXAMPLE: wp_enqueue_style( 'custom-style', get_template_directory_uri() . '/css/your-custom.css', array(), '1.0.0' );
 
 	// Google fonts
 	wp_enqueue_style( 'roboto', 'https://fonts.googleapis.com/css?family=Roboto:300,400,400italic,500,700', array() );
 
-  // magnetic/main site styles (follows Bootstrap & plugins in case any overrides in main site styles)
-  wp_enqueue_style( 'main', get_stylesheet_uri(), array(), $resource_version );
+    // magnetic/main site styles (follows Bootstrap & plugins in case any overrides in main site styles)
+    wp_enqueue_style( 'main', get_stylesheet_uri(), array(), $resource_version );
 
-  // Modernizr (SVG, media query, add CSS classes, Modernizr.testStyles() build)
-  wp_enqueue_script( 'modernizr_js', get_template_directory_uri() . '/js/modernizr.custom.07230.js', array(), '2.8.3' );
+    // Modernizr (SVG, media query, add CSS classes, Modernizr.testStyles() build)
+    wp_enqueue_script( 'modernizr_js', get_template_directory_uri() . '/js/modernizr.custom.07230.js', array(), '2.8.3' );
 
-  /*
-   * Footer scripts
-   * jQuery note: Remove the 'jquery' dependency from Bootstrap and others to load a custom jQuery version in the footer (not the bundled WP version in header). Some plugins will require jQuery and the bundled WP version will get loaded in the header. If that's the case, don't use the jQuery line below to avoid loading it twice.
-   */
+    /*
+     * Footer scripts
+     * jQuery note: Remove the 'jquery' dependency from Bootstrap and others to load a custom jQuery version in the footer
+     * (not the bundled WP version in header). Many plugins will require jQuery and the bundled WP version will get loaded
+     * in the header. If that's the case, DO NOT use the jQuery line below to avoid loading it twice. Try this only if you
+     * have full control over the environment and you're trying to fine tune everything.
+     */
 	// OPTIONAL: wp_enqueue_script( 'jquery_js', get_template_directory_uri() . '/js/jquery.min.js', array(), '3.3.1', TRUE );
 	// OPTIONAL: wp_enqueue_script( 'popper_js', get_template_directory_uri() . '/js/popper.min.js', array(), '1.14.3', TRUE );
 	// OPTIONAL: wp_enqueue_script( 'bootstrap_js', get_template_directory_uri() . '/js/bootstrap.min.js', array('jquery'), '4.1.0', TRUE );
