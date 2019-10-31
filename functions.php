@@ -315,8 +315,8 @@ function magnetic_scripts() {
     // magnetic/main site styles (follows Bootstrap & plugins in case any overrides in main site styles)
     wp_enqueue_style( 'main', get_stylesheet_uri(), array(), $resource_version );
 
-    // Modernizr (SVG, media query, add CSS classes, Modernizr.testStyles() build)
-    wp_enqueue_script( 'modernizr_js', get_template_directory_uri() . '/js/modernizr.custom.07230.js', array(), '2.8.3' );
+    // Modernizr (Minimal build. Configure your own at: https://modernizr.com/)
+    wp_enqueue_script( 'modernizr_js', get_template_directory_uri() . '/js/modernizr-custom.js', array(), '3.6.0' );
 
     /*
      * Footer scripts
