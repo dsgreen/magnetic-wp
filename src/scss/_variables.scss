@@ -10,6 +10,7 @@ $gray-80: lighten(black,20%);
 $gray-90: lighten(black,10%);
 
 // various colors
+$super-light: rgb(247,247,247);
 $light-gray-01: #eaeaea;
 $light-gray-02: #d3d3d3;
 $light-gray-03: #cccccc;
@@ -21,9 +22,11 @@ $dark-gray-02: #1e1e1e;
 $light-btn-bg: lighten($light-gray-01, 2%);
 
 // minty scheme
-$alabaster: #FBFBFB;
+// color contrast accessibility fix
+$alabaster: #FFFFFF; //#FBFBFB;
 $mint: #75CC6C;
-$sea-foam: #39A074;
+// color contrast accessibility fix
+$sea-foam: #2F835F;//#39A074;
 $slate: #6E7E93;
 $storm: #233550;
 $rock: #212833;
@@ -66,7 +69,7 @@ $cat-link: $light;
 $cat-bg: $brand;
 $cat-link-hover: $light;
 $cat-bg-hover: $brand-hover;
-$read-more-bg: $light-btn-bg;
+$read-more-bg: $super-light;
 $read-more-hover: $brand-hover;
 $tag-link: $link-color;
 $tag-bg: $light-btn-bg;
@@ -127,7 +130,7 @@ $form-required-color: red;
 $table-head-bg-color: $light;
 $table-border-color: $light-gray-01;
 $post-bottom-border-color: $light-gray-02;
-$widget-title-bg-color: $light-btn-bg;
+$widget-title-bg-color: $super-light;
 $widget-title-border: .2rem solid $copy-color;
 
 // columns - for custom grid
