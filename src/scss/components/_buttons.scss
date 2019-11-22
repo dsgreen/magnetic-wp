@@ -3,7 +3,8 @@
   see base/forms for form buttons
 */
 a.btn,
-a.btn-inverse {
+a.btn-inverse,
+a.btn-outline {
   display: inline-block;
   padding: .6em .9em;
   font-size: 1.4rem;
@@ -34,7 +35,8 @@ a.btn {
     }
   }
 }
-a.btn-inverse {
+a.btn-inverse,
+a.btn-outline {
   color: $btn-inverse-txt-color;
   border: solid .2rem $btn-inverse-border-color;
   .fa {
@@ -49,7 +51,8 @@ a.btn-inverse {
     }
   }
 }
-a.btn.alt {
+a.btn.alt,
+a.btn-alt {
   @include btn-color-override($btn-alt-txt-color, $btn-alt-bg-color);
 }
 a.btn.wide {
