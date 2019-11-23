@@ -22,11 +22,9 @@ $dark-gray-02: #1e1e1e;
 $light-btn-bg: lighten($light-gray-01, 2%);
 
 // minty scheme
-// color contrast accessibility fix
-$alabaster: #FFFFFF; //#FBFBFB;
+$alabaster: #FFFFFF;
 $mint: #75CC6C;
-// color contrast accessibility fix
-$sea-foam: #2F835F;//#39A074;
+$sea-foam: #2F835F;
 $slate: #6E7E93;
 $storm: #233550;
 $rock: #212833;
@@ -70,6 +68,7 @@ $cat-bg: $brand;
 $cat-link-hover: $light;
 $cat-bg-hover: $brand-hover;
 $read-more-bg: $super-light;
+$read-more-color: $dark;
 $read-more-hover: $brand-hover;
 $tag-link: $link-color;
 $tag-bg: $light-btn-bg;
