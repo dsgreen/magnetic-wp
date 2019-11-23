@@ -43,6 +43,7 @@ jQuery(document).ready(function($) {
               scrollTop: ( target.offset().top - 100 )
             }, 500, function() {
               // Callback after animation
+              // Add this for full accessibility
               // Must change focus!
               /*
               var $target = $(target);

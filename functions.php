@@ -292,7 +292,7 @@ function magnetic_scripts() {
      * Query strings for static resources OK. See: https://sirv.com/help/resources/remove-query-strings-from-static-resources/
      */
     $dev = false;
-    $theme_version = '1.0';
+    $theme_version = '1.1';
     $resource_version = ($dev === true) ? rand() : $theme_version;
 
     /*
