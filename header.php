@@ -24,11 +24,11 @@
     is_page_template('page-image-header.php') ||
     is_page_template('page-image-header-no-sidebar.php') ||
     is_page_template('front-page.php')
-) { ?>
+) : ?>
 <body <?php body_class('body--transparent-header'); ?>>
-<?php } else { ?>
+<?php else : ?>
 <body <?php body_class(); ?>>
-<?php }  ?>
+<?php endif; ?>
 <a class="skiplink" href="#content"><?php esc_html_e( 'Skip to main content', 'magnetic' ); ?></a>
 <header class="site-header" id="top">
 	<div class="container">
@@ -78,7 +78,7 @@
     !is_page_template('page-no-sidebar.php') &&
     !is_page_template('page-gutenberg.php') &&
     !is_page_template('front-page.php')
-) { ?>
+) : ?>
 <section class="site-content container" id="content">
   <div class="row">
 	  <?php
@@ -91,4 +91,4 @@
     <div class="col-md-8 col-lg-9">
     <?php endif; ?>
       <main class="site-main" id="main">
-<?php } ?>
+<?php endif; ?>

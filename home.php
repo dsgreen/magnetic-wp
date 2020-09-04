@@ -12,8 +12,8 @@
  * @package magnetic
  */
 
-get_header(); ?>
-<?php
+get_header();
+
 		if ( have_posts() ) :
 
 			if ( is_home() && ! is_front_page() ) : ?>
