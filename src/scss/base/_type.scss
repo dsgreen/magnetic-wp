@@ -1,5 +1,16 @@
+// font vars
+$font__main: sans-serif;
+$font__code: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+$font__pre: "Courier 10 Pitch", Courier, monospace;
+$font__line-height-body: 1.5;
+$font__line-height-pre: 1.6;
+$color__background-ins: #fff9c0;
+
 // font family
 body {
+  font-family: $sans;
+}
+h1, h2, h3, h4, h5, h6, dt, legend, caption, label, th {
   font-family: $sans;
 }
 

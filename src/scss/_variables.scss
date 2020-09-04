@@ -21,7 +21,7 @@ $dark-gray-01: #2e2e2e;
 $dark-gray-02: #1e1e1e;
 $light-btn-bg: lighten($light-gray-01, 2%);
 
-// minty scheme
+// Magnetic colors
 $alabaster: #FFFFFF;
 $mint: #75CC6C;
 $sea-foam: #2F835F;
@@ -59,30 +59,38 @@ $link-color: $brand;
 $link-hover: $brand-hover;
 $link-visited: $brand;
 $skiplink-bg: $light;
+// entry title
 $entry-title-link: $copy-color;
 $entry-title-hover: $brand-hover;
+// meta
 $meta-link-color: $copy-color;
 $meta-link-hover: $brand-hover;
+// categories
 $cat-link: $light;
 $cat-bg: $brand;
 $cat-link-hover: $light;
 $cat-bg-hover: $brand-hover;
+// read more link
 $read-more-bg: $super-light;
 $read-more-color: $dark;
 $read-more-hover: $brand-hover;
+// tags
 $tag-link: $link-color;
 $tag-bg: $light-btn-bg;
 $tag-link-hover: $link-hover;
 $tag-bg-hover: $light-btn-bg;
+// comments, single nav
 $comment-meta-link-color: $copy-color;
 $single-nav-color: $copy-color;
 $single-nav-hover: $brand-hover;
+// footer
 $footer-widgets-link-color: $light;
 $footer-widgets-link-hover: $dark;
 $footer-widgets-btn-color: $dark;
 $footer-widgets-btn-hover: lighten($dark, 10%);
 $footer-link-color: $light;
 $footer-link-hover: $link-hover;
+// link underline
 $text-decoration-global: none;
 //$text-decoration-content: underline;
 //$text-decoration-sidebar: none;
@@ -157,7 +165,6 @@ $breakpoint-4xl: 1800px;
 // widths & media queries
 $max-container-width: $breakpoint-xl;
 $max-container-width-header: $max-container-width;
-
 $nav-breakpoint: $breakpoint-lg;
 
 // type
