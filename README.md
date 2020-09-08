@@ -1,7 +1,7 @@
-wp-base
+Magnetic
 ============
 
-This is a blank starter theme based on the `underscores` theme (http://underscores.me). 
+This is a minimal blog or portfolio theme called Magnetic. Use the included Sass files to customize it further and make it your own. This theme is based on the `underscores` theme (http://underscores.me). Enjoy!
 
 Notes
 -----
