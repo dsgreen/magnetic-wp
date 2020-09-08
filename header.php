@@ -28,7 +28,8 @@
 <body <?php body_class('body--transparent-header'); ?>>
 <?php else : ?>
 <body <?php body_class(); ?>>
-<?php endif; ?>
+<?php endif;
+wp_body_open(); ?>
 <a class="skiplink" href="#content"><?php esc_html_e( 'Skip to main content', 'magnetic' ); ?></a>
 <header class="site-header" id="top">
 	<div class="container">
