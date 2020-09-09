@@ -119,7 +119,7 @@
 								),
 							)
 						),
-						get_the_title()
+              wp_kses_post( get_the_title() )
 					),
 					'<span class="edit-link">',
 					'</span>'

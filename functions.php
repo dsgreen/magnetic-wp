@@ -118,7 +118,7 @@ if ( ! function_exists( 'magnetic_setup' ) ) :
 		 */
 	   function new_excerpt_more() {
 		   global $post;
-		   return '&hellip; <div class="more-wrap"><a href="'. get_permalink($post->ID) . '" title="Continue to ' . get_the_title() . '" class="more-link">' . get_the_title() . '</a></div>';
+		   return '&hellip; <div class="more-wrap"><a href="'. get_permalink($post->ID) . '" title="Continue to ' . wp_kses_post( get_the_title() ) . '" class="more-link">' . wp_kses_post( get_the_title() ) . '</a></div>';
 	   }
 	   add_filter('excerpt_more', 'new_excerpt_more');
 

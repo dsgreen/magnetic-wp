@@ -69,7 +69,7 @@ if ( ! function_exists( 'magnetic_comments_link' ) ) :
               ),
             )
           ),
-          get_the_title()
+            wp_kses_post( get_the_title() )
         )
       );
       echo '</span>';
@@ -137,7 +137,7 @@ if ( ! function_exists( 'magnetic_entry_footer' ) ) :
 						),
 					)
 				),
-				get_the_title()
+          wp_kses_post( get_the_title() )
 			),
 			'<span class="edit-link">',
 			'</span>'
