@@ -83,6 +83,8 @@ if ( ! function_exists( 'magnetic_setup' ) ) :
 			'comment-list',
 			'gallery',
 			'caption',
+            'style',
+            'script'
 		) );
 
 		// post formats here as needed
