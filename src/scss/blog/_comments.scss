@@ -108,6 +108,15 @@ ol.comment-list {
   .comment-form-cookies-consent label {
     font-weight: normal;
   }
+  .comment-form-cookies-consent {
+    input,
+    label {
+      display: inline-block;
+    }
+    input {
+      margin-right: .25em;
+    }
+  }
   input {
     border: .1rem solid $form-input-outline-color;
   }
