@@ -35,7 +35,7 @@ module.exports = function(grunt) {
       build: {
         options: {
           implementation: sass,
-          outputStyle: 'compressed'
+          outputStyle: 'expanded'
         },
         files: {
           'style.css' : 'src/scss/main.scss'
