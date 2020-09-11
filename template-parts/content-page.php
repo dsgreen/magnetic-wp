@@ -12,7 +12,7 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<?php if (
   // exclude this template, post thumbnail already displayed in template-parts/image-header.php
-	!is_page_template('page-image-header.php')
+	!is_page_template('templates/template-image-header.php')
 	) { ?>
 	<?php magnetic_post_thumbnail(); ?>
 

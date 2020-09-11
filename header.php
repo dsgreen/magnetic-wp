@@ -21,7 +21,7 @@
 </head>
 <?php if (
     // add a page class to style header & navigation with a featured background image
-    is_page_template('page-image-header.php') ||
+    is_page_template('templates/template-image-header.php') ||
     is_page_template('front-page.php')
 ) : ?>
 <body <?php body_class('body--transparent-header'); ?>>
@@ -74,9 +74,9 @@ wp_body_open(); ?>
 <?php
   if (
     // these templates have special markup, exclude from the following
-    !is_page_template('page-image-header.php') &&
-    !is_page_template('page-no-sidebar.php') &&
-    !is_page_template('page-gutenberg.php') &&
+    !is_page_template('templates/template-image-header.php') &&
+    !is_page_template('templates/template-no-sidebar.php') &&
+    !is_page_template('templates/template-full-width.php') &&
     !is_page_template('front-page.php')
   ) : ?>
 <div class="site-content container" id="content">

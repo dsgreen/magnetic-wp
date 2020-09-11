@@ -1,8 +1,8 @@
 <?php
 /**
  *
- * Template Name: Gutenberg
- * Page with no sidebar, max width, for Gutenberg block editor.
+ * Template Name: Full Width
+ * Page with no sidebar, max width, for block editor.
  *
  * @package magnetic
  */
