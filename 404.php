@@ -26,7 +26,6 @@ get_header();
 
 				</div>
 			</section>
-
   </main>
 </div><!-- end main col -->
 <?php

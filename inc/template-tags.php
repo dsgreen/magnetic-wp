@@ -17,10 +17,11 @@ if ( ! function_exists( 'magnetic_posted_on' ) ) :
 			$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time>';
 		}
 
-		$time_string = sprintf( $time_string,
-			esc_attr( get_the_date( 'DATE_W3C' ) ),
+		$time_string = sprintf(
+      $time_string,
+			esc_attr( get_the_date( DATE_W3C ) ),
 			esc_html( get_the_date() ),
-			esc_attr( get_the_modified_date( 'DATE_W3C' ) ),
+			esc_attr( get_the_modified_date( DATE_W3C ) ),
 			esc_html( get_the_modified_date() )
 		);
 
@@ -30,7 +31,7 @@ if ( ! function_exists( 'magnetic_posted_on' ) ) :
 			'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 		);
 
-		echo '<span class="posted-on">' . $posted_on . '</span>'; // WPCS: XSS OK.
+		echo '<span class="posted-on">' . $posted_on . '</span>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 
 	}
 endif;
@@ -46,7 +47,7 @@ if ( ! function_exists( 'magnetic_posted_by' ) ) :
 			'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 		);
 
-		echo '<span class="byline"> ' . $byline . '</span>'; // WPCS: XSS OK.
+		echo '<span class="byline"> ' . $byline . '</span>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 
 	}
 endif;
@@ -92,7 +93,7 @@ if ( ! function_exists( 'magnetic_print_categories' ) ) :
 		  if ($categories_list) {
 			  /* translators: 1: list of categories. */
 			  printf('<span class="cat-links">' . esc_html__(
-			      $list_title = ($list_label ? 'Categories: ' : '') . '%1$s', 'magnetic') . '</span>', $categories_list); // WPCS: XSS OK.
+			      $list_title = ($list_label ? 'Categories: ' : '') . '%1$s', 'magnetic') . '</span>', $categories_list); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 		  }
 	  }
   }
@@ -112,7 +113,7 @@ if ( ! function_exists( 'magnetic_print_tags' ) ) :
 			if ($tags_list) {
 				/* translators: 1: list of tags. */
 				printf('<span class="tags-links">' . esc_html__(
-						$list_title = ($list_label ? 'Tags: ' : '') . '%1$s', 'magnetic') . '</span>', $tags_list); // WPCS: XSS OK.
+						$list_title = ($list_label ? 'Tags: ' : '') . '%1$s', 'magnetic') . '</span>', $tags_list); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 			}
 		}
   }
@@ -168,7 +169,7 @@ function magnetic_post_thumbnail($img_size = 'post-thumbnail') {
 
 	<a class="post-thumbnail" href="<?php the_permalink(); ?>" aria-hidden="true">
 		<?php
-			the_post_thumbnail( $img_size, array(
+			the_post_thumbnail($img_size, array(
 				'alt' => the_title_attribute( array(
 					'echo' => false,
 				) ),

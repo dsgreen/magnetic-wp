@@ -60,17 +60,24 @@
 	      else :
             ?>
 
-          <p>&copy; <?php esc_html_e('Copyright ', 'magnetic'); echo date('Y') . ' '; bloginfo( 'name' );
-          esc_html_e('. Proudly powered by ', 'magnetic'); ?>
-          <a href="<?php echo esc_url( __( 'https://wordpress.org/', 'magnetic' ) ); ?>" rel="nofollow"><?php esc_html_e('WordPress', 'magnetic'); ?></a><?php esc_html_e(' and ', 'magnetic'); ?>
-          <a href="<?php echo esc_url( __( 'https://magneticthemes.com/', 'magnetic') ); ?>" rel="nofollow"><?php esc_html_e('Magnetic', 'magnetic'); ?></a>.</p>
+          <p>&copy; <?php
+              esc_html_e('Copyright ', 'magnetic'); echo date('Y') . ' '; bloginfo( 'name' );
+              esc_html_e('. Proudly powered by ', 'magnetic');
+              ?>
+          <a href="<?php echo esc_url( __( 'https://wordpress.org/', 'magnetic' ) ); ?>" rel="nofollow"><?php
+              esc_html_e('WordPress', 'magnetic'); ?></a><?php
+              esc_html_e(' and ', 'magnetic');
+              ?>
+          <a href="<?php echo esc_url( __( 'https://magneticthemes.com/', 'magnetic') ); ?>" rel="nofollow"><?php
+              esc_html_e('Magnetic', 'magnetic'); ?></a>.</p>
 
 	      <?php
         endif;
 	      ?>
       </div>
       <div class="col-sm-6">
-        <p class="text-right"><a href="#top" class="back-to-top"><i class="fas fa-angle-up fa-2x" title="<?php esc_html_e( 'Back to top', 'magnetic' ); ?>"></i></a></p>
+        <p class="text-right"><a href="#top" class="back-to-top"><i class="fas fa-angle-up fa-2x" title="<?php
+                esc_html_e( 'Back to top', 'magnetic' ); ?>"></i></a></p>
       </div>
     </div>
 	</div>
