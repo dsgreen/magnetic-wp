@@ -11,12 +11,26 @@
  * WooCommerce setup function.
  *
  * @link https://docs.woocommerce.com/document/third-party-custom-theme-compatibility/
- * @link https://github.com/woocommerce/woocommerce/wiki/Enabling-product-gallery-features-(zoom,-swipe,-lightbox)-in-3.0.0
+ * @link https://github.com/woocommerce/woocommerce/wiki/Enabling-product-gallery-features-(zoom,-swipe,-lightbox)
+ * @link https://github.com/woocommerce/woocommerce/wiki/Declaring-WooCommerce-support-in-themes
  *
  * @return void
  */
 function magnetic_woocommerce_setup() {
-	add_theme_support( 'woocommerce' );
+    add_theme_support(
+        'woocommerce',
+        array(
+            'thumbnail_image_width' => 150,
+            'single_image_width'    => 300,
+            'product_grid'          => array(
+                'default_rows'    => 3,
+                'min_rows'        => 1,
+                'default_columns' => 4,
+                'min_columns'     => 1,
+                'max_columns'     => 6,
+            ),
+        )
+    );
 	add_theme_support( 'wc-product-gallery-zoom' );
 	add_theme_support( 'wc-product-gallery-lightbox' );
 	add_theme_support( 'wc-product-gallery-slider' );
@@ -29,7 +43,7 @@ add_action( 'after_setup_theme', 'magnetic_woocommerce_setup' );
  * @return void
  */
 function magnetic_woocommerce_scripts() {
-	wp_enqueue_style( 'magnetic-woocommerce-style', get_template_directory_uri() . '/woocommerce.css' );
+	wp_enqueue_style( 'magnetic-woocommerce-style', get_template_directory_uri() . '/woocommerce.css', array(), THEME_VERSION );
 
 	$font_path   = WC()->plugin_url() . '/assets/fonts/';
 	$inline_font = '@font-face {
@@ -71,36 +85,6 @@ function magnetic_woocommerce_active_body_class( $classes ) {
 add_filter( 'body_class', 'magnetic_woocommerce_active_body_class' );
 
 /**
- * Products per page.
- *
- * @return integer number of products.
- */
-function magnetic_woocommerce_products_per_page() {
-	return 12;
-}
-add_filter( 'loop_shop_per_page', 'magnetic_woocommerce_products_per_page' );
-
-/**
- * Product gallery thumnbail columns.
- *
- * @return integer number of columns.
- */
-function magnetic_woocommerce_thumbnail_columns() {
-	return 4;
-}
-add_filter( 'woocommerce_product_thumbnails_columns', 'magnetic_woocommerce_thumbnail_columns' );
-
-/**
- * Default loop columns on product archives.
- *
- * @return integer products per row.
- */
-function magnetic_woocommerce_loop_columns() {
-	return 3;
-}
-add_filter( 'loop_shop_columns', 'magnetic_woocommerce_loop_columns' );
-
-/**
  * Related Products Args.
  *
  * @param array $args related products args.
@@ -118,31 +102,6 @@ function magnetic_woocommerce_related_products_args( $args ) {
 }
 add_filter( 'woocommerce_output_related_products_args', 'magnetic_woocommerce_related_products_args' );
 
-if ( ! function_exists( 'magnetic_woocommerce_product_columns_wrapper' ) ) {
-	/**
-	 * Product columns wrapper.
-	 *
-	 * @return  void
-	 */
-	function magnetic_woocommerce_product_columns_wrapper() {
-		$columns = magnetic_woocommerce_loop_columns();
-		echo '<div class="columns-' . absint( $columns ) . '">';
-	}
-}
-add_action( 'woocommerce_before_shop_loop', 'magnetic_woocommerce_product_columns_wrapper', 40 );
-
-if ( ! function_exists( 'magnetic_woocommerce_product_columns_wrapper_close' ) ) {
-	/**
-	 * Product columns wrapper close.
-	 *
-	 * @return  void
-	 */
-	function magnetic_woocommerce_product_columns_wrapper_close() {
-		echo '</div>';
-	}
-}
-add_action( 'woocommerce_after_shop_loop', 'magnetic_woocommerce_product_columns_wrapper_close', 40 );
-
 /**
  * Remove default WooCommerce wrapper.
  */
@@ -159,7 +118,6 @@ if ( ! function_exists( 'magnetic_woocommerce_wrapper_before' ) ) {
 	 */
 	function magnetic_woocommerce_wrapper_before() {
 		?>
-		<div id="primary" class="content-area">
 			<main id="main" class="site-main">
 		<?php
 	}
@@ -177,7 +135,6 @@ if ( ! function_exists( 'magnetic_woocommerce_wrapper_after' ) ) {
 	function magnetic_woocommerce_wrapper_after() {
 		?>
 			</main>
-		</div><!-- #primary -->
 		<?php
 	}
 }
@@ -225,9 +182,15 @@ if ( ! function_exists( 'magnetic_woocommerce_cart_link' ) ) {
 	function magnetic_woocommerce_cart_link() {
 		?>
 			<a class="cart-contents" href="<?php echo esc_url( wc_get_cart_url() ); ?>" title="<?php esc_attr_e( 'View your shopping cart', 'magnetic' ); ?>">
-				<?php /* translators: number of items in the mini cart. */ ?>
-				<span class="amount"><?php echo wp_kses_data( WC()->cart->get_cart_subtotal() ); ?></span> <span class="count"><?php echo wp_kses_data( sprintf( _n( '%d item', '%d items', WC()->cart->get_cart_contents_count(), 'magnetic' ), WC()->cart->get_cart_contents_count() ) );?></span>
-			</a>
+          <?php
+          $item_count_text = sprintf(
+          /* translators: number of items in the mini cart. */
+              _n( '%d item', '%d items', WC()->cart->get_cart_contents_count(), 'magnetic' ),
+              WC()->cart->get_cart_contents_count()
+          );
+          ?>
+        <span class="amount"><?php echo wp_kses_data( WC()->cart->get_cart_subtotal() ); ?></span> <span class="count"><?php echo esc_html( $item_count_text ); ?></span>
+      </a>
 		<?php
 	}
 }
