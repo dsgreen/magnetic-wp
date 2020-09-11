@@ -28,7 +28,7 @@
 ## General Structure
 --------------------------------------------------------------*/
 
-.page-template-page-gutenberg {
+.page-template-template-full-width {
 
   .entry-header > *,
   .entry-content > * {
@@ -51,7 +51,7 @@
 }
 
 @media screen and (min-width: $breakpoint-sm) {
-  .page-template-page-gutenberg {
+  .page-template-template-full-width {
 
     .entry-content > * {
       padding-left: 0;
@@ -68,14 +68,14 @@
 ## Code
 --------------------------------------------------------------*/
 
-.page-template-page-gutenberg .wp-block-code {
+.page-template-template-full-width .wp-block-code {
   padding: 0.8em 1em;
   margin-left: $gutenberg-side-margin;
   margin-right: $gutenberg-side-margin;
 }
 
 @media screen and (min-width: $breakpoint-sm) {
-  .page-template-page-gutenberg .wp-block-code {
+  .page-template-template-full-width .wp-block-code {
     margin-left: auto;
     margin-right: auto;
   }
@@ -85,12 +85,12 @@
 ## Cover
 --------------------------------------------------------------*/
 
-.page-template-page-gutenberg .wp-block-cover-text p {
+.page-template-template-full-width .wp-block-cover-text p {
   padding: 1.5em $gutenberg-side-margin;
 }
 
 @media screen and (min-width: $breakpoint-sm) {
-  .page-template-page-gutenberg .wp-block-cover-text p {
+  .page-template-template-full-width .wp-block-cover-text p {
     padding: 1.5em 0;
   }
 }
@@ -99,7 +99,7 @@
 ## Embeds
 --------------------------------------------------------------*/
 
-.page-template-page-gutenberg {
+.page-template-template-full-width {
 
   .wp-block-embed.type-video > .wp-block-embed__wrapper {
     position: relative;
@@ -124,7 +124,7 @@
 # Gallery
 --------------------------------------------------------------*/
 
-.page-template-page-gutenberg .wp-block-gallery:not(.components-placeholder) {
+.page-template-template-full-width .wp-block-gallery:not(.components-placeholder) {
   margin: 1.5em auto;
 }
 
@@ -132,7 +132,7 @@
 ## Group
 --------------------------------------------------------------*/
 
-.page-template-page-gutenberg {
+.page-template-template-full-width {
 
   .wp-block-group > .wp-block-group__inner-container > * {
     max-width: $gutenberg-content-width;
@@ -165,7 +165,7 @@
 # Image
 --------------------------------------------------------------*/
 
-.page-template-page-gutenberg {
+.page-template-template-full-width {
 
   .wp-block-image img {
     display: block;
@@ -194,7 +194,7 @@
 ## Latest Posts
 --------------------------------------------------------------*/
 
-.page-template-page-gutenberg {
+.page-template-template-full-width {
 
   ul.wp-block-latest-posts.alignwide,
   ul.wp-block-latest-posts.alignfull,
@@ -209,7 +209,7 @@
 # List
 --------------------------------------------------------------*/
 
-.page-template-page-gutenberg {
+.page-template-template-full-width {
 
   .entry-content ul,
   .entry-content ol {
@@ -242,7 +242,7 @@
 ## More
 --------------------------------------------------------------*/
 
-.page-template-page-gutenberg .more-link {
+.page-template-template-full-width .more-link {
   display: block;
 }
 
@@ -250,7 +250,7 @@
 ## Pullquote
 --------------------------------------------------------------*/
 
-.page-template-page-gutenberg .wp-block-pullquote>p:first-child {
+.page-template-template-full-width .wp-block-pullquote>p:first-child {
   margin-top: 0;
 }
 
@@ -258,7 +258,7 @@
 ## Quote
 --------------------------------------------------------------*/
 
-.page-template-page-gutenberg {
+.page-template-template-full-width {
 
   .wp-block-quote {
     margin-left: $gutenberg-side-margin;
@@ -287,7 +287,7 @@
 }
 
 @media screen and (min-width: 644px) {
-  .page-template-page-gutenberg .wp-block-quote {
+  .page-template-template-full-width .wp-block-quote {
     margin: 36px auto;
   }
 }
@@ -296,7 +296,7 @@
 ## Separator
 --------------------------------------------------------------*/
 
-.page-template-page-gutenberg .wp-block-separator {
+.page-template-template-full-width .wp-block-separator {
   margin: 3em auto;
   padding: 0;
 }
@@ -305,7 +305,7 @@
 ## Table
 --------------------------------------------------------------*/
 
-.page-template-page-gutenberg {
+.page-template-template-full-width {
 
   .wp-block-table {
     overflow-x: auto;
@@ -325,7 +325,7 @@
 }
 
 @media screen and (min-width: $breakpoint-sm) {
-  .page-template-page-gutenberg .wp-block-table {
+  .page-template-template-full-width .wp-block-table {
     margin-left: auto;
     margin-right: auto;
     width: 100%;
@@ -336,7 +336,7 @@
 ## Video
 --------------------------------------------------------------*/
 
-.page-template-page-gutenberg .wp-block-video video {
+.page-template-template-full-width .wp-block-video video {
   max-width: $gutenberg-content-width;
 }
 
