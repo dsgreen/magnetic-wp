@@ -87,9 +87,6 @@ if ( ! function_exists( 'magnetic_setup' ) ) :
             'script'
 		) );
 
-		// post formats here as needed
-		// ...
-
 		/*
 		 * Set up the WordPress core custom background feature.
 		 */
@@ -108,12 +105,15 @@ if ( ! function_exists( 'magnetic_setup' ) ) :
 		 *
 		 * @link https://codex.wordpress.org/Theme_Logo
 		 */
-		add_theme_support( 'custom-logo', array(
+		add_theme_support(
+		    'custom-logo',
+            array(
 			'height'      => 250,
 			'width'       => 250,
 			'flex-width'  => true,
 			'flex-height' => true,
-		) );
+            )
+        );
 
 		/*
 		 * Change the excerpt 'more' link.
@@ -373,7 +373,7 @@ if ( class_exists( 'WooCommerce' ) ) {
 }
 
 /*
- * Remove WordPress emoji script from head.
+ * Remove WordPress emoji script from head. OPTIONAL, for fine-tuning.
  */
 /*
 remove_action('wp_head', 'print_emoji_detection_script', 7);
