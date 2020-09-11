@@ -7,6 +7,11 @@
  * @package magnetic
  */
 
+if ( ! defined( 'THEME_VERSION' ) ) {
+    // Replace the version number of the theme on each release.
+    define( 'THEME_VERSION', '1.1.1' );
+}
+
 if ( ! function_exists( 'magnetic_setup' ) ) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
@@ -59,7 +64,7 @@ if ( ! function_exists( 'magnetic_setup' ) ) :
 		/*
 		 * Add sizes for use in attachment display settings menu.
 		 */
-		add_filter( 'image_size_names_choose', 'custom_image_sizes' );
+		add_filter('image_size_names_choose', 'custom_image_sizes' );
 		function custom_image_sizes( $sizes ) {
 			return array_merge( $sizes, array(
 				'extra_large' => __( 'Extra Large', 'magnetic' )
@@ -69,31 +74,42 @@ if ( ! function_exists( 'magnetic_setup' ) ) :
 		/*
 		 * Register main navigation menu.
 		 */
-		register_nav_menus( array(
-			'primary' => esc_html__( 'Primary', 'magnetic' ),
-		) );
+		register_nav_menus(
+		    array(
+		    	'primary' => esc_html__( 'Primary', 'magnetic' ),
+		    )
+        );
 
 		/*
 		 * Switch default core markup for search form, comment form, and comments
 		 * to output valid HTML5.
 		 */
-		add_theme_support( 'html5', array(
-			'search-form',
-			'comment-form',
-			'comment-list',
-			'gallery',
-			'caption',
-            'style',
-            'script'
-		) );
+		add_theme_support(
+		    'html5',
+            array(
+                'search-form',
+                'comment-form',
+                'comment-list',
+                'gallery',
+                'caption',
+                'style',
+                'script'
+            )
+        );
 
 		/*
 		 * Set up the WordPress core custom background feature.
 		 */
-		add_theme_support( 'custom-background', apply_filters( 'magnetic_custom_background_args', array(
-			'default-color' => 'ffffff',
-			'default-image' => '',
-		) ) );
+		add_theme_support(
+		    'custom-background',
+            apply_filters(
+                'magnetic_custom_background_args',
+                array(
+			        'default-color' => 'ffffff',
+			        'default-image' => '',
+		        )
+            )
+        );
 
 		/*
 		 * Add theme support for selective refresh for widgets.
@@ -290,12 +306,11 @@ function magnetic_scripts() {
      * Development mode
      * Use a random number for development to avoid browser caching the theme CSS while it's being worked on
      * (set $dev to true).
-     * Could opt to use no query string for production to optimize static resource loading (set $theme_version to null), however:
+     * Could opt to use no query string for production to optimize static resource loading (set THEME_VERSION to null), however:
      * Query strings for static resources OK. See: https://sirv.com/help/resources/remove-query-strings-from-static-resources/
      */
     $dev = false;
-    $theme_version = '1.1';
-    $resource_version = ($dev === true) ? rand() : $theme_version;
+    $resource_version = ($dev === true) ? rand() : THEME_VERSION;
 
     /*
      * Header scripts and styles
