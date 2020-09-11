@@ -8,8 +8,11 @@
  */
 
 get_header();
-
-		if ( have_posts() ) : ?>
+?>
+  <main class="site-main" id="main">
+<?php
+		if ( have_posts() ) :
+        ?>
 
 			<header class="page-header">
 				<h1 class="page-title"><?php
@@ -37,9 +40,10 @@ get_header();
 
 			get_template_part( 'template-parts/content', 'none' );
 
-		endif; ?>
-  </main><!-- from header -->
-</div><!-- from header -->
+		endif;
+		?>
+  </main>
+</div><!-- end main col -->
 <?php
 get_sidebar();
 get_footer();

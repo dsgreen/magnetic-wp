@@ -1,7 +1,3 @@
 # Workflow
-_dev/
-_dist/
 node_modules/
 *.map
-sass/style.css
-src/scss/main.css

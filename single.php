@@ -8,6 +8,9 @@
  */
 
 get_header();
+?>
+  <main class="site-main" id="main">
+<?php
 
       while ( have_posts() ) : the_post();
 
@@ -22,8 +25,8 @@ get_header();
 
       endwhile; // End of the loop.
       ?>
-  </main><!-- from header -->
-</div><!-- from header -->
+  </main>
+</div><!-- end main col -->
 <?php
 get_sidebar();
 get_footer();

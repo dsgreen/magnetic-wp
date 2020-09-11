@@ -8,7 +8,7 @@
  */
 
 get_header(); ?>
-<section class="site-content container" id="content">
+<div class="site-content container" id="content">
   <div class="row">
     <div class="col-12">
       <main class="site-main" id="main">
@@ -29,6 +29,6 @@ get_header(); ?>
 		  </main>
     </div>
   </div>
-</section>
+</div>
 <?php
 get_footer();

@@ -22,7 +22,6 @@
 <?php if (
     // add a page class to style header & navigation with a featured background image
     is_page_template('page-image-header.php') ||
-    is_page_template('page-image-header-no-sidebar.php') ||
     is_page_template('front-page.php')
 ) : ?>
 <body <?php body_class('body--transparent-header'); ?>>
@@ -40,7 +39,7 @@ wp_body_open(); ?>
     <?php
       $description = get_bloginfo( 'description', 'display' );
       if ( $description || is_customize_preview() ) : ?>
-    <p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
+    <p class="site-description"><?php echo $description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
     <?php
       endif; ?>
 		<button class="nav-toggle">
@@ -72,15 +71,15 @@ wp_body_open(); ?>
 	</div>
 </header>
 
-<?php if (
+<?php
+  if (
     // these templates have special markup, exclude from the following
     !is_page_template('page-image-header.php') &&
-    !is_page_template('page-image-header-no-sidebar.php') &&
     !is_page_template('page-no-sidebar.php') &&
     !is_page_template('page-gutenberg.php') &&
     !is_page_template('front-page.php')
-) : ?>
-<section class="site-content container" id="content">
+  ) : ?>
+<div class="site-content container" id="content">
   <div class="row">
 	  <?php
     // no sidebar active
@@ -90,6 +89,7 @@ wp_body_open(); ?>
     // else, we have a sidebar
     else : ?>
     <div class="col-md-8 col-lg-9">
-    <?php endif; ?>
-      <main class="site-main" id="main">
-<?php endif; ?>
+    <?php
+
+    endif;
+  endif;

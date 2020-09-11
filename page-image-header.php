@@ -12,9 +12,9 @@ get_header();
 
 <?php while ( have_posts() ) : the_post(); ?>
 <?php get_template_part( 'template-parts/image-header' ); ?>
-<section class="site-content container" id="content">
+<div class="site-content container" id="content">
   <div class="row">
-    <div class="col-md-8 col-lg-9">
+    <div class="col-12">
       <main class="site-main" id="main">
 
               <?php get_template_part( 'template-parts/content', 'page' ); ?>
@@ -30,7 +30,6 @@ get_header();
 
       </main>
     </div>
-<?php get_sidebar(); ?>
   </div>
-</section>
+</div>
 <?php get_footer();

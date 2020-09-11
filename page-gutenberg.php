@@ -7,7 +7,7 @@
  * @package magnetic
  */
 get_header(); ?>
-	<section class="site-content" id="content">
+	<div class="site-content" id="content">
 		<main class="site-main" id="main">
 
 			<?php
@@ -21,6 +21,6 @@ get_header(); ?>
 			?>
 
 		</main>
-	</section>
+	</div>
 <?php
 get_footer();

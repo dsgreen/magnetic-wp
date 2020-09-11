@@ -12,11 +12,14 @@
  * @package magnetic
  */
 
-get_header(); ?>
+get_header();
+?>
+  <main class="site-main" id="main">
 <?php
 		if ( have_posts() ) :
 
-			if ( is_home() && ! is_front_page() ) : ?>
+			if ( is_home() && ! is_front_page() ) :
+          ?>
 				<header>
 					<h1 class="sr-only page-title"><?php single_post_title(); ?></h1>
 				</header>
@@ -42,9 +45,10 @@ get_header(); ?>
 
 			get_template_part( 'template-parts/content', 'none' );
 
-		endif; ?>
-  </main><!-- from header -->
-</div><!-- from header -->
+		endif;
+		?>
+  </main>
+</div><!-- end main col -->
 <?php
 get_sidebar();
 get_footer();

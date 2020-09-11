@@ -7,8 +7,9 @@
  * @package magnetic
  */
 
-get_header(); ?>
-
+get_header();
+?>
+  <main class="site-main" id="main">
 			<section class="error-404 not-found">
 				<header class="page-header">
 					<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'magnetic' ); ?></h1>
@@ -26,7 +27,7 @@ get_header(); ?>
 				</div>
 			</section>
 
-  </main><!-- from header -->
-</div><!-- from header -->
+  </main>
+</div><!-- end main col -->
 <?php
 get_footer();
