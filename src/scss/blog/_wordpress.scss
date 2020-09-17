@@ -41,3 +41,9 @@
   margin-right: auto;
   margin-bottom: 1em;
 }
+
+// legacy iframe embed
+// WP unit test
+iframe {
+  max-width: 100%;
+}

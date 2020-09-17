@@ -28,10 +28,15 @@
 }
 
 .gallery-item {
+  margin-bottom: 1em;
   display: inline-block;
   text-align: center;
   vertical-align: top;
   width: 100%;
+}
+
+.gallery-item img {
+  margin: 0 auto;
 }
 
 .gallery-columns-2 .gallery-item {
@@ -68,4 +73,10 @@
 
 .gallery-caption {
   display: block;
+}
+
+.wp-caption-text {
+  padding-top: .25em;
+  text-align: center;
+  font-size: .9em;
 }

@@ -9,6 +9,11 @@ $color__background-ins: #fff9c0;
 // font family
 body {
   font-family: $sans;
+  overflow-wrap: break-word;
+}
+// edge case in WP theme unit test
+.nav-links {
+  overflow-wrap: anywhere;
 }
 h1, h2, h3, h4, h5, h6, dt, legend, caption, label, th {
   font-family: $sans;
@@ -129,10 +134,11 @@ li > ul,
 li > ol {
   margin-bottom: 0;
 }
+// edge case in WP theme unit test, comment this out
 // switch to circle for nested list items
-li > ul li {
-  list-style-type: circle;
-}
+//li > ul li {
+//  list-style-type: circle;
+//}
 
 //tables
 table {
