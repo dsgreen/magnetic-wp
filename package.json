@@ -1,8 +1,8 @@
 {
   "name": "magnetic",
-  "version": "1.0.0",
+  "version": "1.2",
   "private": true,
-  "description": "Base WordPress theme for commercial projects.",
+  "description": "This is a minimal blog or portfolio WordPress theme called Magnetic.",
   "main": "index.php",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
