@@ -68,7 +68,7 @@
               esc_html_e('WordPress', 'magnetic'); ?></a><?php
               esc_html_e(' and ', 'magnetic');
               ?>
-          <a href="<?php echo esc_url( __( 'https://magneticthemes.com/', 'magnetic') ); ?>" rel="nofollow"><?php
+          <a href="<?php echo esc_url( __( 'https://www.themedemo.app/magnetic/', 'magnetic') ); ?>" rel="nofollow"><?php
               esc_html_e('Magnetic', 'magnetic'); ?></a>.</p>
 
 	      <?php

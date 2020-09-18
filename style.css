@@ -1,10 +1,10 @@
 /*!
 Theme Name: Magnetic
-Theme URI: https://demo.magneticthemes.com/magnetic/
-Author: Magnetic Themes
-Author URI: https://magneticthemes.com/
+Theme URI: https://www.themedemo.app/magnetic/
+Author: Douglas Green
+Author URI: https://douglasgreen.com/
 Description: This is a minimal blog or portfolio theme called Magnetic.
-Version: 1.1.1
+Version: 1.2
 Tested up to: 5.5.1
 Requires PHP: 5.6
 License: GNU General Public License v2 or later
@@ -565,6 +565,11 @@ img {
 
 body {
   font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  overflow-wrap: break-word;
+}
+
+.nav-links {
+  overflow-wrap: anywhere;
 }
 
 h1, h2, h3, h4, h5, h6, dt, legend, caption, label, th {
@@ -694,10 +699,6 @@ li > ol {
   margin-bottom: 0;
 }
 
-li > ul li {
-  list-style-type: circle;
-}
-
 table {
   width: 100%;
   border-spacing: 0;
@@ -765,6 +766,7 @@ textarea {
 }
 
 button:not(.nav-toggle):not(.customize-partial-edit-shortcut-button):not(.customize-partial-edit-shortcut),
+button:not(.mejs-button button),
 input[type="button"],
 input[type="submit"],
 input[type="reset"],
@@ -787,6 +789,9 @@ input.button {
 }
 
 button:not(.nav-toggle):not(.customize-partial-edit-shortcut-button):not(.customize-partial-edit-shortcut):hover, button:not(.nav-toggle):not(.customize-partial-edit-shortcut-button):not(.customize-partial-edit-shortcut):active, button:not(.nav-toggle):not(.customize-partial-edit-shortcut-button):not(.customize-partial-edit-shortcut):focus,
+button:hover,
+button:active,
+button:focus,
 input[type="button"]:hover,
 input[type="button"]:active,
 input[type="button"]:focus,
@@ -1572,10 +1577,15 @@ a.btn.wide {
 }
 
 .gallery-item {
+  margin-bottom: 1em;
   display: inline-block;
   text-align: center;
   vertical-align: top;
   width: 100%;
+}
+
+.gallery-item img {
+  margin: 0 auto;
 }
 
 .gallery-columns-2 .gallery-item {
@@ -1612,6 +1622,12 @@ a.btn.wide {
 
 .gallery-caption {
   display: block;
+}
+
+.wp-caption-text {
+  padding-top: .25em;
+  text-align: center;
+  font-size: .9em;
 }
 
 .bg-primary {
@@ -2094,6 +2110,10 @@ a.btn.wide {
   margin-bottom: 1em;
 }
 
+iframe {
+  max-width: 100%;
+}
+
 .comment-content a {
   word-wrap: break-word;
 }
@@ -2256,6 +2276,10 @@ ol.comment-list .comment-reply-title a {
 
 .comments-area {
   margin-bottom: 2em;
+}
+
+#cancel-comment-reply-link {
+  margin-left: 1em;
 }
 
 .entry-header {

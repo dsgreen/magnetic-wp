@@ -73,7 +73,7 @@ msgstr ""
 
 #. Author URI of the plugin/theme
 #: footer.php:71
-msgid "https://magneticthemes.com/"
+msgid "https://douglasgreen.com/"
 msgstr ""
 
 #. Theme Name of the plugin/theme
@@ -305,7 +305,7 @@ msgid "Continue reading<span class=\"sr-only\"> \"%s\"</span>"
 msgstr ""
 
 #. Theme URI of the plugin/theme
-msgid "https://demo.magneticthemes.com/magnetic/"
+msgid "https://www.themedemo.app/magnetic/"
 msgstr ""
 
 #. Description of the plugin/theme

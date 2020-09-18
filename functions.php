@@ -9,7 +9,7 @@
 
 if ( ! defined( 'THEME_VERSION' ) ) {
     // Replace the version number of the theme on each release.
-    define( 'THEME_VERSION', '1.1.1' );
+    define( 'THEME_VERSION', '1.2' );
 }
 
 if ( ! function_exists( 'magnetic_setup' ) ) :
@@ -56,9 +56,9 @@ if ( ! function_exists( 'magnetic_setup' ) ) :
 		 */
 		add_theme_support( 'post-thumbnails' );
 
-    /*
-     * Register custom image sizes.
-     */
+		/*
+		 * Register custom image sizes.
+		 */
 		add_image_size( 'extra_large', 1400, 1400 );
 
 		/*
@@ -134,16 +134,16 @@ if ( ! function_exists( 'magnetic_setup' ) ) :
 		/*
 		 * Change the excerpt 'more' link.
 		 */
-	   function new_excerpt_more() {
+	   	function new_excerpt_more() {
 		   global $post;
 		   return '&hellip; <div class="more-wrap"><a href="'. get_permalink($post->ID) . '" title="Continue to ' . wp_kses_post( get_the_title() ) . '" class="more-link">' . wp_kses_post( get_the_title() ) . '</a></div>';
-	   }
-	   add_filter('excerpt_more', 'new_excerpt_more');
+	   	}
+	   	add_filter('excerpt_more', 'new_excerpt_more');
 
 		/*
 		 * Remove the WordPress version number from the HTML source.
 		 */
-	  add_filter( 'the_generator', '__return_null' );
+		add_filter( 'the_generator', '__return_null' );
 	}
 endif;
 add_action( 'after_setup_theme', 'magnetic_setup' );
