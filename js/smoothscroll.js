@@ -1,5 +1,7 @@
 'use strict';
 
+// https://github.com/iamdustan/smoothscroll
+
 // polyfill
 function polyfill() {
   // aliases
