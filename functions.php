@@ -333,7 +333,6 @@ function magnetic_scripts() {
      * Footer scripts
      */
 	// plugin scripts, followed by main site script
-	wp_enqueue_script( 'smoothscroll', get_template_directory_uri() . '/js/smoothscroll.min.js', array(), '0.4.4', TRUE );
 	wp_enqueue_script( 'hoverintent', get_template_directory_uri() . '/js/hoverintent.js', array(), 'r7', TRUE );
 	wp_enqueue_script( 'superfish', get_template_directory_uri() . '/js/superfish.min.js', array(), '1.7.10', TRUE );
 	wp_enqueue_script( 'main_js', get_template_directory_uri() . '/js/main.min.js', array('jquery'), $resource_version, TRUE );

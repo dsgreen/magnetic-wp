@@ -33,25 +33,3 @@ jQuery(document).ready(function($) {
         cssArrows: false
     });
 });
-
-jQuery(document).ready(function($) {
-    $(".back-to-top").click(function() {
-        window.scroll({
-            top: 0,
-            left: 0,
-            behavior: "smooth"
-        });
-    });
-    $('a[href*="#"]').not('[href="#"]').not('[href="#0"]').not(".back-to-top").click(function(event) {
-        if (location.pathname.replace(/^\//, "") == this.pathname.replace(/^\//, "") && location.hostname == this.hostname) {
-            var target = $(this.hash);
-            target = target.length ? target : $("[name=" + this.hash.slice(1) + "]");
-            if (target.length) {
-                event.preventDefault();
-                $("html, body").animate({
-                    scrollTop: target.offset().top - 100
-                }, 500, function() {});
-            }
-        }
-    });
-});
