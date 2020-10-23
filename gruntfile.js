@@ -18,7 +18,7 @@ module.exports = function(grunt) {
       },
       build: {
         src:  'src/js/*.js',
-        dest: 'js/main.js'
+        dest: 'js/main.min.js'
       }
     },
     sass: {
