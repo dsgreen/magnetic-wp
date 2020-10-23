@@ -316,15 +316,9 @@ function magnetic_scripts() {
      * Header scripts and styles
      * Bootstrap grid, plugins, other
      */
-    // ALTERNATE, full Bootstrap: wp_enqueue_style( 'bootstrap', get_stylesheet_directory_uri() . '/css/bootstrap.min.css', array(), '4.1.3' );
 	// Bootstrap grid only:
-	wp_enqueue_style( 'bootstrap-grid', get_stylesheet_directory_uri() . '/css/bootstrap-grid.min.css', array(), '4.1.3' );
-
-	// ALTERNATE, earlier Font Awesome: wp_enqueue_style( 'font-awesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css', array(), '4.7.0' );
-    wp_enqueue_style( 'font-awesome', 'https://use.fontawesome.com/releases/v5.1.1/css/all.css', array(), '5.1.1' );
-
-	// custom plugin styles: could opt to put in header-{custom}.php files for select pages, or use template conditionals here
-    // EXAMPLE: wp_enqueue_style( 'custom-style', get_template_directory_uri() . '/css/your-custom.css', array(), '1.0.0' );
+	wp_enqueue_style( 'bootstrap-grid', get_stylesheet_directory_uri() . '/bootstrap/bootstrap-grid.min.css', array(), '4.1.3' );
+    wp_enqueue_style( 'font-awesome', get_stylesheet_directory_uri() . '/fontawesome/css/custom.css', array(), '5.15.1' );
 
 	// Google fonts
 	wp_enqueue_style( 'roboto', 'https://fonts.googleapis.com/css?family=Roboto:300,400,400italic,500,700', array() );
@@ -333,24 +327,16 @@ function magnetic_scripts() {
     wp_enqueue_style( 'main', get_stylesheet_uri(), array(), $resource_version );
 
     // Modernizr (Minimal build. Configure your own at: https://modernizr.com/)
-    wp_enqueue_script( 'modernizr_js', get_template_directory_uri() . '/js/modernizr-custom.js', array(), '3.6.0' );
+    wp_enqueue_script( 'modernizr_js', get_template_directory_uri() . '/js/modernizr-custom.min.js', array(), '3.6.0' );
 
     /*
      * Footer scripts
-     * jQuery note: Remove the 'jquery' dependency from Bootstrap and others to load a custom jQuery version in the footer
-     * (not the bundled WP version in header). Many plugins will require jQuery and the bundled WP version will get loaded
-     * in the header. If that's the case, DO NOT use the jQuery line below to avoid loading it twice. Try this only if you
-     * have full control over the environment and you're trying to fine tune everything.
      */
-	// OPTIONAL: wp_enqueue_script( 'jquery_js', get_template_directory_uri() . '/js/jquery.min.js', array(), '3.3.1', TRUE );
-	// OPTIONAL: wp_enqueue_script( 'popper_js', get_template_directory_uri() . '/js/popper.min.js', array(), '1.14.3', TRUE );
-	// OPTIONAL: wp_enqueue_script( 'bootstrap_js', get_template_directory_uri() . '/js/bootstrap.min.js', array('jquery'), '4.1.0', TRUE );
-
 	// plugin scripts, followed by main site script
 	wp_enqueue_script( 'smoothscroll', get_template_directory_uri() . '/js/smoothscroll.min.js', array(), '0.4.4', TRUE );
 	wp_enqueue_script( 'hoverintent', get_template_directory_uri() . '/js/hoverintent.js', array(), 'r7', TRUE );
 	wp_enqueue_script( 'superfish', get_template_directory_uri() . '/js/superfish.min.js', array(), '1.7.10', TRUE );
-	wp_enqueue_script( 'main_js', get_template_directory_uri() . '/js/main.js', array('jquery'), $resource_version, TRUE );
+	wp_enqueue_script( 'main_js', get_template_directory_uri() . '/js/main.min.js', array('jquery'), $resource_version, TRUE );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
