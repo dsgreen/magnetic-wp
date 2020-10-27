@@ -157,7 +157,7 @@ add_action( 'after_setup_theme', 'magnetic_setup' );
  * https://wycks.wordpress.com/2013/02/14/why-the-content_width-wordpress-global-kinda-sucks/
  */
 function magnetic_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'magnetic_content_width', 2500 );
+	$GLOBALS['content_width'] = apply_filters( 'magnetic_content_width', 2500 ); // phpcs:ignore WPThemeReview.CoreFunctionality.PrefixAllGlobals.NonPrefixedVariableFound
 }
 add_action( 'after_setup_theme', 'magnetic_content_width', 0 );
 
