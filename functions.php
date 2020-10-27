@@ -134,16 +134,12 @@ if ( ! function_exists( 'magnetic_setup' ) ) :
 		/*
 		 * Change the excerpt 'more' link.
 		 */
-	   	function new_excerpt_more() {
+	   	function magnetic_excerpt_more() {
+		   if ( is_admin() ) return $more;
 		   global $post;
 		   return '&hellip; <div class="more-wrap"><a href="'. get_permalink($post->ID) . '" title="Continue to ' . wp_kses_post( get_the_title() ) . '" class="more-link">' . wp_kses_post( get_the_title() ) . '</a></div>';
 	   	}
-	   	add_filter('excerpt_more', 'new_excerpt_more');
-
-		/*
-		 * Remove the WordPress version number from the HTML source.
-		 */
-		add_filter( 'the_generator', '__return_null' );
+	   	add_filter('excerpt_more', 'magnetic_excerpt_more');
 	}
 endif;
 add_action( 'after_setup_theme', 'magnetic_setup' );
