@@ -199,8 +199,8 @@ endif;
  * See reference: https://codex.wordpress.org/Function_Reference/paginate_links
  *
  */
-if ( ! function_exists( 'numeric_posts_navigation' ) ) :
-	function numeric_posts_navigation() {
+if ( ! function_exists( 'magnetic_numeric_posts_navigation' ) ) :
+	function magnetic_numeric_posts_navigation() {
 
 		global $wp_query;
 
