@@ -1,10 +1,9 @@
 /*!
 Theme Name: Magnetic WP
-Theme URI: https://www.themedemo.app/magnetic/
 Author: Douglas Green
 Author URI: https://douglasgreen.com/
 Description: This is a minimal blog or portfolio theme called Magnetic.
-Version: 1.2
+Version: 1.2.1
 Tested up to: 5.5.1
 Requires PHP: 5.6
 License: GNU General Public License v2 or later
@@ -1034,6 +1033,10 @@ body.body--transparent-header .site-header.scrolled {
   position: fixed;
 }
 
+body.admin-bar .site-header {
+  top: 32px;
+}
+
 .footer-widgets {
   margin-top: 1em;
   padding: 2em 0;
@@ -1470,6 +1473,10 @@ a.btn.wide {
   font-weight: 600;
   color: #2F835F;
   background-color: #FFFFFF;
+}
+
+body.admin-bar .skiplink {
+  top: 32px;
 }
 
 .color-overlay {
