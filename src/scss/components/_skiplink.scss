@@ -13,3 +13,9 @@
     background-color: $skiplink-bg;
   }
 }
+// move skiplink down if admin bar is visible
+body.admin-bar {
+  .skiplink {
+    top: 32px;
+  }
+}

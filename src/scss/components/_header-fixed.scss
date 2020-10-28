@@ -24,3 +24,9 @@ body.body--transparent-header .site-header {
     position: fixed;
   }
 }
+// move header down if admin bar is visible
+body.admin-bar {
+  .site-header {
+    top: 32px;
+  }
+}

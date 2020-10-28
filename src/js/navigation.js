@@ -80,5 +80,4 @@ jQuery(document).ready(function($) {
     autoArrows: false,
     cssArrows: false
   });
-
 });
