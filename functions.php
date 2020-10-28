@@ -7,9 +7,9 @@
  * @package magnetic
  */
 
-if ( ! defined( 'THEME_VERSION' ) ) {
+if ( ! defined( 'MAGNETIC_THEME_VERSION' ) ) {
     // Replace the version number of the theme on each release.
-    define( 'THEME_VERSION', '1.2' );
+    define( 'MAGNETIC_THEME_VERSION', '1.2.1' );
 }
 
 if ( ! function_exists( 'magnetic_setup' ) ) :
@@ -302,11 +302,11 @@ function magnetic_scripts() {
      * Development mode
      * Use a random number for development to avoid browser caching the theme CSS while it's being worked on
      * (set $dev to true).
-     * Could opt to use no query string for production to optimize static resource loading (set THEME_VERSION to null), however:
+     * Could opt to use no query string for production to optimize static resource loading (set MAGNETIC_THEME_VERSION to null), however:
      * Query strings for static resources OK. See: https://sirv.com/help/resources/remove-query-strings-from-static-resources/
      */
     $dev = false;
-    $resource_version = ($dev === true) ? rand() : THEME_VERSION;
+    $resource_version = ($dev === true) ? rand() : MAGNETIC_THEME_VERSION;
 
     /*
      * Header scripts and styles
