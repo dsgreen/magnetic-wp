@@ -28,7 +28,11 @@
 <?php else : ?>
 <body <?php body_class(); ?>>
 <?php endif;
-wp_body_open(); ?>
+if ( function_exists( 'wp_body_open' ) ) {
+	wp_body_open();
+} else {
+	do_action( 'wp_body_open' ); // phpcs:ignore WPThemeReview.CoreFunctionality.PrefixAllGlobals.NonPrefixedHooknameFound
+} ?>
 <a class="skiplink" href="#content"><?php esc_html_e( 'Skip to main content', 'magnetic' ); ?></a>
 <header class="site-header" id="top">
 	<div class="container">

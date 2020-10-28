@@ -187,16 +187,20 @@ function magnetic_post_thumbnail($img_size = 'post-thumbnail') {
 }
 endif;
 
-if ( ! function_exists( 'wp_body_open' ) ) :
+//if ( ! function_exists( 'wp_body_open' ) ) :
     /**
      * Shim for sites older than 5.2.
      *
      * @link https://core.trac.wordpress.org/ticket/12563
+     *
+     * Moved to header.php
+     * See Backward Compatibility: https://make.wordpress.org/core/2019/04/24/miscellaneous-developer-updates-in-5-2/
+     *
      */
-    function wp_body_open() {
-        do_action( 'wp_body_open' );
-    }
-endif;
+//    function wp_body_open() {
+//        do_action( 'wp_body_open' );
+//    }
+//endif;
 
 /**
  * Displays post pagination links
