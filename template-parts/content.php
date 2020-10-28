@@ -34,7 +34,7 @@
       </div>
     </header>
     <div class="entry-content">
-    <?php magnetic_post_thumbnail('extra_large'); ?>
+    <?php magnetic_post_thumbnail('magnetic_extra_large'); ?>
     <?php
     if ( is_single() ) {
       the_content( sprintf(

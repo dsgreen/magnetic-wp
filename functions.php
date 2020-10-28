@@ -59,7 +59,7 @@ if ( ! function_exists( 'magnetic_setup' ) ) :
 		/*
 		 * Register custom image sizes.
 		 */
-		add_image_size( 'extra_large', 1400, 1400 );
+		add_image_size( 'magnetic_extra_large', 1400, 1400 );
 
 		/*
 		 * Add sizes for use in attachment display settings menu.
@@ -67,7 +67,7 @@ if ( ! function_exists( 'magnetic_setup' ) ) :
 		add_filter('image_size_names_choose', 'magnetic_custom_image_sizes' );
 		function magnetic_custom_image_sizes( $sizes ) {
 			return array_merge( $sizes, array(
-				'extra_large' => __( 'Extra Large', 'magnetic' )
+				'magnetic_extra_large' => __( 'Extra Large', 'magnetic' )
 			) );
 		}
 
