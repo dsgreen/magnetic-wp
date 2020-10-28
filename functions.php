@@ -319,21 +319,21 @@ function magnetic_scripts() {
     wp_enqueue_style( 'font-awesome', get_stylesheet_directory_uri() . '/fontawesome/css/custom.css', array(), '5.15.1' );
 
 	// Google fonts
-	wp_enqueue_style( 'roboto', 'https://fonts.googleapis.com/css?family=Roboto:300,400,400italic,500,700', array() );
+	wp_enqueue_style( 'google-font-roboto', 'https://fonts.googleapis.com/css?family=Roboto:300,400,400italic,500,700', array() );
 
     // magnetic/main site styles (follows Bootstrap & plugins in case any overrides in main site styles)
-    wp_enqueue_style( 'main', get_stylesheet_uri(), array(), $resource_version );
+    wp_enqueue_style( 'magnetic-style', get_stylesheet_uri(), array(), $resource_version );
 
     // Modernizr (Minimal build. Configure your own at: https://modernizr.com/)
-    wp_enqueue_script( 'modernizr_js', get_template_directory_uri() . '/js/modernizr-custom.min.js', array(), '3.6.0' );
+    wp_enqueue_script( 'modernizr', get_template_directory_uri() . '/js/modernizr-custom.min.js', array(), '3.6.0' );
 
     /*
      * Footer scripts
      */
 	// plugin scripts, followed by main site script
-	wp_enqueue_script( 'hoverintent', get_template_directory_uri() . '/js/hoverintent.js', array(), 'r7', TRUE );
-	wp_enqueue_script( 'superfish', get_template_directory_uri() . '/js/superfish.min.js', array(), '1.7.10', TRUE );
-	wp_enqueue_script( 'main_js', get_template_directory_uri() . '/js/main.min.js', array('jquery'), $resource_version, TRUE );
+	wp_enqueue_script( 'jquery-hoverintent', get_template_directory_uri() . '/js/hoverintent.js', array('jquery'), 'r7', TRUE );
+	wp_enqueue_script( 'jquery-superfish', get_template_directory_uri() . '/js/superfish.min.js', array('jquery'), '1.7.10', TRUE );
+	wp_enqueue_script( 'magnetic-script', get_template_directory_uri() . '/js/main.min.js', array('jquery'), $resource_version, TRUE );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
