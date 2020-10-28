@@ -61,7 +61,7 @@
             ?>
 
           <p>&copy; <?php
-              esc_html_e('Copyright ', 'magnetic'); echo date('Y') . ' '; bloginfo( 'name' );
+              esc_html_e('Copyright ', 'magnetic'); echo date('Y') . ' '; bloginfo( 'name' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
               esc_html_e('. Proudly powered by ', 'magnetic');
               ?>
           <a href="<?php echo esc_url( __( 'https://wordpress.org/', 'magnetic' ) ); ?>" rel="nofollow"><?php
