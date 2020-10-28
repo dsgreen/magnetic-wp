@@ -27,7 +27,7 @@ if ( ! function_exists( 'magnetic_posted_on' ) ) :
 
 		$posted_on = sprintf(
 			/* translators: %s: post date. */
-			esc_html_x( '%s', 'post date', 'magnetic' ),
+			esc_html_x( 'Posted on %s', 'post date', 'magnetic' ),
 			'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 		);
 
@@ -88,12 +88,15 @@ if ( ! function_exists( 'magnetic_print_categories' ) ) :
   function magnetic_print_categories($list_label = false) {
 	  // Hide category and tag text for pages.
 	  if ( 'post' === get_post_type() ) {
-		  /* translators: used between list items, there is a space after the comma */
-		  $categories_list = get_the_category_list(esc_html__(' ', 'magnetic'));
+		  /* translators: used between list items, there is a space */
+		  $categories_list = get_the_category_list(esc_html(' '));
 		  if ($categories_list) {
-			  /* translators: 1: list of categories. */
-			  printf('<span class="cat-links">' . esc_html__(
-			      $list_title = ($list_label ? 'Categories: ' : '') . '%1$s', 'magnetic') . '</span>', $categories_list); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+        if ($list_label) {
+			    /* translators: 1: list of categories. */
+			    printf('<span class="cat-links">' . esc_html__('Categories: %1$s', 'magnetic') . '</span>', $categories_list); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+		    } else {
+			    printf('<span class="cat-links">' . esc_html('%1$s', 'magnetic') . '</span>', $categories_list); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+		    }
 		  }
 	  }
   }
@@ -108,12 +111,15 @@ if ( ! function_exists( 'magnetic_print_tags' ) ) :
 	function magnetic_print_tags($list_label = false) {
 		// Hide category and tag text for pages.
 		if ( 'post' === get_post_type() ) {
-			/* translators: used between list items, there is a space after the comma */
-			$tags_list = get_the_tag_list('', esc_html_x(' ', 'list item separator', 'magnetic'));
+			/* translators: used between list items, there is a space */
+			$tags_list = get_the_tag_list('', esc_html(' '));
 			if ($tags_list) {
-				/* translators: 1: list of tags. */
-				printf('<span class="tags-links">' . esc_html__(
-						$list_title = ($list_label ? 'Tags: ' : '') . '%1$s', 'magnetic') . '</span>', $tags_list); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+        if ($list_label) {
+				  /* translators: 1: list of tags. */
+				  printf('<span class="tags-links">' . esc_html__('Tags: %1$s', 'magnetic') . '</span>', $tags_list); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+        } else {
+			    printf('<span class="tags-links">' . esc_html('%1$s', 'magnetic') . '</span>', $tags_list); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+        }
 			}
 		}
   }
