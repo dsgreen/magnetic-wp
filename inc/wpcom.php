@@ -19,7 +19,7 @@ function magnetic_wpcom_setup() {
 	if ( ! isset( $themecolors ) ) {
 		// Whitelist wpcom specific variable intended to be overruled.
 		// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
-		$themecolors = array(
+		$themecolors = array( // phpcs:ignore WPThemeReview.CoreFunctionality.PrefixAllGlobals.NonPrefixedVariableFound
 			'bg'     => '',
 			'border' => '',
 			'text'   => '',
