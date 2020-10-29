@@ -47,3 +47,16 @@
 iframe {
   max-width: 100%;
 }
+
+// sticky post class
+.sticky {
+  margin-bottom: 2em;
+  padding: 1.5em 2em;
+  background-color: $super-light;
+
+  .entry-footer {
+    margin-bottom: 1em !important;
+    padding-bottom: 0 !important;
+    border-bottom: none !important;
+  }
+}
