@@ -8,6 +8,7 @@
   display: none;
 }
 .main-navigation,
+.main-navigation div,
 .mobile-navigation {
   ul {
     @include list-nostyle;
@@ -24,7 +25,8 @@
       color: $main-nav-hover;
     }
     // highlight current menu item
-    &.current-menu-item > a {
+    &.current-menu-item > a,
+    &.current_page_item > a {
       color: $main-nav-active;
     }
   }
@@ -37,7 +39,8 @@
       color: $main-nav-hover;
     }
   }
-  .menu-item-has-children > a::after {
+  .menu-item-has-children > a::after,
+  .page_item_has_children > a::after {
     content: "\f107";
     font-family: "Font Awesome 5 Free";
     font-weight: 700;
@@ -77,14 +80,15 @@
     color: $main-nav-color;
   }
   // highlight current menu item
-  .current-menu-item > a {
+  .current-menu-item > a,
+  .current_page_item > a {
     color: $main-nav-active;
   }
-  .sub-menu .current-menu-item > a {
+  .sub-menu .current-menu-item > a,
+  .children .current_page_item > a {
     color: $main-nav-active;
   }
 }
-
 
 // navigation item with button styling
 .main-nav-btn a,
@@ -177,7 +181,6 @@
       background-color: $main-nav-color;
     }
   }
-
   .mobile-navigation ul {
     margin-bottom: 1em;
   }
@@ -202,7 +205,9 @@
   .nav-toggle {
     display: none;
   }
-  .main-navigation {
+  .main-navigation,
+  .main-navigation div
+  {
     float: right;
     > ul {
       @include list-inline;
@@ -211,7 +216,8 @@
     li {
       padding-top: 0;
     }
-    .sub-menu a {
+    .sub-menu a,
+    .children a {
       color: $sub-menu-color;
       background-color: $sub-menu-bg-color;
       &:hover,
@@ -220,19 +226,22 @@
         background-color: lighten($sub-menu-bg-color, 20%);
       }
     }
-    .sub-menu li {
+    .sub-menu li,
+    .children li {
       text-transform: none;
       border-bottom: $sub-menu-brdr solid $sub-menu-brdr-color;
     }
     // current/active menu style
-    li.current-menu-item > a {
+    li.current-menu-item > a,
+    li.current_page_item > a {
       color: $main-nav-active;
       //border-bottom: .2rem solid $main-nav-active;
     }
   }
   // Make sure sub navigation items are the right color when scrolled with transparent header
   .body--transparent-header .site-header.scrolled .main-navigation {
-    .sub-menu a {
+    .sub-menu a,
+    .children a {
       color: $sub-menu-color;
       &:hover,
       &:focus {
@@ -240,15 +249,18 @@
       }
     }
   }
-  .menu-item-has-children {
+  .menu-item-has-children,
+  .page_item_has_children {
     position: relative;
   }
   // Use right angle for sub menu items, desktop
-  .menu-item-has-children .menu-item-has-children > a::after {
+  .menu-item-has-children .menu-item-has-children > a::after,
+  .page_item_has_children .page_item_has_children > a::after {
     content: "\f105";
   }
 
-  .sub-menu {
+  .sub-menu,
+  .children {
     display: none;
     position: absolute;
     top: 2em;
@@ -258,20 +270,25 @@
       text-align: left;
     }
   }
-  .sub-menu a {
+  .sub-menu a,
+  .children a {
     display: block;
   }
   // display sub menu on hover
   // focus-within not fully supported, edge 18 https://caniuse.com/#feat=css-focus-within
   // ultimately need full support, or JS solution
   .menu-item-has-children:hover,
-  .menu-item-has-children:focus-within {
-    > .sub-menu {
+  .menu-item-has-children:focus-within,
+  .page_item_has_children:hover,
+  .page_item_has_children:focus-within {
+    > .sub-menu,
+    > .children {
       display: block;
     }
   }
   // position 2nd level (and greater) menus
-  .sub-menu .sub-menu {
+  .sub-menu .sub-menu,
+  .children .children {
     top: 0;
     left: 16rem;
   }
@@ -284,13 +301,8 @@
   //  }
   //}
   // menu open class applied with JS
-  .sub-menu.open {
+  .sub-menu.open,
+  .children.open {
     display: block;
   }
 }
-// menu style debug
-//.main-navigation,
-//.mobile-navigation {
-//  li {border: 1px solid aqua;}
-//  a {border: 1px solid red;}
-//}
