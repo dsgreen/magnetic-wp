@@ -26,6 +26,18 @@ jQuery(document).ready(function($) {
 
       $(this).next('.sub-menu').slideToggle('fast');
     });
+
+    // mobile nav close button
+    $('.mobile-nav-close').click(function(e) {
+      e.preventDefault();
+
+      // hide open menus
+      $('.mobile-navigation').hide();
+      $('.mobile-navigation .sub-menu').hide();
+
+      // .toggled class is needed for pages with an image header for mobile menu styling
+      $('.site-header').toggleClass('toggled');
+    });
   }
 
   /**
