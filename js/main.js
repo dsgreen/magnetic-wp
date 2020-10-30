@@ -4,15 +4,22 @@ jQuery(document).ready(function($) {
     function setupMobileMenu() {
         $(".mobile-navigation").hide();
         $(".mobile-navigation .sub-menu").hide();
+        $(".mobile-navigation .children").hide();
         $(".mobile-navigation .menu-item-has-children > a").click(function(e) {
             e.preventDefault();
             $(this).attr("aria-expanded", $(this).attr("aria-expanded") === "true" ? "false" : "true");
             $(this).next(".sub-menu").slideToggle("fast");
         });
+        $(".mobile-navigation .page_item_has_children > a").click(function(e) {
+            e.preventDefault();
+            $(this).attr("aria-expanded", $(this).attr("aria-expanded") === "true" ? "false" : "true");
+            $(this).next(".children").slideToggle("fast");
+        });
         $(".mobile-nav-close").click(function(e) {
             e.preventDefault();
             $(".mobile-navigation").hide();
             $(".mobile-navigation .sub-menu").hide();
+            $(".mobile-navigation .children").hide();
             $(".site-header").toggleClass("toggled");
         });
     }
@@ -25,6 +32,7 @@ jQuery(document).ready(function($) {
         $(".site-header").removeClass("toggled");
         $(".mobile-navigation").hide();
         $(".mobile-navigation .sub-menu").hide();
+        $(".mobile-navigation .children").hide();
     });
     $(window).scroll(function() {
         if ($(document).scrollTop() > 75) {

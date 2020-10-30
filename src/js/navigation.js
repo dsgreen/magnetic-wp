@@ -16,6 +16,7 @@ jQuery(document).ready(function($) {
     // hide the menu initially
     $('.mobile-navigation').hide();
     $('.mobile-navigation .sub-menu').hide();
+    $('.mobile-navigation .children').hide();
 
     // display sub menu on click
     $('.mobile-navigation .menu-item-has-children > a').click(function(e) {
@@ -27,6 +28,16 @@ jQuery(document).ready(function($) {
       $(this).next('.sub-menu').slideToggle('fast');
     });
 
+    // default page menu
+    $('.mobile-navigation .page_item_has_children > a').click(function(e) {
+      e.preventDefault();
+
+      // set aria expanded attribute
+      $(this).attr('aria-expanded', ($(this).attr('aria-expanded') === 'true') ? 'false' : 'true');
+
+      $(this).next('.children').slideToggle('fast');
+    });
+
     // mobile nav close button
     $('.mobile-nav-close').click(function(e) {
       e.preventDefault();
@@ -34,6 +45,7 @@ jQuery(document).ready(function($) {
       // hide open menus
       $('.mobile-navigation').hide();
       $('.mobile-navigation .sub-menu').hide();
+      $('.mobile-navigation .children').hide();
 
       // .toggled class is needed for pages with an image header for mobile menu styling
       $('.site-header').toggleClass('toggled');
@@ -69,6 +81,7 @@ jQuery(document).ready(function($) {
     // hide the mobile nav if it's open
     $('.mobile-navigation').hide();
     $('.mobile-navigation .sub-menu').hide();
+    $('.mobile-navigation .children').hide();
   });
 
   // add class when scrolling, for pages with transparent header

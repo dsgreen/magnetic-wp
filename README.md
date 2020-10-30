@@ -44,8 +44,3 @@ normalize.css v8.0.0
 Copyright (c) Nicolas Gallagher
 License: MIT License, https://opensource.org/licenses/MIT
 Source: github.com/necolas/normalize.css
-
-Theme screenshot photo credits:
-Laptop and hands photo by Headway on Unsplash: https://unsplash.com/@headwayio
-Sticky notes wireframe photo by Jo Szczepanska on Unsplash: https://unsplash.com/@joszczepanska
-Unsplash License: https://unsplash.com/license
