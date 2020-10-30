@@ -22,6 +22,13 @@ function magnetic_body_classes( $classes ) {
 		$classes[] = 'no-sidebar';
 	}
 
+	// Adds a page class to style header & navigation with a featured background image.
+	if ( is_page_template( 'templates/template-image-header.php' ) ||
+		 is_page_template( 'front-page.php' ) )
+	{
+		$classes[] = 'body--transparent-header';
+	}
+
 	return $classes;
 }
 add_filter( 'body_class', 'magnetic_body_classes' );
