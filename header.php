@@ -37,9 +37,9 @@ wp_body_open(); ?>
       <a class="brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
     </p>
     <?php
-      $description = get_bloginfo( 'description', 'display' );
-      if ( $description || is_customize_preview() ) : ?>
-    <p class="site-description"><?php echo $description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
+      $magnetic_description = get_bloginfo( 'description', 'display' );
+      if ( $magnetic_description || is_customize_preview() ) : ?>
+    <p class="site-description"><?php echo $magnetic_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
     <?php
       endif; ?>
 		<button class="nav-toggle">
