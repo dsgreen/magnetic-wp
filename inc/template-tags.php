@@ -188,16 +188,6 @@ function magnetic_post_thumbnail($img_size = 'post-thumbnail') {
 endif;
 
 /**
- * Shim for sites older than 5.2.
- *
- * @link https://core.trac.wordpress.org/ticket/12563
- *
- * Moved to header.php
- * See Backward Compatibility: https://make.wordpress.org/core/2019/04/24/miscellaneous-developer-updates-in-5-2/
- *
- */
-
-/**
  * Displays post pagination links
  *
  * Source code borrowed from Atomic by Array Themes: https://arraythemes.com/
