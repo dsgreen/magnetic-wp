@@ -39,7 +39,7 @@ get_header();
 
 			endwhile;
 
-			magnetic_numeric_posts_navigation();
+		the_posts_pagination();
 
 		else :
 

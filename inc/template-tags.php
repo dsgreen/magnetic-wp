@@ -186,38 +186,3 @@ function magnetic_post_thumbnail($img_size = 'post-thumbnail') {
 	<?php endif; // End is_singular().
 }
 endif;
-
-/**
- * Displays post pagination links
- *
- * Source code borrowed from Atomic by Array Themes: https://arraythemes.com/
- * See reference: https://codex.wordpress.org/Function_Reference/paginate_links
- *
- */
-if ( ! function_exists( 'magnetic_numeric_posts_navigation' ) ) :
-	function magnetic_numeric_posts_navigation() {
-
-		global $wp_query;
-
-		// Return early if there's only one page.
-		if ( $GLOBALS['wp_query']->max_num_pages < 2 ) {
-			return;
-		}
-		?>
-    <div class="navigation">
-			<?php
-			$big = 999999999; // need an unlikely integer
-
-			echo paginate_links( array( // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-				'base'      => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
-				'format'    => '?paged=%#%',
-				'current'   => max( 1, get_query_var('paged') ),
-				'total'     => $wp_query->max_num_pages,
-				'next_text' => esc_html__( 'Next', 'magnetic' ),
-				'prev_text' => esc_html__( 'Prev', 'magnetic' )
-			) );
-			?>
-    </div>
-		<?php
-	}
-endif;
