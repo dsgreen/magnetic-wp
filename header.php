@@ -57,6 +57,7 @@ wp_body_open(); ?>
 				'container_id'      => '',
 				'menu_class'        => ''
 			)); ?>
+      <a href="#" class="mobile-nav-close">Close Menu</a>
     </nav>
 		<nav class="main-navigation hidden">
 			<?php wp_nav_menu( array(

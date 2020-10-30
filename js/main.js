@@ -9,6 +9,12 @@ jQuery(document).ready(function($) {
             $(this).attr("aria-expanded", $(this).attr("aria-expanded") === "true" ? "false" : "true");
             $(this).next(".sub-menu").slideToggle("fast");
         });
+        $(".mobile-nav-close").click(function(e) {
+            e.preventDefault();
+            $(".mobile-navigation").hide();
+            $(".mobile-navigation .sub-menu").hide();
+            $(".site-header").toggleClass("toggled");
+        });
     }
     $(".nav-toggle").click(function() {
         $(".mobile-navigation").slideToggle("fast");
