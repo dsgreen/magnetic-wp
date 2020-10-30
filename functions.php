@@ -134,9 +134,11 @@ if ( ! function_exists( 'magnetic_setup' ) ) :
 		/*
 		 * Change the excerpt 'more' link.
 		 */
-	   	function magnetic_excerpt_more() {
+	   	function magnetic_excerpt_more( $more ) {
 		   // if within the WP admin, return the more tag
-		   if ( is_admin() ) return $more;
+		   if ( is_admin() ) {
+		   	  return $more;
+		   }
 		   // modify and return the more link
 		   global $post;
 		   return '&hellip; <div class="more-wrap"><a href="'. esc_url( get_permalink($post->ID) ) . '" title="Continue to ' . wp_kses_post( get_the_title() ) . '" class="more-link">' . wp_kses_post( get_the_title() ) . '</a></div>';
