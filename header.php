@@ -19,16 +19,8 @@
 <link rel="profile" href="https://gmpg.org/xfn/11">
 <?php wp_head(); ?>
 </head>
-<?php if (
-    // add a page class to style header & navigation with a featured background image
-    is_page_template('templates/template-image-header.php') ||
-    is_page_template('front-page.php')
-) : ?>
-<body <?php body_class('body--transparent-header'); ?>>
-<?php else : ?>
 <body <?php body_class(); ?>>
-<?php endif;
-wp_body_open(); ?>
+<?php wp_body_open(); ?>
 <a class="skiplink" href="#content"><?php esc_html_e( 'Skip to main content', 'magnetic' ); ?></a>
 <header class="site-header" id="top">
 	<div class="container">
