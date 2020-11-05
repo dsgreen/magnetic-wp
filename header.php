@@ -35,7 +35,7 @@
     <?php
       endif; ?>
 		<button class="nav-toggle">
-			<span class="nav-toggle-text">Menu</span>
+			<span class="nav-toggle-text"><?php esc_html_e( 'Menu', 'magnetic-wp' ); ?></span>
 			<span class="bar"></span>
 			<span class="bar"></span>
 			<span class="bar"></span>
