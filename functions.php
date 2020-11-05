@@ -130,23 +130,26 @@ if ( ! function_exists( 'magnetic_wp_setup' ) ) :
 			'flex-height' => true,
             )
         );
-
-		/*
-		 * Change the excerpt 'more' link.
-		 */
-	   	function magnetic_wp_excerpt_more( $more ) {
-		   // if within the WP admin, return the more tag
-		   if ( is_admin() ) {
-		   	  return $more;
-		   }
-		   // modify and return the more link
-		   global $post;
-		   return '&hellip; <div class="more-wrap"><a href="'. esc_url( get_permalink($post->ID) ) . '" title="Continue to ' . wp_kses_post( get_the_title() ) . '" class="more-link">' . wp_kses_post( get_the_title() ) . '</a></div>';
-	   	}
-	   	add_filter('excerpt_more', 'magnetic_wp_excerpt_more');
 	}
 endif;
 add_action( 'after_setup_theme', 'magnetic_wp_setup' );
+
+/**
+ * Change the excerpt 'more' link.
+ */
+function magnetic_wp_excerpt_more( $more ) {
+   // if within the WP admin, return the more tag
+   if ( is_admin() ) {
+	  return $more;
+   }
+   // modify and return the more link
+	return sprintf( '&hellip;<div class="more-wrap"><a href="%1$s" class="more-link">%2$s</a></div>',
+		esc_url( get_permalink( get_the_ID() ) ),
+		// translators: continue reading post title
+		sprintf( __( 'Continue to %s', 'magnetic-wp' ), esc_html( get_the_title( get_the_ID() ) ) )
+	);
+}
+add_filter('excerpt_more', 'magnetic_wp_excerpt_more');
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.

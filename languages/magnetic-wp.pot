@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: Magnetic WP\n"
-"POT-Creation-Date: 2020-10-31 16:56-0400\n"
-"PO-Revision-Date: 2020-10-31 16:56-0400\n"
+"POT-Creation-Date: 2020-11-05 14:15-0500\n"
+"PO-Revision-Date: 2020-11-05 14:15-0500\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -67,20 +67,7 @@ msgstr ""
 msgid "WordPress"
 msgstr ""
 
-#: footer.php:69
-msgid " and "
-msgstr ""
-
-#: footer.php:71
-msgid "https://www.themedemo.app/magnetic/"
-msgstr ""
-
-#. Theme Name of the plugin/theme
-#: footer.php:72
-msgid "Magnetic WP"
-msgstr ""
-
-#: footer.php:80
+#: footer.php:76
 msgid "Back to top"
 msgstr ""
 
@@ -92,103 +79,109 @@ msgstr ""
 msgid "Primary"
 msgstr ""
 
-#: functions.php:175
+#. translators: continue reading post title
+#: functions.php:149
+#, php-format
+msgid "Continue to %s"
+msgstr ""
+
+#: functions.php:178
 msgid "Homepage 1 Left Column"
 msgstr ""
 
-#: functions.php:177
+#: functions.php:180
 msgid "First homepage section, left content area."
 msgstr ""
 
-#: functions.php:184
+#: functions.php:187
 msgid "Homepage 1 Right Column"
 msgstr ""
 
-#: functions.php:186
+#: functions.php:189
 msgid "First homepage section, right content area."
 msgstr ""
 
-#: functions.php:193
+#: functions.php:196
 msgid "Homepage 2 Left Column"
 msgstr ""
 
-#: functions.php:195
+#: functions.php:198
 msgid "Second homepage section, left content area."
 msgstr ""
 
-#: functions.php:202
+#: functions.php:205
 msgid "Homepage 2 Right Column"
 msgstr ""
 
-#: functions.php:204
+#: functions.php:207
 msgid "Second homepage section, right content area."
 msgstr ""
 
-#: functions.php:211
+#: functions.php:214
 msgid "Homepage 3 Left Column"
 msgstr ""
 
-#: functions.php:213
+#: functions.php:216
 msgid "Third homepage section, left content area."
 msgstr ""
 
-#: functions.php:220
+#: functions.php:223
 msgid "Homepage 3 Right Column"
 msgstr ""
 
-#: functions.php:222
+#: functions.php:225
 msgid "Third homepage section, right content area."
 msgstr ""
 
-#: functions.php:229
+#: functions.php:232
 msgid "Homepage 4 Left Column"
 msgstr ""
 
-#: functions.php:231
+#: functions.php:234
 msgid "Fourth homepage section, left content area."
 msgstr ""
 
-#: functions.php:238
+#: functions.php:241
 msgid "Homepage 4 Right Column"
 msgstr ""
 
-#: functions.php:240
+#: functions.php:243
 msgid "Fourth homepage section, right content area."
 msgstr ""
 
-#: functions.php:247
+#: functions.php:250
 msgid "Homepage 5"
 msgstr ""
 
-#: functions.php:249
+#: functions.php:252
 msgid "Fifth homepage section."
 msgstr ""
 
-#: functions.php:256
+#: functions.php:259
 msgid "Sidebar"
 msgstr ""
 
-#: functions.php:258 functions.php:267 functions.php:276 functions.php:285
+#: functions.php:261 functions.php:270 functions.php:279 functions.php:288
 msgid "Add widgets here."
 msgstr ""
 
-#: functions.php:265
+#: functions.php:268
 msgid "Footer 1"
 msgstr ""
 
-#: functions.php:274
+#: functions.php:277
 msgid "Footer 2"
 msgstr ""
 
-#: functions.php:283
+#: functions.php:286
 msgid "Footer 3"
 msgstr ""
 
-#: functions.php:292
+#: functions.php:295
 msgid "Footer Text"
 msgstr ""
 
-#: functions.php:294
+#: functions.php:297
 msgid "Set footer text here."
 msgstr ""
 
@@ -289,6 +282,10 @@ msgstr ""
 #: template-parts/content.php:43
 #, php-format
 msgid "Continue reading<span class=\"sr-only\"> \"%s\"</span>"
+msgstr ""
+
+#. Theme Name of the plugin/theme
+msgid "Magnetic WP"
 msgstr ""
 
 #. Description of the plugin/theme
