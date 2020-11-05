@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package magnetic
+ * @package Magnetic WP
  */
 
 ?>
@@ -14,7 +14,7 @@
     <header class="entry-header">
       <div class="entry-meta">
       <?php
-      magnetic_print_categories();
+      magnetic_wp_print_categories();
       ?>
       </div>
       <?php
@@ -27,20 +27,20 @@
       <div class="entry-meta">
       <?php
       if ( 'post' === get_post_type() ) :
-        magnetic_posted_on();
-        magnetic_posted_by();
-        magnetic_comments_link();
+        magnetic_wp_posted_on();
+        magnetic_wp_posted_by();
+        magnetic_wp_comments_link();
       endif; ?>
       </div>
     </header>
     <div class="entry-content">
-    <?php magnetic_post_thumbnail('magnetic_extra_large'); ?>
+    <?php magnetic_wp_post_thumbnail('magnetic_wp_extra_large'); ?>
     <?php
     if ( is_single() ) {
       the_content( sprintf(
         wp_kses(
           /* translators: %s: Name of current post. Only visible to screen readers */
-          __( 'Continue reading<span class="sr-only"> "%s"</span>', 'magnetic' ),
+          __( 'Continue reading<span class="sr-only"> "%s"</span>', 'magnetic-wp' ),
           array(
             'span' => array(
               'class' => array(),
@@ -51,7 +51,7 @@
       ) );
 
       wp_link_pages( array(
-        'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'magnetic' ),
+        'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'magnetic-wp' ),
         'after'  => '</div>',
       ) );
     } else {
@@ -62,7 +62,7 @@
     <footer class="entry-footer">
       <?php
       if ( is_single() ) {
-        magnetic_entry_footer();
+        magnetic_wp_entry_footer();
       }
       ?>
     </footer>

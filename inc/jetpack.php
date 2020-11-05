@@ -4,7 +4,7 @@
  *
  * @link https://jetpack.com/
  *
- * @package magnetic
+ * @package Magnetic WP
  */
 
 /**
@@ -14,13 +14,13 @@
  * See: https://jetpack.com/support/responsive-videos/
  * See: https://jetpack.com/support/content-options/
  */
-function magnetic_jetpack_setup() {
+function magnetic_wp_jetpack_setup() {
 	// Add theme support for Infinite Scroll.
 	add_theme_support(
 	    'infinite-scroll',
         array(
 		    'container' => 'main',
-		    'render'    => 'magnetic_infinite_scroll_render',
+		    'render'    => 'magnetic_wp_infinite_scroll_render',
 		    'footer'    => 'page',
 	    )
     );
@@ -33,7 +33,7 @@ function magnetic_jetpack_setup() {
 	    'jetpack-content-options',
         array(
 		    'post-details'    => array(
-			    'stylesheet' => 'magnetic-style',
+			    'stylesheet' => 'magnetic-wp-style',
                 'date'       => '.posted-on',
                 'categories' => '.cat-links',
                 'tags'       => '.tags-links',
@@ -48,12 +48,12 @@ function magnetic_jetpack_setup() {
 	    )
     );
 }
-add_action( 'after_setup_theme', 'magnetic_jetpack_setup' );
+add_action( 'after_setup_theme', 'magnetic_wp_jetpack_setup' );
 
 /**
  * Custom render function for Infinite Scroll.
  */
-function magnetic_infinite_scroll_render() {
+function magnetic_wp_infinite_scroll_render() {
 	while ( have_posts() ) {
 		the_post();
 		if ( is_search() ) :

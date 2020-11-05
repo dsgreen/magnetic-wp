@@ -4,7 +4,7 @@
  * Template Name: No Sidebar
  * Page with no sidebar.
  *
- * @package magnetic
+ * @package Magnetic WP
  */
 
 get_header(); ?>

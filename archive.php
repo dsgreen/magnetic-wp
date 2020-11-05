@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package magnetic
+ * @package Magnetic WP
  */
 
 get_header();

@@ -2,9 +2,9 @@
 msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
-"Project-Id-Version: Magnetic\n"
-"POT-Creation-Date: 2020-09-11 14:01-0400\n"
-"PO-Revision-Date: 2020-09-11 12:02-0400\n"
+"Project-Id-Version: Magnetic WP\n"
+"POT-Creation-Date: 2020-10-31 16:56-0400\n"
+"PO-Revision-Date: 2020-10-31 16:56-0400\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -71,14 +71,13 @@ msgstr ""
 msgid " and "
 msgstr ""
 
-#. Author URI of the plugin/theme
 #: footer.php:71
-msgid "https://douglasgreen.com/"
+msgid "https://www.themedemo.app/magnetic/"
 msgstr ""
 
 #. Theme Name of the plugin/theme
 #: footer.php:72
-msgid "Magnetic"
+msgid "Magnetic WP"
 msgstr ""
 
 #: footer.php:80
@@ -193,7 +192,7 @@ msgstr ""
 msgid "Set footer text here."
 msgstr ""
 
-#: header.php:32
+#: header.php:24
 msgid "Skip to main content"
 msgstr ""
 
@@ -201,7 +200,7 @@ msgstr ""
 #: inc/template-tags.php:30
 #, php-format
 msgctxt "post date"
-msgid "%s"
+msgid "Posted on %s"
 msgstr ""
 
 #. translators: %s: post author.
@@ -217,34 +216,22 @@ msgstr ""
 msgid "Leave a Comment<span class=\"screen-reader-text\"> on %s</span>"
 msgstr ""
 
-#. translators: used between list items, there is a space after the comma
-#: inc/template-tags.php:92
-msgid " "
-msgstr ""
-
-#: inc/template-tags.php:96 inc/template-tags.php:116
+#. translators: 1: list of categories.
+#: inc/template-tags.php:96
 #, php-format
-msgid "%1$s"
+msgid "Categories: %1$s"
 msgstr ""
 
-#. translators: used between list items, there is a space after the comma
-#: inc/template-tags.php:112
-msgctxt "list item separator"
-msgid " "
+#. translators: 1: list of tags.
+#: inc/template-tags.php:119
+#, php-format
+msgid "Tags: %1$s"
 msgstr ""
 
 #. translators: %s: Name of current post. Only visible to screen readers
-#: inc/template-tags.php:134
+#: inc/template-tags.php:140
 #, php-format
 msgid "Edit <span class=\"screen-reader-text\">%s</span>"
-msgstr ""
-
-#: inc/template-tags.php:221
-msgid "Next"
-msgstr ""
-
-#: inc/template-tags.php:222
-msgid "Prev"
 msgstr ""
 
 #: inc/woocommerce.php:184
@@ -304,26 +291,14 @@ msgstr ""
 msgid "Continue reading<span class=\"sr-only\"> \"%s\"</span>"
 msgstr ""
 
-#. Theme URI of the plugin/theme
-msgid "https://www.themedemo.app/magnetic/"
-msgstr ""
-
 #. Description of the plugin/theme
-msgid "This is a minimal blog or portfolio theme called Magnetic."
+msgid "This is a minimal blog or portfolio theme called Magnetic WP."
 msgstr ""
 
 #. Author of the plugin/theme
-msgid "Magnetic Themes"
+msgid "Douglas Green"
 msgstr ""
 
-#. Template Name of the plugin/theme
-msgid "Background Image Header"
-msgstr ""
-
-#. Template Name of the plugin/theme
-msgid "No Sidebar"
-msgstr ""
-
-#. Template Name of the plugin/theme
-msgid "Gutenberg"
+#. Author URI of the plugin/theme
+msgid "https://douglasgreen.com/"
 msgstr ""

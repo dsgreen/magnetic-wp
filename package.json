@@ -1,22 +1,22 @@
 {
-  "name": "magnetic",
+  "name": "magnetic-wp",
   "version": "1.2",
   "private": true,
-  "description": "This is a minimal blog or portfolio WordPress theme called Magnetic.",
+  "description": "This is a minimal blog or portfolio WordPress theme called Magnetic WP.",
   "main": "index.php",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dsgreen/magnetic.git"
+    "url": "git+https://github.com/dsgreen/magnetic-wp.git"
   },
   "author": "Douglas Green",
   "license": "GPL-2.0",
   "bugs": {
-    "url": "https://github.com/dsgreen/magnetic/issues"
+    "url": "https://github.com/dsgreen/magnetic-wp/issues"
   },
-  "homepage": "https://github.com/dsgreen/magnetic",
+  "homepage": "https://github.com/dsgreen/magnetic-wp",
   "devDependencies": {
     "bootstrap": "^4.3.1",
     "grunt": "^1.0.4",

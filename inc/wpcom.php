@@ -4,7 +4,7 @@
  *
  * This file is centrally included from `wp-content/mu-plugins/wpcom-theme-compat.php`.
  *
- * @package magnetic
+ * @package Magnetic WP
  */
 
 /**
@@ -12,7 +12,7 @@
  *
  * @global array $themecolors
  */
-function magnetic_wpcom_setup() {
+function magnetic_wp_wpcom_setup() {
 	global $themecolors;
 
 	// Set theme colors for third party services.
@@ -28,4 +28,4 @@ function magnetic_wpcom_setup() {
 		);
 	}
 }
-add_action( 'after_setup_theme', 'magnetic_wpcom_setup' );
+add_action( 'after_setup_theme', 'magnetic_wp_wpcom_setup' );

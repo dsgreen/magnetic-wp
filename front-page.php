@@ -3,7 +3,7 @@
  *
  * Front Page template with a background image header, maximum width.
  *
- * @package magnetic
+ * @package Magnetic WP
  */
 
 get_header();

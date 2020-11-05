@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package magnetic
+ * @package Magnetic WP
  */
 
 ?>
@@ -14,7 +14,7 @@
   // exclude this template, post thumbnail already displayed in template-parts/image-header.php
 	!is_page_template('templates/template-image-header.php')
 	) { ?>
-	<?php magnetic_post_thumbnail(); ?>
+	<?php magnetic_wp_post_thumbnail(); ?>
 
 	<header class="entry-header">
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
@@ -25,7 +25,7 @@
 			the_content();
 
 			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'magnetic' ),
+				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'magnetic-wp' ),
 				'after'  => '</div>',
 			) );
 		?>
@@ -38,7 +38,7 @@
 					sprintf(
 						wp_kses(
 							/* translators: %s: Name of current post. Only visible to screen readers */
-							__( 'Edit <span class="sr-only">%s</span>', 'magnetic' ),
+							__( 'Edit <span class="sr-only">%s</span>', 'magnetic-wp' ),
 							array(
 								'span' => array(
 									'class' => array(),

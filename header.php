@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package magnetic
+ * @package Magnetic WP
  */
 
 ?>
@@ -21,7 +21,7 @@
 </head>
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
-<a class="skiplink" href="#content"><?php esc_html_e( 'Skip to main content', 'magnetic' ); ?></a>
+<a class="skiplink" href="#content"><?php esc_html_e( 'Skip to main content', 'magnetic-wp' ); ?></a>
 <header class="site-header" id="top">
 	<div class="container">
 		<?php the_custom_logo(); ?>
@@ -29,9 +29,9 @@
       <a class="brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
     </p>
     <?php
-      $magnetic_description = get_bloginfo( 'description', 'display' );
-      if ( $magnetic_description || is_customize_preview() ) : ?>
-    <p class="site-description"><?php echo $magnetic_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
+      $magnetic_wp_description = get_bloginfo( 'description', 'display' );
+      if ( $magnetic_wp_description || is_customize_preview() ) : ?>
+    <p class="site-description"><?php echo $magnetic_wp_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
     <?php
       endif; ?>
 		<button class="nav-toggle">

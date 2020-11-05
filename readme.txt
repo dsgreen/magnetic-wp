@@ -1,4 +1,4 @@
-=== magnetic ===
+=== Magnetic WP ===
 
 Contributors: dsgreen
 Tags: blog, custom-background, custom-logo, custom-menu, featured-images, footer-widgets, full-width-template, portfolio, right-sidebar, threaded-comments, translation-ready, two-columns
@@ -10,11 +10,11 @@ Stable tag: 1.2
 License: GNU General Public License v2 or later
 License URI: LICENSE
 
-This is a minimal blog or portfolio theme called Magnetic.
+This is a minimal blog or portfolio theme called Magnetic WP.
 
 == Description ==
 
-This is a minimal blog or portfolio theme called Magnetic. Use the included Sass files to customize it further and make it your own. This theme is based on the `underscores` theme (http://underscores.me). Enjoy!
+This is a minimal blog or portfolio theme called Magnetic WP. Use the included Sass files to customize it further and make it your own. This theme is based on the `underscores` theme (http://underscores.me). Enjoy!
 
 == Installation ==
 

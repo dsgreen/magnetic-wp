@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package magnetic
+ * @package Magnetic WP
  */
 
 ?>
@@ -61,15 +61,11 @@
             ?>
 
           <p>&copy; <?php
-              esc_html_e('Copyright ', 'magnetic'); echo date('Y') . ' '; bloginfo( 'name' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-              esc_html_e('. Proudly powered by ', 'magnetic');
+              esc_html_e('Copyright ', 'magnetic-wp'); echo date('Y') . ' '; bloginfo( 'name' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+              esc_html_e('. Proudly powered by ', 'magnetic-wp');
               ?>
-          <a href="<?php echo esc_url( __( 'https://wordpress.org/', 'magnetic' ) ); ?>" rel="nofollow"><?php
-              esc_html_e('WordPress', 'magnetic'); ?></a><?php
-              esc_html_e(' and ', 'magnetic');
-              ?>
-          <a href="<?php echo esc_url( __( 'https://www.themedemo.app/magnetic/', 'magnetic') ); ?>" rel="nofollow"><?php
-              esc_html_e('Magnetic', 'magnetic'); ?></a>.</p>
+          <a href="<?php echo esc_url( __( 'https://wordpress.org/', 'magnetic-wp' ) ); ?>" rel="nofollow"><?php
+              esc_html_e('WordPress', 'magnetic-wp'); ?></a>.</p>
 
 	      <?php
         endif;
@@ -77,7 +73,7 @@
       </div>
       <div class="col-sm-6">
         <p class="text-right"><a href="#top" class="back-to-top"><i class="fas fa-angle-up fa-2x" title="<?php
-                esc_html_e( 'Back to top', 'magnetic' ); ?>"></i></a></p>
+                esc_html_e( 'Back to top', 'magnetic-wp' ); ?>"></i></a></p>
       </div>
     </div>
 	</div>
