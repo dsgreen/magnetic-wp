@@ -44,3 +44,10 @@ normalize.css v8.0.0
 Copyright (c) Nicolas Gallagher
 License: MIT License, https://opensource.org/licenses/MIT
 Source: github.com/necolas/normalize.css
+
+Theme screenshot photo credits:
+Hands Typing on Laptop Keyboard by Image Catalog: https://search.creativecommons.org/photos/88ec9cd0-137a-4ef0-a9aa-b6fc7e633274
+License: CC0, https://creativecommons.org/share-your-work/public-domain/cc0
+
+Desktop Still Life with Books and Laptop Computer by Image Catalog: https://search.creativecommons.org/photos/8078d161-fa87-4bc0-8f56-4a1fbd774b5a 
+License: CC0, https://creativecommons.org/share-your-work/public-domain/cc0
