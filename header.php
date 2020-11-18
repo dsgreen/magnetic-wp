@@ -49,7 +49,7 @@
 				'container_id'      => '',
 				'menu_class'        => ''
 			)); ?>
-      <a href="#" class="mobile-nav-close">Close Menu</a>
+      <a href="#" class="mobile-nav-close"><?php esc_html_e( 'Close Menu', 'magnetic-wp' ); ?></a>
     </nav>
 		<nav class="main-navigation hidden">
 			<?php wp_nav_menu( array(

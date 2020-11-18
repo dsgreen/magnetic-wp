@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: Magnetic WP\n"
-"POT-Creation-Date: 2020-11-05 14:15-0500\n"
-"PO-Revision-Date: 2020-11-05 14:15-0500\n"
+"POT-Creation-Date: 2020-11-18 16:16-0500\n"
+"PO-Revision-Date: 2020-11-18 16:16-0500\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -187,6 +187,14 @@ msgstr ""
 
 #: header.php:24
 msgid "Skip to main content"
+msgstr ""
+
+#: header.php:38
+msgid "Menu"
+msgstr ""
+
+#: header.php:52
+msgid "Close Menu"
 msgstr ""
 
 #. translators: %s: post date.
