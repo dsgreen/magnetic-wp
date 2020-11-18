@@ -1,14 +1,13 @@
 === Magnetic WP ===
 
 Contributors: dsgreen
-Tags: blog, custom-background, custom-logo, custom-menu, featured-images, footer-widgets, full-width-template, portfolio, right-sidebar, threaded-comments, translation-ready, two-columns
-
 Requires at least: 4.5
 Tested up to: 5.5.1
 Requires PHP: 5.6
-Stable tag: 1.2
+Stable tag: 1.2.5
 License: GNU General Public License v2 or later
 License URI: LICENSE
+Tags: blog, custom-background, custom-logo, custom-menu, featured-images, footer-widgets, full-width-template, portfolio, right-sidebar, threaded-comments, translation-ready, two-columns
 
 This is a minimal blog or portfolio theme called Magnetic WP.
 
@@ -74,7 +73,10 @@ Copyright (c) Nicolas Gallagher
 License: MIT License, https://opensource.org/licenses/MIT
 Source: github.com/necolas/normalize.css
 
+== Screenshots ==
+
 Theme screenshot photo credits:
+
 Hands Typing on Laptop Keyboard by Image Catalog: https://search.creativecommons.org/photos/88ec9cd0-137a-4ef0-a9aa-b6fc7e633274
 License: CC0, https://creativecommons.org/share-your-work/public-domain/cc0
 
