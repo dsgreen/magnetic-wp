@@ -470,7 +470,7 @@ legend {
 a,
 a:link {
   color: #2F835F;
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 a:hover,
@@ -2911,3 +2911,5 @@ select {
   background-color: #36966d !important;
   border-color: #36966d !important;
 }
+
+/*# sourceMappingURL=style.css.map */

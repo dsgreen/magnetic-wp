@@ -91,7 +91,7 @@ $footer-widgets-btn-hover: lighten($dark, 10%);
 $footer-link-color: $light;
 $footer-link-hover: $link-hover;
 // link underline
-$text-decoration-global: none;
+$text-decoration-global: underline;
 //$text-decoration-content: underline;
 //$text-decoration-sidebar: none;
 $text-decoration-footer-widgets: underline;
