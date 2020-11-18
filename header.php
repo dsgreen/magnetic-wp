@@ -2,7 +2,7 @@
 /**
  * The header for our theme
  *
- * This is the template that displays all of the <head> section and the start of the main content div and layout grid
+ * This is the template that displays all of the <head> section and the start of a layout grid
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *

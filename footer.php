@@ -18,8 +18,8 @@
 	!is_page_template('templates/template-full-width.php') &&
 	!is_page_template('front-page.php')
 ) : ?>
-  </div><!-- row -->
-</div>
+  </div><!-- end row -->
+</div><!-- end site-content -->
 <?php endif; ?>
 
 <?php if ( is_active_sidebar( 'footer-1' ) || is_active_sidebar( 'footer-2' ) || is_active_sidebar( 'footer-3' ) ) : ?>
@@ -49,7 +49,7 @@
 <?php endif; ?>
 
 <footer class="site-footer">
-	<div class="container site-info">
+  <div class="container site-info">
     <div class="row">
       <div class="col-sm-6">
 	      <?php
@@ -76,7 +76,7 @@
                 esc_html_e( 'Back to top', 'magnetic-wp' ); ?>"></i></a></p>
       </div>
     </div>
-	</div>
+  </div>
 </footer>
 
 <?php wp_footer(); ?>
