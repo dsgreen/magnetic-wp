@@ -13,8 +13,7 @@ textarea {
 textarea {
   width: 100%;
 }
-button:not(.nav-toggle):not(.customize-partial-edit-shortcut-button):not(.customize-partial-edit-shortcut),
-button:not(.mejs-button button),
+button:not(.nav-toggle):not(.customize-partial-edit-shortcut-button):not(.customize-partial-edit-shortcut):not(.mejs-button button),
 input[type="button"],
 input[type="submit"],
 input[type="reset"],
