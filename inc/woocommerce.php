@@ -45,7 +45,7 @@ add_action( 'after_setup_theme', 'magnetic_wp_woocommerce_setup' );
 function magnetic_wp_woocommerce_scripts() {
 	wp_enqueue_style( 'magnetic-wp-woocommerce-style', get_template_directory_uri() . '/woocommerce.css', array(), MAGNETIC_WP_THEME_VERSION );
 
-	$font_path   = WC()->plugin_url() . esc_html( '/assets/fonts/' );
+	$font_path   = esc_url( WC()->plugin_url() . '/assets/fonts/' );
 	$inline_font = '@font-face {
 			font-family: "star";
 			src: url("' . $font_path . 'star.eot");
