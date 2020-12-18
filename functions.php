@@ -314,6 +314,7 @@ function magnetic_wp_scripts() {
      */
     $dev = false;
     $resource_version = ($dev === true) ? rand() : MAGNETIC_WP_THEME_VERSION;
+    $min_version = ($dev === true) ? '' : '.min';
 
     /*
      * Header scripts and styles
@@ -338,7 +339,7 @@ function magnetic_wp_scripts() {
 	// plugin scripts, followed by main site script
 	wp_enqueue_script( 'jquery-hoverintent', get_template_directory_uri() . '/js/hoverintent.js', array('jquery'), 'r7', TRUE );
 	wp_enqueue_script( 'jquery-superfish', get_template_directory_uri() . '/js/superfish.min.js', array('jquery'), '1.7.10', TRUE );
-	wp_enqueue_script( 'magnetic-wp-script', get_template_directory_uri() . '/js/main.min.js', array('jquery'), $resource_version, TRUE );
+	wp_enqueue_script( 'magnetic-wp-script', get_template_directory_uri() . '/js/main' . $min_version . '.js', array('jquery'), $resource_version, TRUE );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
