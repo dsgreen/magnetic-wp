@@ -34,23 +34,25 @@
     <p class="site-description"><?php echo $magnetic_wp_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
     <?php
       endif; ?>
-		<button class="nav-toggle">
-			<span class="nav-toggle-text"><?php esc_html_e( 'Menu', 'magnetic-wp' ); ?></span>
-			<span class="bar"></span>
-			<span class="bar"></span>
-			<span class="bar"></span>
-		</button>
-    <nav class="mobile-navigation hidden">
-			<?php wp_nav_menu( array(
-				'theme_location'    => 'primary',
-				'menu'              => 'primary',
-				'container'         => '',
-				'container_class'   => '',
-				'container_id'      => '',
-				'menu_class'        => ''
-			)); ?>
-      <a href="#" class="mobile-nav-close"><?php esc_html_e( 'Close Menu', 'magnetic-wp' ); ?></a>
-    </nav>
+    <div id="mobile-navigation-wrap">
+      <button class="nav-toggle">
+        <span class="nav-toggle-text"><?php esc_html_e( 'Menu', 'magnetic-wp' ); ?></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+      <nav class="mobile-navigation hidden">
+        <?php wp_nav_menu( array(
+          'theme_location'    => 'primary',
+          'menu'              => 'primary',
+          'container'         => '',
+          'container_class'   => '',
+          'container_id'      => '',
+          'menu_class'        => ''
+        )); ?>
+        <a href="#" class="mobile-nav-close"><?php esc_html_e( 'Close Menu', 'magnetic-wp' ); ?></a>
+      </nav>
+    </div>
 		<nav class="main-navigation hidden">
 			<?php wp_nav_menu( array(
 					'theme_location'    => 'primary',

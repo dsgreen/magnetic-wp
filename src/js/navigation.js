@@ -52,6 +52,49 @@ jQuery(document).ready(function($) {
     });
   }
 
+  // trap the focus in the mobile nav when open
+  // See: https://uxdesign.cc/how-to-trap-focus-inside-modal-to-make-it-ada-compliant-6a50f9a70700
+  function trapFocusMobileNav() {
+    //console.log('trapFocusMobileNav');
+
+    // add all the elements inside modal which you want to make focusable
+    var focusableElements =
+        'button, [href], [tabindex]:not([tabindex="-1"])';
+    var modal = document.querySelector('#mobile-navigation-wrap'); // select the modal by it's id
+    var firstFocusableElement = modal.querySelectorAll(focusableElements)[0]; // get first element to be focused inside modal
+    var focusableContent = modal.querySelectorAll(focusableElements);
+    var lastFocusableElement = focusableContent[focusableContent.length - 1]; // get last element to be focused inside modal
+
+    function keyListener(e) {
+      var isTabPressed = e.key === 'Tab' || e.keyCode === 9;
+
+      if (!isTabPressed) {
+        //console.log("tab key pressed");
+        return;
+      }
+
+      // if menu is open, manage the focus
+      if ($('#top').hasClass('toggled')) {
+
+        if (e.shiftKey) { // if shift key pressed for shift + tab combination
+          if (document.activeElement === firstFocusableElement) {
+            //console.log("shift key pressed, first item")
+            lastFocusableElement.focus(); // add focus for the last focusable element
+            e.preventDefault();
+          }
+        } else { // if tab key is pressed
+          if (document.activeElement === lastFocusableElement) { // if focused has reached to last focusable element then focus first focusable element after pressing tab
+            //console.log("tab key pressed, last item")
+            firstFocusableElement.focus(); // add focus for the first focusable element
+            e.preventDefault();
+          }
+        }
+      }
+    }
+    document.addEventListener('keydown', keyListener);
+    firstFocusableElement.focus();
+  }
+
   /**
    * main menu toggle button (mobile)
    */
@@ -59,7 +102,9 @@ jQuery(document).ready(function($) {
     $('.mobile-navigation').slideToggle('fast');
     // .toggled class is needed for pages with an image header for mobile menu styling
     $('.site-header').toggleClass('toggled');
-  });
+    // trap nav focus for mobile nav
+    trapFocusMobileNav();
+  })
 
   /**
    * 1st page load
