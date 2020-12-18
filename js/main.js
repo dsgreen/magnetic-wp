@@ -23,9 +23,38 @@ jQuery(document).ready(function($) {
             $(".site-header").toggleClass("toggled");
         });
     }
+    function trapFocusMobileNav() {
+        var focusableElements = 'button, [href], [tabindex]:not([tabindex="-1"])';
+        var modal = document.querySelector("#mobile-navigation-wrap");
+        var firstFocusableElement = modal.querySelectorAll(focusableElements)[0];
+        var focusableContent = modal.querySelectorAll(focusableElements);
+        var lastFocusableElement = focusableContent[focusableContent.length - 1];
+        function keyListener(e) {
+            var isTabPressed = e.key === "Tab" || e.keyCode === 9;
+            if (!isTabPressed) {
+                return;
+            }
+            if ($("#top").hasClass("toggled")) {
+                if (e.shiftKey) {
+                    if (document.activeElement === firstFocusableElement) {
+                        lastFocusableElement.focus();
+                        e.preventDefault();
+                    }
+                } else {
+                    if (document.activeElement === lastFocusableElement) {
+                        firstFocusableElement.focus();
+                        e.preventDefault();
+                    }
+                }
+            }
+        }
+        document.addEventListener("keydown", keyListener);
+        firstFocusableElement.focus();
+    }
     $(".nav-toggle").click(function() {
         $(".mobile-navigation").slideToggle("fast");
         $(".site-header").toggleClass("toggled");
+        trapFocusMobileNav();
     });
     setupMobileMenu();
     $(window).resize(function() {
