@@ -14,8 +14,17 @@
   }
 }
 // move skiplink down if admin bar is visible
-body.admin-bar {
-  .skiplink {
-    top: 32px;
+@media screen and (max-width: 782px){
+  body.admin-bar {
+    .skiplink {
+      top: 46px;
+    }
+  }
+}
+@media screen and (min-width: 783px){
+  body.admin-bar {
+    .skiplink {
+      top: 32px;
+    }
   }
 }

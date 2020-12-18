@@ -25,8 +25,16 @@ body.body--transparent-header .site-header {
   }
 }
 // move header down if admin bar is visible
+// media queries and top amount determined from admin-bar.min.css
 body.admin-bar {
-  .site-header {
-    top: 32px;
+  @media screen and (max-width: 782px){
+    .site-header:not(.scrolled) {
+      top: 46px;
+    }
+  }
+  @media screen and (min-width: 783px){
+    .site-header {
+      top: 32px;
+    }
   }
 }
