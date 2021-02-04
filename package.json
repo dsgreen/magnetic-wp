@@ -1,6 +1,6 @@
 {
   "name": "magnetic-wp",
-  "version": "1.2.7",
+  "version": "1.2.9",
   "private": true,
   "description": "This is a minimal blog or portfolio WordPress theme called Magnetic WP.",
   "main": "index.php",
