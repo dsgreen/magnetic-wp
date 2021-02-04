@@ -73,7 +73,7 @@
       </div>
       <div class="col-sm-6">
         <p class="text-right"><a href="#top" class="back-to-top"><i class="fas fa-angle-up fa-2x" title="<?php
-                esc_html_e( 'Back to top', 'magnetic-wp' ); ?>"></i></a></p>
+                esc_attr_e( 'Back to top', 'magnetic-wp' ); ?>"></i></a></p>
       </div>
     </div>
   </div>
