@@ -22,7 +22,7 @@
 <body <?php body_class(); ?> id="top">
 <?php wp_body_open(); ?>
 <a class="skiplink" href="#content"><?php esc_html_e( 'Skip to main content', 'magnetic-wp' ); ?></a>
-<header class="site-header">
+<header class="site-header" id="site-header">
 	<div class="container">
 		<?php the_custom_logo(); ?>
     <p class="site-title">

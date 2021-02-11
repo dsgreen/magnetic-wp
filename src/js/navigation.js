@@ -74,7 +74,7 @@ jQuery(document).ready(function($) {
       }
 
       // if menu is open, manage the focus
-      if ($('#top').hasClass('toggled')) {
+      if ($('#site-header').hasClass('toggled')) {
 
         if (e.shiftKey) { // if shift key pressed for shift + tab combination
           if (document.activeElement === firstFocusableElement) {

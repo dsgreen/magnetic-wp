@@ -34,7 +34,7 @@ jQuery(document).ready(function($) {
             if (!isTabPressed) {
                 return;
             }
-            if ($("#top").hasClass("toggled")) {
+            if ($("#site-header").hasClass("toggled")) {
                 if (e.shiftKey) {
                     if (document.activeElement === firstFocusableElement) {
                         lastFocusableElement.focus();
