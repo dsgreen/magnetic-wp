@@ -4,12 +4,18 @@ Contributors: dsgreen
 Requires at least: 4.5
 Tested up to: 5.5.1
 Requires PHP: 5.6
-Stable tag: 1.2.10
+Stable tag: 1.2.11
 License: GNU General Public License v2 or later
 License URI: LICENSE
 Tags: blog, custom-background, custom-logo, custom-menu, featured-images, footer-widgets, full-width-template, portfolio, right-sidebar, threaded-comments, translation-ready, two-columns
 
-This is a minimal blog or portfolio theme called Magnetic WP.
+Magnetic WP is a traditional blogging theme with a clean and minimal two column design. Use it as a starting point for a blog, portfolio, or business site.
+
+The homepage template features a full-width hero section, and alternating column widgets to display featured items.
+
+Customize it further with the included Sass files.
+
+See the full demo at: https://www.themedemo.app/magnetic/
 
 == Description ==
 
