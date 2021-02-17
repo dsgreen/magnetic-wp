@@ -259,8 +259,8 @@
     content: "\f105";
   }
 
-  .sub-menu,
-  .children {
+  .main-navigation .sub-menu,
+  .main-navigation .children {
     display: none;
     position: absolute;
     top: 2em;
@@ -270,8 +270,8 @@
       text-align: left;
     }
   }
-  .sub-menu a,
-  .children a {
+  .main-navigation .sub-menu a,
+  .main-navigation .children a {
     display: block;
   }
   // display sub menu on hover
@@ -287,8 +287,8 @@
     }
   }
   // position 2nd level (and greater) menus
-  .sub-menu .sub-menu,
-  .children .children {
+  .main-navigation .sub-menu .sub-menu,
+  .main-navigation .children .children {
     top: 0;
     left: 16rem;
   }
