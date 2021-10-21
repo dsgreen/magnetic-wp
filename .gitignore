@@ -1,3 +1,5 @@
 # Workflow
-node_modules/
 *.map
+node_modules
+package-lock.json
+yarn.lock
