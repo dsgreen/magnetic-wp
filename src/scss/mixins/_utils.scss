@@ -1,14 +1,15 @@
 @mixin clearfix {
-  clear: both;
-  &:before,
-  &:after {
+
+  &::before,
+  &::after {
     display: table;
     content: " ";
   }
-  &:after {
+  &::after {
     clear: both;
   }
 }
+
 .clearfix {
   @include clearfix;
 }
@@ -18,6 +19,7 @@
   max-width: 100%;
   height: auto;
 }
+
 .img-fluid,
 .img-responsive {
   @include img-responsive;

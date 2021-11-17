@@ -65,7 +65,7 @@ ol.comment-list {
     a {
       text-decoration: none;
     }
-    a:before {
+    a::before {
       margin-right: .25em;
       content: "\f3e5";
       font-family: "Font Awesome 5 Free";

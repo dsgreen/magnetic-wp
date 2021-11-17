@@ -22,7 +22,7 @@
       color: $single-nav-hover;
     }
   }
-  .nav-next a:after {
+  .nav-next a::after {
     content: "\f105";
     font-family: "Font Awesome 5 Free";
     font-size: 1.3rem;
