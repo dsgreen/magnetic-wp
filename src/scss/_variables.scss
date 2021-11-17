@@ -1,16 +1,16 @@
 // shades of gray (.gray-10 = 10% gray, etc.)
-$gray-10: lighten(black,90%);
-$gray-20: lighten(black,80%);
-$gray-30: lighten(black,70%);
-$gray-40: lighten(black,60%);
-$gray-50: lighten(black,50%);
-$gray-60: lighten(black,40%);
-$gray-70: lighten(black,30%);
-$gray-80: lighten(black,20%);
-$gray-90: lighten(black,10%);
+$gray-10: lighten(black, 90%);
+$gray-20: lighten(black, 80%);
+$gray-30: lighten(black, 70%);
+$gray-40: lighten(black, 60%);
+$gray-50: lighten(black, 50%);
+$gray-60: lighten(black, 40%);
+$gray-70: lighten(black, 30%);
+$gray-80: lighten(black, 20%);
+$gray-90: lighten(black, 10%);
 
 // various colors
-$super-light: rgb(247,247,247);
+$super-light: rgb(247, 247, 247);
 $light-gray-01: #eaeaea;
 $light-gray-02: #d3d3d3;
 $light-gray-03: #cccccc;
@@ -122,8 +122,10 @@ $main-nav-btn-hover-bg: $brand;
 // buttons
 $btn-txt-color: $light;
 $btn-bg-color: $brand;
+$btn-bg-color-hover: lighten($btn-bg-color, 5%);
 $btn-outline-txt-color: $copy-color;
 $btn-outline-border-color: $copy-color;
+$btn-outline-color-hover: lighten($btn-outline-border-color, 5%);
 $btn-alt-txt-color: $light;
 $btn-alt-bg-color: $dark;
 $btn-border-width: .2rem;
