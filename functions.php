@@ -9,7 +9,7 @@
 
 if ( ! defined( 'MAGNETIC_WP_THEME_VERSION' ) ) {
     // Replace the version number of the theme on each release.
-    define( 'MAGNETIC_WP_THEME_VERSION', '1.2.12' );
+    define( 'MAGNETIC_WP_THEME_VERSION', '1.3.0' );
 }
 
 if ( ! function_exists( 'magnetic_wp_setup' ) ) :
