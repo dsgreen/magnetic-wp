@@ -98,20 +98,6 @@ if ( ! function_exists( 'magnetic_wp_setup' ) ) :
         );
 
 		/*
-		 * Set up the WordPress core custom background feature.
-		 */
-		add_theme_support(
-		    'custom-background',
-            apply_filters(
-                'magnetic_wp_custom_background_args',
-                array(
-			        'default-color' => 'ffffff',
-			        'default-image' => '',
-		        )
-            )
-        );
-
-		/*
 		 * Add theme support for selective refresh for widgets.
 		 */
 		add_theme_support( 'customize-selective-refresh-widgets' );
@@ -367,11 +353,4 @@ require get_template_directory() . '/inc/customizer.php';
  */
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
-}
-
-/**
- * Load WooCommerce compatibility file.
- */
-if ( class_exists( 'WooCommerce' ) ) {
-	require get_template_directory() . '/inc/woocommerce.php';
 }
