@@ -3,7 +3,7 @@ Theme Name: Magnetic WP
 Author: Douglas Green
 Author URI: https://douglasgreen.com/
 Description: Magnetic WP is a traditional blogging theme with a clean and minimal two column design. Use it as a starting point for a blog, portfolio, or business site. The homepage template features a full-width hero section, and alternating column widgets to display featured items. Customize it further with the included Sass files. See the full demo at: https://www.themedemo.app/magnetic/
-Version: 1.2.12
+Version: 1.3.0
 Tested up to: 5.8.1
 Requires PHP: 5.6
 License: GNU General Public License v2 or later
@@ -346,16 +346,12 @@ template {
   display: none;
 }
 
-.clearfix {
-  clear: both;
-}
-
-.clearfix:before, .clearfix:after {
+.clearfix::before, .clearfix::after {
   display: table;
   content: " ";
 }
 
-.clearfix:after {
+.clearfix::after {
   clear: both;
 }
 
@@ -451,8 +447,8 @@ html {
 }
 
 *,
-*:before,
-*:after {
+*::before,
+*::after {
   box-sizing: inherit;
 }
 
@@ -847,16 +843,12 @@ select:active {
   width: 100%;
 }
 
-.form-check {
-  clear: both;
-}
-
-.form-check:before, .form-check:after {
+.form-check::before, .form-check::after {
   display: table;
   content: " ";
 }
 
-.form-check:after {
+.form-check::after {
   clear: both;
 }
 
@@ -2270,16 +2262,12 @@ ol.comment-list li {
   list-style-type: none;
 }
 
-ol.comment-list .comment-meta {
-  clear: both;
-}
-
-ol.comment-list .comment-meta:before, ol.comment-list .comment-meta:after {
+ol.comment-list .comment-meta::before, ol.comment-list .comment-meta::after {
   display: table;
   content: " ";
 }
 
-ol.comment-list .comment-meta:after {
+ol.comment-list .comment-meta::after {
   clear: both;
 }
 
@@ -2303,7 +2291,7 @@ ol.comment-list .reply a {
   text-decoration: none;
 }
 
-ol.comment-list .reply a:before {
+ol.comment-list .reply a::before {
   margin-right: .25em;
   content: "\f3e5";
   font-family: "Font Awesome 5 Free";
@@ -2419,26 +2407,25 @@ ol.comment-list .comment-reply-title a {
 .single .entry-footer,
 .search .entry-footer,
 .archive .entry-footer {
-  clear: both;
   padding-bottom: 2em;
   border-bottom: 1px solid #d3d3d3;
 }
 
-.blog .entry-footer:before, .blog .entry-footer:after,
-.single .entry-footer:before,
-.single .entry-footer:after,
-.search .entry-footer:before,
-.search .entry-footer:after,
-.archive .entry-footer:before,
-.archive .entry-footer:after {
+.blog .entry-footer::before, .blog .entry-footer::after,
+.single .entry-footer::before,
+.single .entry-footer::after,
+.search .entry-footer::before,
+.search .entry-footer::after,
+.archive .entry-footer::before,
+.archive .entry-footer::after {
   display: table;
   content: " ";
 }
 
-.blog .entry-footer:after,
-.single .entry-footer:after,
-.search .entry-footer:after,
-.archive .entry-footer:after {
+.blog .entry-footer::after,
+.single .entry-footer::after,
+.search .entry-footer::after,
+.archive .entry-footer::after {
   clear: both;
 }
 
@@ -2564,17 +2551,16 @@ ol.comment-list .comment-reply-title a {
 }
 
 .navigation {
-  clear: both;
   margin-top: .5em;
   margin-bottom: 2em;
 }
 
-.navigation:before, .navigation:after {
+.navigation::before, .navigation::after {
   display: table;
   content: " ";
 }
 
-.navigation:after {
+.navigation::after {
   clear: both;
 }
 
@@ -2738,7 +2724,7 @@ ol.comment-list .comment-reply-title a {
   color: #3ca97a;
 }
 
-.single .nav-next a:after {
+.single .nav-next a::after {
   content: "\f105";
   font-family: "Font Awesome 5 Free";
   font-size: 1.3rem;

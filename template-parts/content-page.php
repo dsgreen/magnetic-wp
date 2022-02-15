@@ -13,13 +13,13 @@
 	<?php if (
   // exclude this template, post thumbnail already displayed in template-parts/image-header.php
 	!is_page_template('templates/template-image-header.php')
-	) { ?>
+	) : ?>
 	<?php magnetic_wp_post_thumbnail(); ?>
 
 	<header class="entry-header">
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 	</header><!-- .entry-header -->
-	<?php } ?>
+	<?php endif; ?>
 	<div class="entry-content">
 		<?php
 			the_content();

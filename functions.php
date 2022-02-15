@@ -9,7 +9,7 @@
 
 if ( ! defined( 'MAGNETIC_WP_THEME_VERSION' ) ) {
     // Replace the version number of the theme on each release.
-    define( 'MAGNETIC_WP_THEME_VERSION', '1.2.12' );
+    define( 'MAGNETIC_WP_THEME_VERSION', '1.3.0' );
 }
 
 if ( ! function_exists( 'magnetic_wp_setup' ) ) :
@@ -94,20 +94,6 @@ if ( ! function_exists( 'magnetic_wp_setup' ) ) :
                 'caption',
                 'style',
                 'script'
-            )
-        );
-
-		/*
-		 * Set up the WordPress core custom background feature.
-		 */
-		add_theme_support(
-		    'custom-background',
-            apply_filters(
-                'magnetic_wp_custom_background_args',
-                array(
-			        'default-color' => 'ffffff',
-			        'default-image' => '',
-		        )
             )
         );
 
@@ -367,11 +353,4 @@ require get_template_directory() . '/inc/customizer.php';
  */
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
-}
-
-/**
- * Load WooCommerce compatibility file.
- */
-if ( class_exists( 'WooCommerce' ) ) {
-	require get_template_directory() . '/inc/woocommerce.php';
 }
