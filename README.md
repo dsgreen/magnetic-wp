@@ -15,7 +15,7 @@ Other linked dependencies, such as Bootstrap, may have their own license (see be
 
 ### Libraries
 
-Bootstrap Grid v4.1.3
+Bootstrap Grid v4.6.2
 Copyright (c) 2011-2018 The Bootstrap Authors, Twitter, Inc.
 License: MIT License, https://github.com/twbs/bootstrap/blob/master/LICENSE
 Source: https://getbootstrap.com/

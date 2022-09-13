@@ -49,7 +49,7 @@ This theme is licensed with the the GPL v2 license. See the LICENSE file for det
 
 Libraries
 
-Bootstrap Grid v4.1.3
+Bootstrap Grid v4.6.2
 Copyright (c) 2011-2018 The Bootstrap Authors, Twitter, Inc.
 License: MIT License, https://github.com/twbs/bootstrap/blob/master/LICENSE
 Source: https://getbootstrap.com/
