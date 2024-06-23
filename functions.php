@@ -307,7 +307,7 @@ function magnetic_wp_scripts() {
      * Bootstrap grid, plugins, other
      */
 	// Bootstrap grid only:
-	wp_enqueue_style( 'bootstrap-grid', get_stylesheet_directory_uri() . '/bootstrap/bootstrap-grid.min.css', array(), '4.1.3' );
+	wp_enqueue_style( 'bootstrap-grid', get_stylesheet_directory_uri() . '/bootstrap/bootstrap-grid.min.css', array(), '4.6.2' );
     wp_enqueue_style( 'font-awesome', get_stylesheet_directory_uri() . '/fontawesome/css/all.css', array(), '5.15.2' );
 
 	// Google fonts
