@@ -7,11 +7,6 @@
  * @package Magnetic WP
  */
 
-if ( ! defined( 'MAGNETIC_WP_THEME_VERSION' ) ) {
-    // Replace the version number of the theme on each release.
-    define( 'MAGNETIC_WP_THEME_VERSION', '1.3.0' );
-}
-
 if ( ! function_exists( 'magnetic_wp_setup' ) ) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
@@ -295,11 +290,9 @@ function magnetic_wp_scripts() {
      * Development mode
      * Use a random number for development to avoid browser caching the theme CSS while it's being worked on
      * (set $dev to true).
-     * Could opt to use no query string for production to optimize static resource loading (set MAGNETIC_WP_THEME_VERSION to null), however:
-     * Query strings for static resources OK. See: https://sirv.com/help/resources/remove-query-strings-from-static-resources/
      */
     $dev = false;
-    $resource_version = ($dev === true) ? rand() : MAGNETIC_WP_THEME_VERSION;
+    $resource_version = ($dev === true) ? rand() : wp_get_theme()->get( 'Version' );
     $min_version = ($dev === true) ? '' : '.min';
 
     /*
@@ -310,8 +303,8 @@ function magnetic_wp_scripts() {
 	wp_enqueue_style( 'bootstrap-grid', get_stylesheet_directory_uri() . '/bootstrap/bootstrap-grid.min.css', array(), '4.6.2' );
     wp_enqueue_style( 'font-awesome', get_stylesheet_directory_uri() . '/fontawesome/css/all.css', array(), '5.15.2' );
 
-	// Google fonts
-	wp_enqueue_style( 'google-font-roboto', 'https://fonts.googleapis.com/css?family=Roboto:300,400,400italic,500,700', array() );
+	// Enqueue theme fonts
+	wp_enqueue_style( 'magnetic_wp-fonts', get_template_directory_uri( '/assets/css/font-roboto.css' ), array(), $resource_version, 'all' );
 
     // Magnetic WP/main site styles (follows Bootstrap & plugins in case any overrides in main site styles)
     wp_enqueue_style( 'magnetic-wp-style', get_stylesheet_uri(), array(), $resource_version );
