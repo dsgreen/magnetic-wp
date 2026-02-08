@@ -298,18 +298,15 @@ function magnetic_wp_scripts() {
      * Header scripts and styles
      * Bootstrap grid, plugins, other
      */
-	// Bootstrap grid only:
+	// Bootstrap grid only (v4.6.2 — could be upgraded to Bootstrap 5.x in a future release):
 	wp_enqueue_style( 'bootstrap-grid', get_stylesheet_directory_uri() . '/bootstrap/bootstrap-grid.min.css', array(), '4.6.2' );
-    wp_enqueue_style( 'font-awesome', get_stylesheet_directory_uri() . '/fontawesome/css/all.css', array(), '5.15.2' );
+    wp_enqueue_style( 'font-awesome', get_stylesheet_directory_uri() . '/fontawesome/css/all.min.css', array(), '6.7.2' );
 
 	// Enqueue theme fonts
-	wp_enqueue_style( 'magnetic_wp-fonts', get_template_directory_uri( '/assets/css/font-roboto.css' ), array(), $resource_version, 'all' );
+	wp_enqueue_style( 'magnetic_wp-fonts', get_template_directory_uri() . '/assets/css/font-roboto.css', array(), $resource_version, 'all' );
 
     // Magnetic WP/main site styles (follows Bootstrap & plugins in case any overrides in main site styles)
     wp_enqueue_style( 'magnetic-wp-style', get_stylesheet_uri(), array(), $resource_version );
-
-    // Modernizr (Minimal build. Configure your own at: https://modernizr.com/)
-    wp_enqueue_script( 'modernizr', get_template_directory_uri() . '/js/modernizr-custom.min.js', array(), '3.6.0' );
 
     /*
      * Footer scripts

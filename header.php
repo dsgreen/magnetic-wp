@@ -13,6 +13,7 @@
 <!doctype html>
 <html class="no-js" <?php language_attributes(); ?>>
 <head>
+<script>document.documentElement.classList.remove('no-js');</script>
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta http-equiv="x-ua-compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">

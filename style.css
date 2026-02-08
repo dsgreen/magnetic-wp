@@ -1446,7 +1446,7 @@ a.btn {
   border: solid 0.2rem #2F835F;
 }
 
-a.btn .fa {
+a.btn [class*="fa-"] {
   color: rgba(255, 255, 255, 0.6);
 }
 
@@ -1456,7 +1456,7 @@ a.btn:hover, a.btn:focus {
   border-color: #36966d;
 }
 
-a.btn:hover .fa, a.btn:focus .fa {
+a.btn:hover [class*="fa-"], a.btn:focus [class*="fa-"] {
   color: rgba(255, 255, 255, 0.7);
 }
 
@@ -1465,7 +1465,7 @@ a.btn-outline {
   border: solid 0.2rem #212833;
 }
 
-a.btn-outline .fa {
+a.btn-outline [class*="fa-"] {
   color: rgba(33, 40, 51, 0.6);
 }
 
@@ -1474,7 +1474,7 @@ a.btn-outline:hover, a.btn-outline:focus {
   border-color: #2b3442;
 }
 
-a.btn-outline:hover .fa, a.btn-outline:focus .fa {
+a.btn-outline:hover [class*="fa-"], a.btn-outline:focus [class*="fa-"] {
   color: rgba(33, 40, 51, 0.7);
 }
 
@@ -1485,8 +1485,8 @@ a.btn-alt {
   border-color: #212833;
 }
 
-a.btn.alt .fa,
-a.btn-alt .fa {
+a.btn.alt [class*="fa-"],
+a.btn-alt [class*="fa-"] {
   color: rgba(255, 255, 255, 0.6);
 }
 
@@ -1498,9 +1498,9 @@ a.btn-alt:focus {
   border-color: #2b3442;
 }
 
-a.btn.alt:hover .fa, a.btn.alt:focus .fa,
-a.btn-alt:hover .fa,
-a.btn-alt:focus .fa {
+a.btn.alt:hover [class*="fa-"], a.btn.alt:focus [class*="fa-"],
+a.btn-alt:hover [class*="fa-"],
+a.btn-alt:focus [class*="fa-"] {
   color: rgba(255, 255, 255, 0.7);
 }
 

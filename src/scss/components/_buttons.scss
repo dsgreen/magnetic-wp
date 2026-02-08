@@ -22,7 +22,7 @@ a.btn {
   color: $btn-txt-color;
   background-color: $btn-bg-color;
   border: solid .2rem $btn-bg-color;
-  .fa {
+  [class*="fa-"] {
     color: rgba($btn-txt-color,.6);
   }
   &:hover,
@@ -30,7 +30,7 @@ a.btn {
     color: $btn-txt-color;
     background-color: $btn-bg-color-hover;
     border-color: $btn-bg-color-hover;
-    .fa {
+    [class*="fa-"] {
       color: rgba($btn-txt-color,.7);
     }
   }
@@ -38,14 +38,14 @@ a.btn {
 a.btn-outline {
   color: $btn-outline-txt-color;
   border: solid .2rem $btn-outline-border-color;
-  .fa {
+  [class*="fa-"] {
     color: rgba($btn-outline-txt-color,.6);
   }
   &:hover,
   &:focus {
     color: $btn-outline-color-hover;
     border-color: $btn-outline-color-hover;
-    .fa {
+    [class*="fa-"] {
       color: rgba($btn-outline-txt-color,.7);
     }
   }

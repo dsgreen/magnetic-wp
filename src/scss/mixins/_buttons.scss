@@ -2,7 +2,7 @@
   color: $txt-color;
   background-color: $bg-color;
   border-color: $bg-color;
-  .fa {
+  [class*="fa-"] {
     color: rgba($txt-color,.6);
   }
   &:hover,
@@ -10,7 +10,7 @@
     color: $txt-color;
     background-color: lighten($bg-color, 5%);
     border-color: lighten($bg-color, 5%);
-    .fa {
+    [class*="fa-"] {
       color: rgba($txt-color,.7);
     }
   }
@@ -18,14 +18,14 @@
 @mixin btn-inv-color-override($txt-color, $bdr-color) {
   color: $txt-color;
   border-color: $bdr-color;
-  .fa {
+  [class*="fa-"] {
     color: rgba($txt-color,.6);
   }
   &:hover,
   &:focus {
     color: lighten($txt-color, 5%);
     border-color: lighten($bdr-color, 5%);
-    .fa {
+    [class*="fa-"] {
       color: rgba($txt-color,.7);
     }
   }
