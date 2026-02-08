@@ -41,8 +41,7 @@ if ( ! function_exists( 'magnetic_wp_setup' ) ) :
 		 * Gutenberg opt-in
 		 */
 		add_theme_support( 'wp-block-styles' );
-		add_theme_support( 'align-wide' );
-		add_theme_support( 'responsive-embeds' );
+		add_theme_support( 'editor-styles' );
 
 		/*
 		 * Enable support for Post Thumbnails on posts and pages.
