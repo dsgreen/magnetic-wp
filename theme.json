@@ -71,5 +71,19 @@
 			"margin": true,
 			"blockGap": true
 		}
+	},
+	"styles": {
+		"blocks": {
+			"core/button": {
+				"border": {
+					"radius": "0px"
+				},
+				"typography": {
+					"textTransform": "uppercase",
+					"letterSpacing": "0.03em",
+					"fontSize": "1.4rem"
+				}
+			}
+		}
 	}
 }
