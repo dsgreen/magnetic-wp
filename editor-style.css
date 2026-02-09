@@ -1,0 +1,152 @@
+/*--------------------------------------------------------------
+# Editor Styles
+#
+# Mirrors the front-end typography, colors, and spacing so the
+# block editor matches the theme. WordPress automatically scopes
+# these rules inside .editor-styles-wrapper.
+--------------------------------------------------------------*/
+
+@import url("assets/css/font-roboto.css");
+
+/* Typography
+--------------------------------------------------------------*/
+body {
+	font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 16px;
+	line-height: 1.625;
+	color: #212833;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: normal;
+	line-height: 1.4;
+	margin-bottom: 0.5em;
+	color: #212833;
+}
+
+h1 { font-size: 36px; }
+h2 { font-size: 30px; }
+h3 { font-size: 24px; }
+h4, h5, h6 { font-size: 18px; }
+
+p {
+	margin-bottom: 1.625em;
+}
+
+/* Links
+--------------------------------------------------------------*/
+a {
+	color: #2F835F;
+	text-decoration: none;
+}
+
+a:hover,
+a:focus {
+	color: #3a9e72;
+}
+
+/* Layout
+--------------------------------------------------------------*/
+.wp-block {
+	max-width: 580px;
+}
+
+.wp-block[data-align="wide"] {
+	max-width: 1070px;
+}
+
+.wp-block[data-align="full"] {
+	max-width: none;
+}
+
+/* Lists
+--------------------------------------------------------------*/
+ul, ol {
+	margin: 0 0 1.625em;
+	padding-left: 2.5em;
+}
+
+li {
+	margin-bottom: 0.25em;
+}
+
+/* Blockquote
+--------------------------------------------------------------*/
+blockquote {
+	margin: 0 0 1.625em;
+	padding-left: 1em;
+	border-left: 4px solid #2F835F;
+	font-style: italic;
+	color: #6E7E93;
+}
+
+blockquote cite {
+	display: block;
+	margin-top: 0.5em;
+	font-size: 13px;
+	font-style: normal;
+	color: #212833;
+}
+
+/* Code / Pre
+--------------------------------------------------------------*/
+code, kbd, tt, var {
+	font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+	font-size: 0.875em;
+}
+
+pre {
+	background: #F7F7F7;
+	border: 1px solid #EAEAEA;
+	font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+	font-size: 0.875em;
+	line-height: 1.6;
+	margin-bottom: 1.625em;
+	max-width: 100%;
+	overflow: auto;
+	padding: 1em;
+}
+
+/* Tables
+--------------------------------------------------------------*/
+table {
+	border-collapse: collapse;
+	margin-bottom: 1.625em;
+	width: 100%;
+}
+
+th, td {
+	border: 1px solid #EAEAEA;
+	padding: 0.5em;
+	text-align: left;
+}
+
+th {
+	background: #F7F7F7;
+	font-weight: 500;
+}
+
+/* Horizontal Rule
+--------------------------------------------------------------*/
+hr {
+	border: 0;
+	border-top: 1px solid #EAEAEA;
+	margin: 2em 0;
+}
+
+/* Images
+--------------------------------------------------------------*/
+img {
+	height: auto;
+	max-width: 100%;
+}
+
+figure {
+	margin: 0 0 1.625em;
+}
+
+figcaption {
+	color: #6E7E93;
+	font-size: 13px;
+	margin-top: 0.5em;
+}

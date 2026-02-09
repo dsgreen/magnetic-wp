@@ -42,6 +42,7 @@ if ( ! function_exists( 'magnetic_wp_setup' ) ) :
 		 */
 		add_theme_support( 'wp-block-styles' );
 		add_theme_support( 'editor-styles' );
+		add_editor_style( 'editor-style.css' );
 
 		/*
 		 * Enable support for Post Thumbnails on posts and pages.
@@ -343,3 +344,8 @@ require get_template_directory() . '/inc/customizer.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
+
+/**
+ * Block patterns.
+ */
+require get_template_directory() . '/inc/block-patterns.php';
