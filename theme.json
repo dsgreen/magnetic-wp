@@ -81,7 +81,7 @@
 				"typography": {
 					"textTransform": "uppercase",
 					"letterSpacing": "0.03em",
-					"fontSize": "1.4rem"
+					"fontSize": "14px"
 				}
 			}
 		}

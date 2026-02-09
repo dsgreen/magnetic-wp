@@ -45,20 +45,6 @@ a:focus {
 	color: #3a9e72;
 }
 
-/* Layout
---------------------------------------------------------------*/
-.wp-block {
-	max-width: 580px;
-}
-
-.wp-block[data-align="wide"] {
-	max-width: 1070px;
-}
-
-.wp-block[data-align="full"] {
-	max-width: none;
-}
-
 /* Lists
 --------------------------------------------------------------*/
 ul, ol {
