@@ -79,25 +79,31 @@ function magnetic_wp_register_block_patterns() {
 	);
 
 	register_block_pattern(
-		'magnetic-wp/full-width-dark-section',
+		'magnetic-wp/full-width-cta-dark',
 		array(
-			'title'       => __( 'Full-Width Dark Section', 'magnetic-wp' ),
-			'description' => __( 'Full-width section with a dark background, white text, and centered content, matching homepage section 5.', 'magnetic-wp' ),
+			'title'       => __( 'Full-Width CTA Dark', 'magnetic-wp' ),
+			'description' => __( 'Full-width dark section with text on the left and a call-to-action button on the right, matching homepage section 5.', 'magnetic-wp' ),
 			'categories'  => array( 'magnetic-wp' ),
 			'content'     => '<!-- wp:group {"align":"full","backgroundColor":"dark","textColor":"white","style":{"spacing":{"padding":{"top":"3em","right":"3em","bottom":"3em","left":"3em"}}},"layout":{"type":"constrained"}} -->
-<div class="wp-block-group alignfull has-white-color has-dark-background-color has-text-color has-background" style="padding-top:3em;padding-right:3em;padding-bottom:3em;padding-left:3em"><!-- wp:heading {"textColor":"white"} -->
+<div class="wp-block-group alignfull has-white-color has-dark-background-color has-text-color has-background" style="padding-top:3em;padding-right:3em;padding-bottom:3em;padding-left:3em"><!-- wp:columns {"verticalAlignment":"center"} -->
+<div class="wp-block-columns are-vertically-aligned-center"><!-- wp:column {"verticalAlignment":"center"} -->
+<div class="wp-block-column is-vertically-aligned-center"><!-- wp:heading {"textColor":"white"} -->
 <h2 class="wp-block-heading has-white-color has-text-color">Your Heading Here</h2>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
 <p>Add your content here. This full-width dark section is ideal for call-to-action areas or highlighting important information.</p>
-<!-- /wp:paragraph -->
+<!-- /wp:paragraph --></div>
+<!-- /wp:column -->
 
-<!-- wp:buttons -->
+<!-- wp:column {"verticalAlignment":"center"} -->
+<div class="wp-block-column is-vertically-aligned-center"><!-- wp:buttons {"layout":{"type":"flex","justifyContent":"right"}} -->
 <div class="wp-block-buttons"><!-- wp:button {"backgroundColor":"brand","textColor":"white"} -->
 <div class="wp-block-button"><a class="wp-block-button__link has-white-color has-brand-background-color has-text-color has-background wp-element-button">Get Started</a></div>
 <!-- /wp:button --></div>
 <!-- /wp:buttons --></div>
+<!-- /wp:column --></div>
+<!-- /wp:columns --></div>
 <!-- /wp:group -->',
 		)
 	);
