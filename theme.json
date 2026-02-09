@@ -74,6 +74,22 @@
 	},
 	"styles": {
 		"blocks": {
+			"core/columns": {
+				"spacing": {
+					"margin": {
+						"top": "0",
+						"bottom": "0"
+					}
+				}
+			},
+			"core/group": {
+				"spacing": {
+					"margin": {
+						"top": "0",
+						"bottom": "0"
+					}
+				}
+			},
 			"core/button": {
 				"border": {
 					"radius": "0px"
