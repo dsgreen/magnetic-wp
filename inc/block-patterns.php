@@ -97,8 +97,8 @@ function magnetic_wp_register_block_patterns() {
 <!-- /wp:column -->
 
 <!-- wp:column {"verticalAlignment":"center"} -->
-<div class="wp-block-column is-vertically-aligned-center"><!-- wp:buttons {"layout":{"type":"flex","justifyContent":"right"}} -->
-<div class="wp-block-buttons"><!-- wp:button {"backgroundColor":"brand","textColor":"white"} -->
+<div class="wp-block-column is-vertically-aligned-center"><!-- wp:buttons {"className":"mwp-justify-md-end","layout":{"type":"flex"}} -->
+<div class="wp-block-buttons mwp-justify-md-end"><!-- wp:button {"backgroundColor":"brand","textColor":"white"} -->
 <div class="wp-block-button"><a class="wp-block-button__link has-white-color has-brand-background-color has-text-color has-background wp-element-button">Get Started</a></div>
 <!-- /wp:button --></div>
 <!-- /wp:buttons --></div>

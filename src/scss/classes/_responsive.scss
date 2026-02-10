@@ -1,0 +1,22 @@
+/*--------------------------------------------------------------
+# Responsive Utilities (mwp- prefix)
+#
+# Naming convention: mwp-{property}-{breakpoint}-{value}
+# Mobile-first: base styles apply below the breakpoint,
+# the breakpoint suffix applies at that breakpoint and above.
+#
+# Breakpoints: sm (576), md (768), lg (992), xl (1200)
+--------------------------------------------------------------*/
+
+// Justify content
+.mwp-justify-md-end {
+  @media screen and (min-width: $breakpoint-md) {
+    justify-content: flex-end;
+  }
+}
+
+.mwp-justify-md-center {
+  @media screen and (min-width: $breakpoint-md) {
+    justify-content: center;
+  }
+}
