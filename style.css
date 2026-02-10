@@ -1761,7 +1761,7 @@ a.btn.wide {
   padding-right: 2rem;
 }
 .page-template-template-full-width .entry-content > .alignwide {
-  max-width: 1070px;
+  max-width: 1160px;
 }
 .page-template-template-full-width .entry-content > .alignfull {
   margin: 1.5em 0;
@@ -1839,7 +1839,7 @@ a.btn.wide {
   margin-right: auto;
 }
 .page-template-template-full-width .wp-block-group > .wp-block-group__inner-container > .alignwide {
-  max-width: 1070px;
+  max-width: 1160px;
 }
 .page-template-template-full-width .wp-block-group > .wp-block-group__inner-container > .alignfull {
   max-width: 100%;
