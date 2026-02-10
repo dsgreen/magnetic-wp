@@ -20,8 +20,8 @@ function magnetic_wp_register_block_patterns() {
 			'title'       => __( 'Image Left, Text Right', 'magnetic-wp' ),
 			'description' => __( 'Two-column layout with a large image on the left and text on the right, matching homepage sections 1 and 3.', 'magnetic-wp' ),
 			'categories'  => array( 'magnetic-wp' ),
-			'content'     => '<!-- wp:columns {"align":"full","style":{"spacing":{"blockGap":{"left":"0"}}}} -->
-<div class="wp-block-columns alignfull"><!-- wp:column {"width":"50%","style":{"spacing":{"padding":{"top":"0","right":"0","bottom":"0","left":"0"}}}} -->
+			'content'     => '<!-- wp:columns {"align":"full","style":{"spacing":{"blockGap":{"left":"0"},"margin":{"top":"0","bottom":"0"}}}} -->
+<div class="wp-block-columns alignfull" style="margin-top:0;margin-bottom:0"><!-- wp:column {"width":"50%","style":{"spacing":{"padding":{"top":"0","right":"0","bottom":"0","left":"0"}}}} -->
 <div class="wp-block-column" style="padding-top:0;padding-right:0;padding-bottom:0;padding-left:0;flex-basis:50%"><!-- wp:image {"sizeSlug":"full","linkDestination":"none"} -->
 <figure class="wp-block-image size-full"><img src="" alt=""/></figure>
 <!-- /wp:image --></div>
@@ -52,8 +52,8 @@ function magnetic_wp_register_block_patterns() {
 			'title'       => __( 'Text Left, Image Right', 'magnetic-wp' ),
 			'description' => __( 'Two-column layout with text on the left and a large image on the right, matching homepage sections 2 and 4.', 'magnetic-wp' ),
 			'categories'  => array( 'magnetic-wp' ),
-			'content'     => '<!-- wp:columns {"align":"full","style":{"spacing":{"blockGap":{"left":"0"}}}} -->
-<div class="wp-block-columns alignfull"><!-- wp:column {"verticalAlignment":"center","width":"50%","style":{"spacing":{"padding":{"top":"2em","right":"5em","bottom":"2em","left":"5em"}}}} -->
+			'content'     => '<!-- wp:columns {"align":"full","style":{"spacing":{"blockGap":{"left":"0"},"margin":{"top":"0","bottom":"0"}}}} -->
+<div class="wp-block-columns alignfull" style="margin-top:0;margin-bottom:0"><!-- wp:column {"verticalAlignment":"center","width":"50%","style":{"spacing":{"padding":{"top":"2em","right":"5em","bottom":"2em","left":"5em"}}}} -->
 <div class="wp-block-column is-vertically-aligned-center" style="padding-top:2em;padding-right:5em;padding-bottom:2em;padding-left:5em;flex-basis:50%"><!-- wp:heading -->
 <h2 class="wp-block-heading">Your Heading Here</h2>
 <!-- /wp:heading -->
@@ -84,8 +84,8 @@ function magnetic_wp_register_block_patterns() {
 			'title'       => __( 'Full-Width CTA Dark', 'magnetic-wp' ),
 			'description' => __( 'Full-width dark section with text on the left and a call-to-action button on the right, matching homepage section 5.', 'magnetic-wp' ),
 			'categories'  => array( 'magnetic-wp' ),
-			'content'     => '<!-- wp:group {"align":"full","backgroundColor":"dark","textColor":"white","style":{"spacing":{"padding":{"top":"3em","right":"3em","bottom":"3em","left":"3em"}}},"layout":{"type":"constrained"}} -->
-<div class="wp-block-group alignfull has-white-color has-dark-background-color has-text-color has-background" style="padding-top:3em;padding-right:3em;padding-bottom:3em;padding-left:3em"><!-- wp:columns {"verticalAlignment":"center"} -->
+			'content'     => '<!-- wp:group {"align":"full","backgroundColor":"dark","textColor":"white","style":{"spacing":{"padding":{"top":"3em","right":"3em","bottom":"3em","left":"3em"},"margin":{"top":"0","bottom":"0"}}},"layout":{"type":"constrained"}} -->
+<div class="wp-block-group alignfull has-white-color has-dark-background-color has-text-color has-background" style="margin-top:0;margin-bottom:0;padding-top:3em;padding-right:3em;padding-bottom:3em;padding-left:3em"><!-- wp:columns {"verticalAlignment":"center"} -->
 <div class="wp-block-columns are-vertically-aligned-center"><!-- wp:column {"verticalAlignment":"center"} -->
 <div class="wp-block-column is-vertically-aligned-center"><!-- wp:heading {"textColor":"white"} -->
 <h2 class="wp-block-heading has-white-color has-text-color">Your Heading Here</h2>
