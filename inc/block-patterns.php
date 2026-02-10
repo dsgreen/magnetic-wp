@@ -85,8 +85,8 @@ function magnetic_wp_register_block_patterns() {
 			'description' => __( 'Full-width dark section with text on the left and a call-to-action button on the right, matching homepage section 5.', 'magnetic-wp' ),
 			'categories'  => array( 'magnetic-wp' ),
 			'content'     => '<!-- wp:group {"align":"full","backgroundColor":"dark","textColor":"white","style":{"spacing":{"padding":{"top":"3em","right":"3em","bottom":"3em","left":"3em"},"margin":{"top":"0","bottom":"0"}}},"layout":{"type":"constrained"}} -->
-<div class="wp-block-group alignfull has-white-color has-dark-background-color has-text-color has-background" style="margin-top:0;margin-bottom:0;padding-top:3em;padding-right:3em;padding-bottom:3em;padding-left:3em"><!-- wp:columns {"verticalAlignment":"center"} -->
-<div class="wp-block-columns are-vertically-aligned-center"><!-- wp:column {"verticalAlignment":"center"} -->
+<div class="wp-block-group alignfull has-white-color has-dark-background-color has-text-color has-background" style="margin-top:0;margin-bottom:0;padding-top:3em;padding-right:3em;padding-bottom:3em;padding-left:3em"><!-- wp:columns {"verticalAlignment":"center","align":"wide"} -->
+<div class="wp-block-columns are-vertically-aligned-center alignwide"><!-- wp:column {"verticalAlignment":"center"} -->
 <div class="wp-block-column is-vertically-aligned-center"><!-- wp:heading {"textColor":"white"} -->
 <h2 class="wp-block-heading has-white-color has-text-color">Your Heading Here</h2>
 <!-- /wp:heading -->
