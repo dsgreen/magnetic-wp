@@ -153,6 +153,7 @@ $header-shadow: false;
 $gutenberg-side-margin: 2rem;
 $gutenberg-content-width: 800px;
 $gutenberg-wide-width: 1160px;
+$breakpoint-wp-columns: 782px; // WordPress columns block stacking breakpoint
 
 // Bootstrap breakpoints, except 2xl+
 // xs < 576

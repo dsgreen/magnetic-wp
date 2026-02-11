@@ -1733,17 +1733,42 @@ a.btn.wide {
 # Mobile-first: base styles apply below the breakpoint,
 # the breakpoint suffix applies at that breakpoint and above.
 #
-# Breakpoints: sm (576), md (768), lg (992), xl (1200)
+# Breakpoints: sm (576), md (782*), lg (992), xl (1200)
+# * md uses $breakpoint-wp-columns (782px) to align with the
+#   WordPress columns block stacking breakpoint.
 --------------------------------------------------------------*/
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 782px) {
   .mwp-justify-md-end {
     justify-content: flex-end;
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 782px) {
   .mwp-justify-md-center {
     justify-content: center;
+  }
+}
+
+@media screen and (min-width: 782px) {
+  .mwp-order-md-first {
+    order: -1;
+  }
+}
+
+@media screen and (min-width: 782px) {
+  .mwp-order-md-last {
+    order: 99;
+  }
+}
+
+.mwp-p-2 {
+  padding: 2em;
+}
+
+@media screen and (min-width: 782px) {
+  .mwp-px-md-5 {
+    padding-left: 5em;
+    padding-right: 5em;
   }
 }
 
