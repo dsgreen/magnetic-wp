@@ -854,6 +854,10 @@ select:active {
   padding-top: 2.5em;
 }
 
+.page-template-template-full-width-hero .site-main {
+  padding-top: 0;
+}
+
 #secondary {
   padding-top: 4em;
 }

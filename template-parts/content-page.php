@@ -11,8 +11,9 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<?php if (
-  // exclude these templates, post thumbnail and title already displayed in template-parts/image-header.php
+  // exclude these templates, title/image handled by hero section or block pattern
 	!is_page_template('templates/template-image-header.php') &&
+	!is_page_template('templates/template-full-width-hero.php') &&
 	!is_front_page()
 	) : ?>
 	<?php magnetic_wp_post_thumbnail(); ?>

@@ -24,6 +24,7 @@ function magnetic_wp_body_classes( $classes ) {
 
 	// Adds a page class to style header & navigation with a featured background image.
 	if ( is_page_template( 'templates/template-image-header.php' ) ||
+		 is_page_template( 'templates/template-full-width-hero.php' ) ||
 		 is_front_page() )
 	{
 		$classes[] = 'body--transparent-header';
