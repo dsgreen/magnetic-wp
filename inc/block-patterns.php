@@ -125,5 +125,56 @@ function magnetic_wp_register_block_patterns() {
 <!-- /wp:group -->',
 		)
 	);
+	register_block_pattern(
+		'magnetic-wp/team',
+		array(
+			'title'       => __( 'Team', 'magnetic-wp' ),
+			'description' => __( 'Three-column team layout with photos, names, and job titles.', 'magnetic-wp' ),
+			'categories'  => array( 'magnetic-wp' ),
+			'content'     => '<!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":{"left":"2em"}}}} -->
+<div class="wp-block-columns alignwide"><!-- wp:column -->
+<div class="wp-block-column"><!-- wp:image {"sizeSlug":"large","linkDestination":"none"} -->
+<figure class="wp-block-image size-large"><img src="" alt=""/></figure>
+<!-- /wp:image -->
+
+<!-- wp:heading {"level":3,"style":{"spacing":{"margin":{"bottom":"0"}}}} -->
+<h3 class="wp-block-heading" style="margin-bottom:0">Team Member</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph {"style":{"spacing":{"margin":{"top":"0.25em"}},"typography":{"fontSize":"1.1em"}},"textColor":"slate"} -->
+<p class="has-slate-color has-text-color" style="margin-top:0.25em;font-size:1.1em">Job Title</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:column -->
+
+<!-- wp:column -->
+<div class="wp-block-column"><!-- wp:image {"sizeSlug":"large","linkDestination":"none"} -->
+<figure class="wp-block-image size-large"><img src="" alt=""/></figure>
+<!-- /wp:image -->
+
+<!-- wp:heading {"level":3,"style":{"spacing":{"margin":{"bottom":"0"}}}} -->
+<h3 class="wp-block-heading" style="margin-bottom:0">Team Member</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph {"style":{"spacing":{"margin":{"top":"0.25em"}},"typography":{"fontSize":"1.1em"}},"textColor":"slate"} -->
+<p class="has-slate-color has-text-color" style="margin-top:0.25em;font-size:1.1em">Job Title</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:column -->
+
+<!-- wp:column -->
+<div class="wp-block-column"><!-- wp:image {"sizeSlug":"large","linkDestination":"none"} -->
+<figure class="wp-block-image size-large"><img src="" alt=""/></figure>
+<!-- /wp:image -->
+
+<!-- wp:heading {"level":3,"style":{"spacing":{"margin":{"bottom":"0"}}}} -->
+<h3 class="wp-block-heading" style="margin-bottom:0">Team Member</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph {"style":{"spacing":{"margin":{"top":"0.25em"}},"typography":{"fontSize":"1.1em"}},"textColor":"slate"} -->
+<p class="has-slate-color has-text-color" style="margin-top:0.25em;font-size:1.1em">Job Title</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:column --></div>
+<!-- /wp:columns -->',
+		)
+	);
 }
 add_action( 'init', 'magnetic_wp_register_block_patterns' );
