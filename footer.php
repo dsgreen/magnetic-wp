@@ -17,7 +17,7 @@
 	!is_page_template('templates/template-no-sidebar.php') &&
 	!is_page_template('templates/template-full-width.php') &&
 	!is_page_template('templates/template-full-width-hero.php') &&
-	!is_front_page()
+	( !is_front_page() || is_home() )
 ) : ?>
   </div><!-- end row -->
 </div><!-- end site-content -->

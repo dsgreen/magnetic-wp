@@ -9,6 +9,13 @@
  * @package Magnetic WP
  */
 
+// If no static front page is set ("Your latest posts" mode),
+// use the blog index template instead.
+if ( is_home() ) {
+	require get_template_directory() . '/home.php';
+	return;
+}
+
 get_header();
 ?>
 
@@ -18,6 +25,7 @@ get_header();
   <main class="site-main" id="main">
 
 	<?php
+  // If homepage widget areas are active, use the classic widget-based layout.
 	if ( magnetic_wp_has_homepage_widgets() ) :
 		get_template_part( 'template-parts/content', 'front-page' );
 	else :

@@ -23,16 +23,19 @@ function magnetic_wp_body_classes( $classes ) {
 	}
 
 	// Adds a page class to style header & navigation with a featured background image.
+    // Also applies to the front page when a static front page is set, to allow for a transparent header.
+    // Excludes the blog index when "Your latest posts" is selected as the front page, to avoid unintended styling.
 	if ( is_page_template( 'templates/template-image-header.php' ) ||
 		 is_page_template( 'templates/template-full-width-hero.php' ) ||
-		 is_front_page() )
+		 ( is_front_page() && ! is_home() ) )
 	{
 		$classes[] = 'body--transparent-header';
 	}
 
 	// Use full-width block layout on the front page and hero template.
+    // Exclude the blog index when "Your latest posts" is selected as the front page, to avoid unintended styling.
 	if ( is_page_template( 'templates/template-full-width-hero.php' ) ||
-		 ( is_front_page() && ! magnetic_wp_has_homepage_widgets() ) )
+		 ( is_front_page() && ! is_home() && ! magnetic_wp_has_homepage_widgets() ) )
 	{
 		$classes[] = 'page-template-template-full-width';
 	}
