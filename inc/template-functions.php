@@ -30,8 +30,10 @@ function magnetic_wp_body_classes( $classes ) {
 		$classes[] = 'body--transparent-header';
 	}
 
-	// Use full-width block layout on the front page when no homepage widgets are active.
-	if ( is_front_page() && ! magnetic_wp_has_homepage_widgets() ) {
+	// Use full-width block layout on the front page and hero template.
+	if ( is_page_template( 'templates/template-full-width-hero.php' ) ||
+		 ( is_front_page() && ! magnetic_wp_has_homepage_widgets() ) )
+	{
 		$classes[] = 'page-template-template-full-width';
 	}
 
