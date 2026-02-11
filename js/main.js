@@ -20,6 +20,7 @@ jQuery(document).ready(function($) {
             $(".mobile-navigation").hide();
             $(".mobile-navigation .sub-menu").hide();
             $(".mobile-navigation .children").hide();
+            $(".nav-toggle").attr("aria-expanded", "false");
             $(".site-header").toggleClass("toggled");
         });
     }
@@ -52,6 +53,8 @@ jQuery(document).ready(function($) {
         firstFocusableElement.focus();
     }
     $(".nav-toggle").click(function() {
+        var expanded = $(this).attr("aria-expanded") === "true";
+        $(this).attr("aria-expanded", !expanded);
         $(".mobile-navigation").slideToggle("fast");
         $(".site-header").toggleClass("toggled");
         trapFocusMobileNav();
@@ -59,6 +62,7 @@ jQuery(document).ready(function($) {
     setupMobileMenu();
     $(window).resize(function() {
         $(".site-header").removeClass("toggled");
+        $(".nav-toggle").attr("aria-expanded", "false");
         $(".mobile-navigation").hide();
         $(".mobile-navigation .sub-menu").hide();
         $(".mobile-navigation .children").hide();

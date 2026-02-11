@@ -47,6 +47,9 @@ jQuery(document).ready(function($) {
       $('.mobile-navigation .sub-menu').hide();
       $('.mobile-navigation .children').hide();
 
+      // reset aria-expanded on the toggle button
+      $('.nav-toggle').attr('aria-expanded', 'false');
+
       // .toggled class is needed for pages with an image header for mobile menu styling
       $('.site-header').toggleClass('toggled');
     });
@@ -99,6 +102,8 @@ jQuery(document).ready(function($) {
    * main menu toggle button (mobile)
    */
   $('.nav-toggle').click(function() {
+    var expanded = $(this).attr('aria-expanded') === 'true';
+    $(this).attr('aria-expanded', !expanded);
     $('.mobile-navigation').slideToggle('fast');
     // .toggled class is needed for pages with an image header for mobile menu styling
     $('.site-header').toggleClass('toggled');
@@ -117,6 +122,9 @@ jQuery(document).ready(function($) {
   $(window).resize(function() {
     // .toggled class is needed for pages with an image header for mobile menu styling
     $('.site-header').removeClass('toggled');
+
+    // reset aria-expanded on the toggle button
+    $('.nav-toggle').attr('aria-expanded', 'false');
 
     // desktop
     // if (window.innerWidth > 991) {}

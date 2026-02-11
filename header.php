@@ -36,13 +36,13 @@
     <?php
       endif; ?>
     <div id="mobile-navigation-wrap">
-      <button class="nav-toggle">
+      <button class="nav-toggle" aria-expanded="false" aria-controls="mobile-navigation" aria-label="<?php esc_attr_e( 'Toggle menu', 'magnetic-wp' ); ?>">
         <span class="nav-toggle-text"><?php esc_html_e( 'Menu', 'magnetic-wp' ); ?></span>
         <span class="bar"></span>
         <span class="bar"></span>
         <span class="bar"></span>
       </button>
-      <nav class="mobile-navigation hidden">
+      <nav id="mobile-navigation" class="mobile-navigation hidden" aria-label="<?php esc_attr_e( 'Mobile menu', 'magnetic-wp' ); ?>">
         <?php wp_nav_menu( array(
           'theme_location'    => 'primary',
           'menu'              => 'primary',
@@ -54,7 +54,7 @@
         <a href="#" class="mobile-nav-close"><?php esc_html_e( 'Close Menu', 'magnetic-wp' ); ?></a>
       </nav>
     </div>
-		<nav class="main-navigation hidden">
+		<nav class="main-navigation hidden" aria-label="<?php esc_attr_e( 'Main menu', 'magnetic-wp' ); ?>">
 			<?php wp_nav_menu( array(
 					'theme_location'    => 'primary',
 					'menu'              => 'primary',

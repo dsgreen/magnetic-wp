@@ -24,7 +24,7 @@
 <?php endif; ?>
 
 <?php if ( is_active_sidebar( 'footer-1' ) || is_active_sidebar( 'footer-2' ) || is_active_sidebar( 'footer-3' ) ) : ?>
-<section class="footer-widgets">
+<section class="footer-widgets" aria-label="<?php esc_attr_e( 'Footer widgets', 'magnetic-wp' ); ?>">
   <div class="container">
     <div class="row">
       <?php if ( is_active_sidebar( 'footer-1' ) ) : ?>
