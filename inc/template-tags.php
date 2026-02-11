@@ -95,7 +95,7 @@ if ( ! function_exists( 'magnetic_wp_print_categories' ) ) :
 			    /* translators: 1: list of categories. */
 			    printf('<span class="cat-links">' . esc_html__('Categories: %1$s', 'magnetic-wp') . '</span>', $categories_list); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 		    } else {
-			    printf('<span class="cat-links">' . esc_html('%1$s', 'magnetic-wp') . '</span>', $categories_list); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+			    printf('<span class="cat-links">' . esc_html__('%1$s', 'magnetic-wp') . '</span>', $categories_list); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 		    }
 		  }
 	  }
@@ -118,7 +118,7 @@ if ( ! function_exists( 'magnetic_wp_print_tags' ) ) :
 				  /* translators: 1: list of tags. */
 				  printf('<span class="tags-links">' . esc_html__('Tags: %1$s', 'magnetic-wp') . '</span>', $tags_list); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
         } else {
-			    printf('<span class="tags-links">' . esc_html('%1$s', 'magnetic-wp') . '</span>', $tags_list); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+			    printf('<span class="tags-links">' . esc_html__('%1$s', 'magnetic-wp') . '</span>', $tags_list); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
         }
 			}
 		}

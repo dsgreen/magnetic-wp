@@ -2,7 +2,7 @@
 	.hero {
 		background-image: url('<?php
     if ( has_post_thumbnail() ) {
-      the_post_thumbnail_url('full');
+      echo esc_url( get_the_post_thumbnail_url( null, 'full' ) );
     } ?>');
 	}
 </style>
