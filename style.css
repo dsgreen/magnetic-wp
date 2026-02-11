@@ -1800,7 +1800,7 @@ a.btn.wide {
 ## General Structure
 --------------------------------------------------------------*/
 .page-template-template-full-width .entry-header > *,
-.page-template-template-full-width .entry-content > * {
+.page-template-template-full-width .entry-content > *:not(.alignfull) {
   margin: 36px auto;
   max-width: 800px;
   padding-left: 2rem;
@@ -1810,12 +1810,11 @@ a.btn.wide {
   max-width: 1160px;
 }
 .page-template-template-full-width .entry-content > .alignfull {
-  margin: 1.5em 0;
   max-width: 100%;
 }
 
-@media screen and (min-width: 576px) {
-  .page-template-template-full-width .entry-content > * {
+@media screen and (min-width: 782px) {
+  .page-template-template-full-width .entry-content > *:not(.alignfull) {
     padding-left: 0;
     padding-right: 0;
   }

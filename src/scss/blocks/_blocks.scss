@@ -31,29 +31,27 @@
 .page-template-template-full-width {
 
   .entry-header > *,
-  .entry-content > * {
+  .entry-content > *:not(.alignfull) {
     margin: 36px auto;
     max-width: $gutenberg-content-width;
     padding-left: $gutenberg-side-margin;
     padding-right: $gutenberg-side-margin;
   }
 
-
   .entry-content > .alignwide {
     max-width: $gutenberg-wide-width;
   }
 
   .entry-content > .alignfull {
-    margin: 1.5em 0;
     max-width: 100%;
   }
 
 }
 
-@media screen and (min-width: $breakpoint-sm) {
+@media screen and (min-width: $breakpoint-wp-columns) {
   .page-template-template-full-width {
 
-    .entry-content > * {
+    .entry-content > *:not(.alignfull) {
       padding-left: 0;
       padding-right: 0;
     }
