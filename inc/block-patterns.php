@@ -15,6 +15,24 @@ function magnetic_wp_register_block_patterns() {
 	);
 
 	register_block_pattern(
+		'magnetic-wp/hero',
+		array(
+			'title'       => __( 'Hero', 'magnetic-wp' ),
+			'description' => __( 'Full-width hero section with a background image, dark overlay, heading, and subtitle. Replaces the featured image header.', 'magnetic-wp' ),
+			'categories'  => array( 'magnetic-wp' ),
+			'content'     => '<!-- wp:cover {"dimRatio":50,"overlayColor":"dark","isUserOverlayColor":true,"minHeight":75,"minHeightUnit":"vh","align":"full","style":{"spacing":{"padding":{"top":"8em","bottom":"2em","left":"2em","right":"2em"},"margin":{"top":"0","bottom":"0"}}}} -->
+<div class="wp-block-cover alignfull" style="margin-top:0;margin-bottom:0;padding-top:8em;padding-right:2em;padding-bottom:2em;padding-left:2em;min-height:75vh"><span aria-hidden="true" class="wp-block-cover__background has-dark-background-color has-background-dim"></span><div class="wp-block-cover__inner-container"><!-- wp:heading {"level":1,"style":{"typography":{"fontSize":"5rem","fontWeight":"300"}},"textColor":"white"} -->
+<h1 class="wp-block-heading has-white-color has-text-color" style="font-size:5rem;font-weight:300">Your Page Title</h1>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph {"style":{"typography":{"fontSize":"2.2rem"}},"textColor":"white"} -->
+<p class="has-white-color has-text-color" style="font-size:2.2rem">Add a subtitle or lead text here.</p>
+<!-- /wp:paragraph --></div></div>
+<!-- /wp:cover -->',
+		)
+	);
+
+	register_block_pattern(
 		'magnetic-wp/image-left-text-right',
 		array(
 			'title'       => __( 'Image Left, Text Right', 'magnetic-wp' ),
