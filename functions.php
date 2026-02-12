@@ -41,8 +41,8 @@ if ( ! function_exists( 'magnetic_wp_setup' ) ) :
 		 * Gutenberg opt-in
 		 */
 		add_theme_support( 'wp-block-styles' );
-		add_theme_support( 'align-wide' );
-		add_theme_support( 'responsive-embeds' );
+		add_theme_support( 'editor-styles' );
+		add_editor_style( 'editor-style.css' );
 
 		/*
 		 * Enable support for Post Thumbnails on posts and pages.
@@ -288,43 +288,50 @@ add_action( 'widgets_init', 'magnetic_wp_widgets_init' );
 function magnetic_wp_scripts() {
     /*
      * Development mode
-     * Use a random number for development to avoid browser caching the theme CSS while it's being worked on
-     * (set $dev to true).
+     * Set $dev to true to load unminified JS for debugging.
      */
     $dev = false;
-    $resource_version = ($dev === true) ? rand() : wp_get_theme()->get( 'Version' );
     $min_version = ($dev === true) ? '' : '.min';
+    $theme_dir = get_template_directory();
+    $theme_uri = get_template_directory_uri();
 
     /*
      * Header scripts and styles
      * Bootstrap grid, plugins, other
      */
-	// Bootstrap grid only:
+	// Bootstrap grid only (v4.6.2 — could be upgraded to Bootstrap 5.x in a future release):
 	wp_enqueue_style( 'bootstrap-grid', get_stylesheet_directory_uri() . '/bootstrap/bootstrap-grid.min.css', array(), '4.6.2' );
-    wp_enqueue_style( 'font-awesome', get_stylesheet_directory_uri() . '/fontawesome/css/all.css', array(), '5.15.2' );
+    wp_enqueue_style( 'font-awesome', get_stylesheet_directory_uri() . '/fontawesome/css/all.min.css', array(), '6.7.2' );
 
 	// Enqueue theme fonts
-	wp_enqueue_style( 'magnetic_wp-fonts', get_template_directory_uri( '/assets/css/font-roboto.css' ), array(), $resource_version, 'all' );
+	wp_enqueue_style( 'magnetic_wp-fonts', $theme_uri . '/assets/css/font-roboto.css', array(), filemtime( $theme_dir . '/assets/css/font-roboto.css' ), 'all' );
 
     // Magnetic WP/main site styles (follows Bootstrap & plugins in case any overrides in main site styles)
-    wp_enqueue_style( 'magnetic-wp-style', get_stylesheet_uri(), array(), $resource_version );
-
-    // Modernizr (Minimal build. Configure your own at: https://modernizr.com/)
-    wp_enqueue_script( 'modernizr', get_template_directory_uri() . '/js/modernizr-custom.min.js', array(), '3.6.0' );
+    wp_enqueue_style( 'magnetic-wp-style', get_stylesheet_uri(), array(), filemtime( get_stylesheet_directory() . '/style.css' ) );
 
     /*
      * Footer scripts
      */
 	// plugin scripts, followed by main site script
-	wp_enqueue_script( 'jquery-hoverintent', get_template_directory_uri() . '/js/hoverintent.js', array('jquery'), 'r7', TRUE );
-	wp_enqueue_script( 'jquery-superfish', get_template_directory_uri() . '/js/superfish.min.js', array('jquery'), '1.7.10', TRUE );
-	wp_enqueue_script( 'magnetic-wp-script', get_template_directory_uri() . '/js/main' . $min_version . '.js', array('jquery'), $resource_version, TRUE );
+	wp_enqueue_script( 'jquery-hoverintent', $theme_uri . '/js/hoverintent.js', array('jquery'), 'r7', array( 'strategy' => 'defer', 'in_footer' => true ) );
+	wp_enqueue_script( 'jquery-superfish', $theme_uri . '/js/superfish.min.js', array('jquery'), '1.7.10', array( 'strategy' => 'defer', 'in_footer' => true ) );
+	wp_enqueue_script( 'magnetic-wp-script', $theme_uri . '/js/main' . $min_version . '.js', array('jquery'), filemtime( $theme_dir . '/js/main' . $min_version . '.js' ), array( 'strategy' => 'defer', 'in_footer' => true ) );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
 add_action( 'wp_enqueue_scripts', 'magnetic_wp_scripts' );
+
+/**
+ * Remove the 'no-js' class on the document element.
+ *
+ * Hooked early to wp_head so it runs before any styles are parsed.
+ */
+function magnetic_wp_no_js_script() {
+	wp_print_inline_script_tag( 'document.documentElement.classList.remove("no-js");' );
+}
+add_action( 'wp_head', 'magnetic_wp_no_js_script', 1 );
 
 /**
  * Custom template tags for this theme.
@@ -347,3 +354,8 @@ require get_template_directory() . '/inc/customizer.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
+
+/**
+ * Block patterns.
+ */
+require get_template_directory() . '/inc/block-patterns.php';

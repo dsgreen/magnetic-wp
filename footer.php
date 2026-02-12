@@ -16,14 +16,15 @@
 	!is_page_template('templates/template-image-header.php') &&
 	!is_page_template('templates/template-no-sidebar.php') &&
 	!is_page_template('templates/template-full-width.php') &&
-	!is_page_template('front-page.php')
+	!is_page_template('templates/template-full-width-hero.php') &&
+	( !is_front_page() || is_home() )
 ) : ?>
   </div><!-- end row -->
 </div><!-- end site-content -->
 <?php endif; ?>
 
 <?php if ( is_active_sidebar( 'footer-1' ) || is_active_sidebar( 'footer-2' ) || is_active_sidebar( 'footer-3' ) ) : ?>
-<section class="footer-widgets">
+<section class="footer-widgets" aria-label="<?php esc_attr_e( 'Footer widgets', 'magnetic-wp' ); ?>">
   <div class="container">
     <div class="row">
       <?php if ( is_active_sidebar( 'footer-1' ) ) : ?>
@@ -61,7 +62,7 @@
             ?>
 
           <p>&copy; <?php
-              esc_html_e('Copyright ', 'magnetic-wp'); echo date('Y') . ' '; bloginfo( 'name' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+              esc_html_e('Copyright ', 'magnetic-wp'); echo esc_html( date( 'Y' ) ) . ' '; bloginfo( 'name' );
               esc_html_e('. Proudly powered by ', 'magnetic-wp');
               ?>
           <a href="<?php echo esc_url( __( 'https://wordpress.org/', 'magnetic-wp' ) ); ?>" rel="nofollow"><?php
@@ -72,7 +73,7 @@
 	      ?>
       </div>
       <div class="col-sm-6">
-        <p class="text-right"><a href="#top" class="back-to-top"><i class="fas fa-angle-up fa-2x" title="<?php
+        <p class="text-right"><a href="#top" class="back-to-top"><i class="fa-solid fa-angle-up fa-2x" title="<?php
                 esc_attr_e( 'Back to top', 'magnetic-wp' ); ?>"></i></a></p>
       </div>
     </div>

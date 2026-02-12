@@ -1,0 +1,49 @@
+/*--------------------------------------------------------------
+# Responsive Utilities (mwp- prefix)
+#
+# Naming convention: mwp-{property}-{breakpoint}-{value}
+# Mobile-first: base styles apply below the breakpoint,
+# the breakpoint suffix applies at that breakpoint and above.
+#
+# Breakpoints: sm (576), md (782*), lg (992), xl (1200)
+# * md uses $breakpoint-wp-columns (782px) to align with the
+#   WordPress columns block stacking breakpoint.
+--------------------------------------------------------------*/
+
+// Justify content
+.mwp-justify-md-end {
+  @media screen and (min-width: $breakpoint-wp-columns) {
+    justify-content: flex-end;
+  }
+}
+
+.mwp-justify-md-center {
+  @media screen and (min-width: $breakpoint-wp-columns) {
+    justify-content: center;
+  }
+}
+
+// Order
+.mwp-order-md-first {
+  @media screen and (min-width: $breakpoint-wp-columns) {
+    order: -1;
+  }
+}
+
+.mwp-order-md-last {
+  @media screen and (min-width: $breakpoint-wp-columns) {
+    order: 99;
+  }
+}
+
+// Padding
+.mwp-p-2 {
+  padding: 2em;
+}
+
+.mwp-px-md-5 {
+  @media screen and (min-width: $breakpoint-wp-columns) {
+    padding-left: 5em;
+    padding-right: 5em;
+  }
+}

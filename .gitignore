@@ -3,3 +3,6 @@
 node_modules
 package-lock.json
 yarn.lock
+CLAUDE.local.md
+magnetic-wp-update-guide.md
+.claude

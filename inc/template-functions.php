@@ -23,15 +23,49 @@ function magnetic_wp_body_classes( $classes ) {
 	}
 
 	// Adds a page class to style header & navigation with a featured background image.
+    // Also applies to the front page when a static front page is set, to allow for a transparent header.
+    // Excludes the blog index when "Your latest posts" is selected as the front page, to avoid unintended styling.
 	if ( is_page_template( 'templates/template-image-header.php' ) ||
-		 is_page_template( 'front-page.php' ) )
+		 is_page_template( 'templates/template-full-width-hero.php' ) ||
+		 ( is_front_page() && ! is_home() ) )
 	{
 		$classes[] = 'body--transparent-header';
+	}
+
+	// Use full-width block layout on the front page and hero template.
+    // Exclude the blog index when "Your latest posts" is selected as the front page, to avoid unintended styling.
+	if ( is_page_template( 'templates/template-full-width-hero.php' ) ||
+		 ( is_front_page() && ! is_home() && ! magnetic_wp_has_homepage_widgets() ) )
+	{
+		$classes[] = 'page-template-template-full-width';
 	}
 
 	return $classes;
 }
 add_filter( 'body_class', 'magnetic_wp_body_classes' );
+
+/**
+ * Check if any homepage widget areas have active widgets.
+ *
+ * @return bool True if any homepage widget area is active.
+ */
+function magnetic_wp_has_homepage_widgets() {
+	$widget_areas = array(
+		'home-1-1', 'home-1-2',
+		'home-2-1', 'home-2-2',
+		'home-3-1', 'home-3-2',
+		'home-4-1', 'home-4-2',
+		'home-5',
+	);
+
+	foreach ( $widget_areas as $area ) {
+		if ( is_active_sidebar( $area ) ) {
+			return true;
+		}
+	}
+
+	return false;
+}
 
 /**
  * Add a pingback url auto-discovery header for single posts, pages, or attachments.

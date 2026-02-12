@@ -14,7 +14,6 @@
 <html class="no-js" <?php language_attributes(); ?>>
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>">
-<meta http-equiv="x-ua-compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link rel="profile" href="https://gmpg.org/xfn/11">
 <?php wp_head(); ?>
@@ -35,13 +34,13 @@
     <?php
       endif; ?>
     <div id="mobile-navigation-wrap">
-      <button class="nav-toggle">
+      <button class="nav-toggle" aria-expanded="false" aria-controls="mobile-navigation" aria-label="<?php esc_attr_e( 'Toggle menu', 'magnetic-wp' ); ?>">
         <span class="nav-toggle-text"><?php esc_html_e( 'Menu', 'magnetic-wp' ); ?></span>
         <span class="bar"></span>
         <span class="bar"></span>
         <span class="bar"></span>
       </button>
-      <nav class="mobile-navigation hidden">
+      <nav id="mobile-navigation" class="mobile-navigation hidden" aria-label="<?php esc_attr_e( 'Mobile menu', 'magnetic-wp' ); ?>">
         <?php wp_nav_menu( array(
           'theme_location'    => 'primary',
           'menu'              => 'primary',
@@ -53,7 +52,7 @@
         <a href="#" class="mobile-nav-close"><?php esc_html_e( 'Close Menu', 'magnetic-wp' ); ?></a>
       </nav>
     </div>
-		<nav class="main-navigation hidden">
+		<nav class="main-navigation hidden" aria-label="<?php esc_attr_e( 'Main menu', 'magnetic-wp' ); ?>">
 			<?php wp_nav_menu( array(
 					'theme_location'    => 'primary',
 					'menu'              => 'primary',
@@ -72,7 +71,8 @@
     !is_page_template('templates/template-image-header.php') &&
     !is_page_template('templates/template-no-sidebar.php') &&
     !is_page_template('templates/template-full-width.php') &&
-    !is_page_template('front-page.php')
+    !is_page_template('templates/template-full-width-hero.php') &&
+    ( !is_front_page() || is_home() )
   ) : ?>
 <div class="site-content container" id="content">
   <div class="row">
