@@ -339,6 +339,23 @@
 }
 
 /*--------------------------------------------------------------
+## Accordion
+--------------------------------------------------------------*/
+
+.wp-block-accordion-heading__toggle {
+  border-bottom: 1px solid $light-gray-02;
+
+  &:hover,
+  &:focus {
+    border-bottom-color: $brand;
+  }
+}
+
+.wp-block-accordion-item.is-open > .wp-block-accordion-heading .wp-block-accordion-heading__toggle {
+  border-bottom-color: $brand;
+}
+
+/*--------------------------------------------------------------
 # Additional Theme Styles
 --------------------------------------------------------------*/
 

@@ -728,7 +728,7 @@ textarea {
   width: 100%;
 }
 
-button:not(.nav-toggle):not(.customize-partial-edit-shortcut-button):not(.customize-partial-edit-shortcut):not(.mejs-button button),
+button:not(.nav-toggle):not(.customize-partial-edit-shortcut-button):not(.customize-partial-edit-shortcut):not(.mejs-button button):not(.wp-block-accordion-heading__toggle),
 input[type=button],
 input[type=submit],
 input[type=reset],
@@ -749,7 +749,7 @@ input.button {
   border: solid 0.2rem #2F835F;
   transition: all 0.1s ease;
 }
-button:not(.nav-toggle):not(.customize-partial-edit-shortcut-button):not(.customize-partial-edit-shortcut):not(.mejs-button button):hover, button:not(.nav-toggle):not(.customize-partial-edit-shortcut-button):not(.customize-partial-edit-shortcut):not(.mejs-button button):active, button:not(.nav-toggle):not(.customize-partial-edit-shortcut-button):not(.customize-partial-edit-shortcut):not(.mejs-button button):focus,
+button:not(.nav-toggle):not(.customize-partial-edit-shortcut-button):not(.customize-partial-edit-shortcut):not(.mejs-button button):not(.wp-block-accordion-heading__toggle):hover, button:not(.nav-toggle):not(.customize-partial-edit-shortcut-button):not(.customize-partial-edit-shortcut):not(.mejs-button button):not(.wp-block-accordion-heading__toggle):active, button:not(.nav-toggle):not(.customize-partial-edit-shortcut-button):not(.customize-partial-edit-shortcut):not(.mejs-button button):not(.wp-block-accordion-heading__toggle):focus,
 input[type=button]:hover,
 input[type=button]:active,
 input[type=button]:focus,
@@ -2039,6 +2039,20 @@ a.btn.wide {
 --------------------------------------------------------------*/
 .page-template-template-full-width .wp-block-video video {
   max-width: 800px;
+}
+
+/*--------------------------------------------------------------
+## Accordion
+--------------------------------------------------------------*/
+.wp-block-accordion-heading__toggle {
+  border-bottom: 1px solid #d3d3d3;
+}
+.wp-block-accordion-heading__toggle:hover, .wp-block-accordion-heading__toggle:focus {
+  border-bottom-color: #2F835F;
+}
+
+.wp-block-accordion-item.is-open > .wp-block-accordion-heading .wp-block-accordion-heading__toggle {
+  border-bottom-color: #2F835F;
 }
 
 /*--------------------------------------------------------------
