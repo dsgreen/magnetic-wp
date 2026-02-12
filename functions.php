@@ -329,7 +329,7 @@ add_action( 'wp_enqueue_scripts', 'magnetic_wp_scripts' );
  * Hooked early to wp_head so it runs before any styles are parsed.
  */
 function magnetic_wp_no_js_script() {
-	echo '<script>document.documentElement.classList.remove("no-js");</script>' . "\n";
+	wp_print_inline_script_tag( 'document.documentElement.classList.remove("no-js");' );
 }
 add_action( 'wp_head', 'magnetic_wp_no_js_script', 1 );
 
