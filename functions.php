@@ -324,6 +324,16 @@ function magnetic_wp_scripts() {
 add_action( 'wp_enqueue_scripts', 'magnetic_wp_scripts' );
 
 /**
+ * Remove the 'no-js' class on the document element.
+ *
+ * Hooked early to wp_head so it runs before any styles are parsed.
+ */
+function magnetic_wp_no_js_script() {
+	echo '<script>document.documentElement.classList.remove("no-js");</script>' . "\n";
+}
+add_action( 'wp_head', 'magnetic_wp_no_js_script', 1 );
+
+/**
  * Custom template tags for this theme.
  */
 require get_template_directory() . '/inc/template-tags.php';
